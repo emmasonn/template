@@ -1,0 +1,96 @@
+name: peniremit
+description: A new Flutter project.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  dotted_border: ^2.1.0
+  go_router: ^12.1.3
+  provider: ^6.1.1
+  equatable: ^2.0.5
+  bloc: ^8.1.2
+  cached_network_image: ^3.2.3
+  shared_preferences: ^2.2.2
+  cupertino_icons: ^1.0.2
+  sized_context: ^1.0.0+4
+  persistent_bottom_nav_bar: ^5.0.2
+  flutter_screenutil: ^5.9.0
+  pull_to_refresh: ^2.0.0
+  responsive_framework: ^1.1.1
+  shimmer: ^3.0.0
+  simple_animations: ^5.0.2
+  path_provider: ^2.0.13
+  otp_text_field: ^1.1.3
+  pinput: ^3.0.1
+  get_it: ^7.6.4
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  http: ^0.13.0
+  iconify_flutter: ^0.0.5
+  image_cropper: ^3.0.1
+  image_picker: ^0.8.6
+  internet_connection_checker: ^0.0.1+4
+  intl: ^0.18.0
+  nb_utils: ^6.0.6
+  dartz: ^0.10.1
+  device_info_plus: ^9.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.3.5
+
+flutter_native_splash:
+  color: "#000000"
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/logos/launcher_icon.png"
+  min_sdk_android: 21
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/flags/
+    - assets/images/
+    - assets/ads/
+
+  fonts:
+    - family: Lexend
+      fonts:
+        - asset: fonts/Lexend-Light.ttf
+          weight: 200
+        - asset: fonts/Lexend-Regular.ttf
+          weight: 400
+        - asset: fonts/Lexend-SemiBold.ttf
+          weight: 500
+        - asset: fonts/Lexend-Medium.ttf
+          weight: 600
+        - asset: fonts/Lexend-Bold.ttf
+          weight: 700
+
+    - family: NotoSerifJP
+      fonts:
+        - asset: fonts/NotoSerifJP-Regular.otf
+          weight: 400
+        - asset: fonts/NotoSerifJP-SemiBold.otf
+          weight: 500
+        - asset: fonts/NotoSerifJP-Medium.otf
+          weight: 600
+        - asset: fonts/NotoSerifJP-Bold.otf
+          weight: 700
+          
+    - family: Peniremit
+      fonts:
+        - asset: fonts/peniremit.ttf
+
