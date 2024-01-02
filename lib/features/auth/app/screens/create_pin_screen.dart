@@ -69,6 +69,7 @@ class _CreatePinScreenState extends State<CreatePinScreen> {
               label: AppStrings.pinTxt,
               hintText: AppStrings.pinHint,
               keyboardType: TextInputType.number,
+              style: TextStyles.body1,
               obscureText: true,
               suffixIcon: const SizedBox(),
               formatter: [
@@ -82,6 +83,7 @@ class _CreatePinScreenState extends State<CreatePinScreen> {
               label: AppStrings.confirmPinTxt,
               hintText: AppStrings.confirmPinHint,
               keyboardType: TextInputType.number,
+              style: TextStyles.body1,
               formatter: [
                 LengthLimitingTextInputFormatter(4),
               ],

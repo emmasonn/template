@@ -118,15 +118,16 @@ class _PhoneNumberFieldState extends State<PhoneNumberField> {
                   }));
                 },
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 16, right: 8.0),
+                  padding: const EdgeInsets.only(
+                    left: 16,
+                    right: 8.0,
+                  ),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
                         selectedCountry.dialingCode,
-                        style: widget.style?.copyWith(
-                          fontSize: 14,
-                        ),
+                        style: widget.style,
                       ),
                       const SizedBox(
                         width: 5.0,
@@ -134,6 +135,7 @@ class _PhoneNumberFieldState extends State<PhoneNumberField> {
                       const Icon(
                         Icons.keyboard_arrow_down,
                         color: AppColors.surfaceLighter,
+                        size: 20,
                       ),
                       const SizedBox(
                         height: 50,

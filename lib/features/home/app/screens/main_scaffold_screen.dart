@@ -23,6 +23,7 @@ class _MainScaffoldViewState extends State<MainScaffoldView> {
       appBar: CustomAppBar(
         context,
         titleText: AppStrings.appNameTxt,
+        
         style: TextStyles.h4.copyWith(fontWeight: FontWeight.w600),
         actionIcons: [
           IconButton(

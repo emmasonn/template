@@ -42,28 +42,25 @@ class _CountryScreenState extends State<CountryScreen> {
     return Scaffold(
         appBar: CustomAppBar(
           context,
-            titleText: AppStrings.selectCountryTxt,
-            leading: IconButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: const Icon(
-                Icons.close,
-                size: 24,
-              ),
-            )),
+          titleText: AppStrings.searchCountryTxt,
+          leadingIcon: Icons.close,
+          onBackPressed: () {
+            Navigator.pop(context);
+          },
+        ),
         body: SafeArea(
           child: Column(
             children: [
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: AppTextFieldEx(
+                  height: 40.0,
                   prefixIcon: const Icon(
                     Icons.search,
                     size: 24,
                     color: AppColors.surfaceLighter,
                   ),
-                  hintText: 'Search country',
+                  hintText: AppStrings.searchCountryTxt,
                   style: TextStyles.body2,
                   onChanged: (value) {
                     if (value != null && value.isNotEmpty) {
@@ -83,66 +80,63 @@ class _CountryScreenState extends State<CountryScreen> {
                 ),
               ),
               Expanded(
-                child: ListView.separated(
-                  separatorBuilder: (context, index) => const Divider(
-                    height: 4.0,
-                    color: AppColors.surfaceLighter,
-                  ),
-                  itemCount: searchResult.isEmpty
-                      ? Country.all.length
-                      : searchResult.length,
-                  shrinkWrap: true,
-                  itemBuilder: (context, index) {
-                    final Country item = searchResult.isEmpty
-                        ? Country.all[index]
-                        : searchResult[index];
-                    return InkWell(
-                      onTap: () {
-                        widget.navCallBack.callBack?.call(item);
-                        //close country screen
-                        context.pop(context);
-                      },
-                      child: Container(
-                        padding: const EdgeInsets.only(
-                          left: 16.0,
-                          right: 32,
-                        ),
-                        child: ListTile(
-                          leading: Text(
-                            '+${item.dialingCode}',
-                            style: const TextStyle(
-                              fontWeight: FontWeight.w500,
-                              fontSize: 14,
-                            ),
+                child: Scrollbar(
+                  child: ListView.separated(
+                    separatorBuilder: (context, index) => const Divider(
+                      height: 4.0,
+                      color: AppColors.surfaceLighter,
+                    ),
+                    itemCount: searchResult.isEmpty
+                        ? Country.all.length
+                        : searchResult.length,
+                    shrinkWrap: true,
+                    itemBuilder: (context, index) {
+                      final Country item = searchResult.isEmpty
+                          ? Country.all[index]
+                          : searchResult[index];
+                      return InkWell(
+                        onTap: () {
+                          widget.navCallBack.callBack?.call(item);
+                          //close country screen
+                          context.pop(context);
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.only(
+                            left: 16.0,
+                            right: 32,
                           ),
-                          title: Row(
-                            children: [
-                              SizedBox(
-                                height: 20,
-                                width: 30,
-                                child: Image.asset(
-                                  item.asset,
-                                  package: null,
-                                ),
-                              ),
-                              const SizedBox(
-                                width: 10.0,
-                              ),
-                              Expanded(
-                                child: Text(
-                                  item.name.capitalizeEachLetters(),
-                                  style: const TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 14,
+                          child: ListTile(
+                            contentPadding: EdgeInsets.zero,
+                            leading: Text(
+                              '+${item.dialingCode}',
+                              style: TextStyles.h4,
+                            ),
+                            title: Row(
+                              children: [
+                                SizedBox(
+                                  height: 20,
+                                  width: 30,
+                                  child: Image.asset(
+                                    item.asset,
+                                    package: null,
                                   ),
                                 ),
-                              ),
-                            ],
+                                const SizedBox(
+                                  width: 10.0,
+                                ),
+                                Expanded(
+                                  child: Text(
+                                    item.name.capitalizeEachLetters(),
+                                    style: TextStyles.body1,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                    );
-                  },
+                      );
+                    },
+                  ),
                 ),
               ),
             ],

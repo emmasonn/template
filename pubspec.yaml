@@ -39,6 +39,7 @@ dependencies:
   nb_utils: ^6.0.6
   dartz: ^0.10.1
   device_info_plus: ^9.1.0
+  flutter_spinkit: ^5.2.0
 
 dev_dependencies:
   flutter_test:

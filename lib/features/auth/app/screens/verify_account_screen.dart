@@ -93,13 +93,13 @@ class _VerifyAccountScreenState extends State<VerifyAccountScreen> {
               alignment: Alignment.topLeft,
               child: RichText(
                 text: TextSpan(
-                    text: AppStrings.alreadyHaveAccountTxt,
+                    text: AppStrings.didnotRecieveCodeCaption,
                     style: TextStyles.caption.copyWith(
                       fontSize: FontSizes.s13,
                     ),
                     children: [
                       TextSpan(
-                        text: AppStrings.signInTxt,
+                        text: AppStrings.resendCodeCaption,
                         style: TextStyles.h1.copyWith(
                           color: AppColors.accent,
                           fontSize: FontSizes.s13,

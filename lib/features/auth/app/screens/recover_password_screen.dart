@@ -66,7 +66,7 @@ class _RecoverPasswordScreenState extends State<RecoverPasswordScreen> {
               label: AppStrings.emailLabel,
               hintText: AppStrings.emailHint,
               keyboardType: TextInputType.text,
-              formatter: [],
+              style: TextStyles.body1,
               maxLine: 1,
               onChanged: (value) {},
             ),

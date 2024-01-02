@@ -92,7 +92,7 @@ class _AppTextFieldExState extends State<AppTextFieldEx> {
           ),
         ],
         SizedBox(
-          height: 50.0,
+          height: widget.height ?? 50.0,
           width: Sizes.btnWidthMd,
           child: TextFormField(
             controller: _controller,

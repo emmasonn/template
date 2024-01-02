@@ -44,9 +44,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
       appBar: CustomAppBar(
         context,
         centerTitle: true,
-        leading: const SizedBox(),
+        noBackButton: true,
         titleText: AppStrings.appNameTxt,
-        style: TextStyles.t1.copyWith(color: AppColors.accent),
+        style: TextStyles.t1.copyWith(
+          color: AppColors.accent,
+        ),
       ),
       body: SafeArea(
         bottom: false,
@@ -88,6 +90,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               AppTextFieldEx(
                 label: AppStrings.emailLabel,
                 hintText: AppStrings.emailHint,
+                style: TextStyles.body1,
                 onChanged: (value) {
                   emailAddress = value;
                 },
@@ -96,6 +99,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               PhoneNumberField(
                 hintText: formatNumberWithSpace(AppStrings.phoneNumberHint),
                 label: AppStrings.phoneNumberLabel,
+                style: TextStyles.body1,
                 onCountrySelected: (country) {},
                 onChanged: (value) {},
               ),
@@ -104,6 +108,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 label: AppStrings.passwordLabel,
                 hintText: AppStrings.passwordHint,
                 keyboardType: TextInputType.text,
+                style: TextStyles.body1,
                 obscureText: true,
                 maxLine: 1,
                 onChanged: (value) {},

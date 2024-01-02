@@ -21,7 +21,7 @@ class AppStrings {
   static const signInCaptionTxt = 'Welcome back! sign into your account';
   static const verifyAccountCaption =
       'Enter the 6-digit verification code sent to';
-  static const didnotRecieveCodeCaption = 'Didn\'t Receive Code?';
+  static const didnotRecieveCodeCaption = 'Didn\'t Receive Code?\t';
   static const resendCodeCaption = 'Resend code';
   static const donotHaveAccountCaption = 'Don\'t have an account?\t';
   static const createPinCaption = 'Create your transaction pin to get started.';
@@ -31,6 +31,7 @@ class AppStrings {
 
   //app bar titles
   static const selectCountryTxt = 'Select Country';
+  static const searchCountryTxt = 'Search Country';
 
   //Form Information
   static const fullNameLabel = 'Full Name';
