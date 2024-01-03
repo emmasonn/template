@@ -141,7 +141,7 @@ class SubscriptionList extends StatelessWidget {
       },
       separatorBuilder: (BuildContext context, index) => const Divider(
         height: 2.0,
-        color: AppColors.surfaceLighter,
+        color: AppColors.surface500,
       ),
     );
   }

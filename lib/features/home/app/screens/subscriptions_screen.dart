@@ -53,7 +53,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                   prefixIcon: const Icon(
                     Icons.search,
                     size: 24,
-                    color: AppColors.surfaceLighter,
+                    color: AppColors.surface500,
                   ),
                   hintText: AppStrings.searchTxt,
                   style: TextStyles.notoSerifJP.copyWith(

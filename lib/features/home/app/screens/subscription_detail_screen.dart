@@ -113,8 +113,8 @@ class _SubscriptionDetailScreenState extends State<SubscriptionDetailScreen> {
                 children: [
                   Text(
                     AppStrings.totalAmountSpentTxt,
-                    style: TextStyles.body1
-                        .copyWith(color: AppColors.surfaceLight),
+                    style:
+                        TextStyles.body1.copyWith(color: AppColors.surface300),
                   ),
                   Text(
                     addDollarToAmount('58000'),
@@ -156,7 +156,7 @@ class _SubscriptionDetailScreenState extends State<SubscriptionDetailScreen> {
                 );
               },
               separatorBuilder: (context, index) => const Divider(
-                color: AppColors.surfaceLight,
+                color: AppColors.surface300,
                 height: 1,
               ),
               itemCount: 3,

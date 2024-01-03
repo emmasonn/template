@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
 import 'package:peniremit/resources/app_assets.dart';
+import 'package:peniremit/resources/app_colors.dart';
 import 'package:peniremit/resources/app_dimen.dart';
 import 'package:peniremit/resources/app_strings.dart';
 import 'package:peniremit/resources/app_styles.dart';
@@ -83,13 +84,14 @@ class UpcomingSubscriptionWidget extends StatelessWidget {
                   Positioned(
                     left: 60,
                     child: CircleAvatar(
+                      backgroundColor: AppColors.surface900,
                       radius: radius,
                       child: Text(
                         '+2',
                         style: TextStyles.notoSerifJP.copyWith(
-                          fontSize: FontSizes.s12,
-                          fontWeight: FontWeight.w700,
-                        ),
+                            fontSize: FontSizes.s12,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.white),
                       ),
                     ),
                   )

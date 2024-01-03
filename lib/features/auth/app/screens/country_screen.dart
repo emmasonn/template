@@ -59,7 +59,7 @@ class _CountryScreenState extends State<CountryScreen> {
                   prefixIcon: const Icon(
                     Icons.search,
                     size: 24,
-                    color: AppColors.surfaceLighter,
+                    color: AppColors.surface500,
                   ),
                   hintText: AppStrings.searchTxt,
                   style: TextStyles.notoSerifJP.copyWith(
@@ -87,7 +87,7 @@ class _CountryScreenState extends State<CountryScreen> {
                   child: ListView.separated(
                     separatorBuilder: (context, index) => const Divider(
                       height: 4.0,
-                      color: AppColors.surfaceLighter,
+                      color: AppColors.surface500,
                     ),
                     itemCount: searchResult.isEmpty
                         ? Country.all.length

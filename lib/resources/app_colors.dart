@@ -9,10 +9,11 @@ class AppColors {
   static const Color onAccentLight = Color(0xffE0E0E0);
 
   //*surface
-  static const Color surfaceDark = Color(0xff1A1A1A);
-  static const Color lightSurface = Color(0xffB7B7B7);
-  static const Color surfaceLight = Color(0xff979797);
-  static const Color surfaceLighter = Color(0xff6A6A6A);
+  static const Color surface900 = Color(0xff1A1A1A);
+  static const Color surface700 = Color(0xff1A1A1A);
+  static const Color surface200 = Color(0xffB7B7B7);
+  static const Color surface300 = Color(0xff979797);
+  static const Color surface500 = Color(0xff6A6A6A);
 
   //*others
   static const Color bgWhite = Color(0xfff3f3f3);

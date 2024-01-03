@@ -134,14 +134,14 @@ class _PhoneNumberFieldState extends State<PhoneNumberField> {
                       ),
                       const Icon(
                         Icons.keyboard_arrow_down,
-                        color: AppColors.surfaceLighter,
+                        color: AppColors.surface500,
                         size: 20,
                       ),
                       const SizedBox(
                         height: 50,
                         width: 5.0,
                         child: VerticalDivider(
-                          color: AppColors.surfaceLighter,
+                          color: AppColors.surface500,
                         ),
                       ),
                     ],

@@ -165,7 +165,7 @@ class _AppTextFieldExState extends State<AppTextFieldEx> {
                           icon: obscureText
                               ? const Icon(Icons.visibility_off_outlined)
                               : const Icon(Icons.visibility_outlined),
-                          color: AppColors.surfaceLighter,
+                          color: AppColors.surface500,
                           iconSize: 14,
                         )
                       : null,
