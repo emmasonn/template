@@ -1,5 +1,3 @@
-import 'package:peniremit/features/home/app/screens/subscription_detail_screen.dart';
-
 class AppStrings {
   //app name
   static const appNameTxt = 'Peniremit';
@@ -67,9 +65,14 @@ class AppStrings {
 
   //items text
   static const airtimeTxt = 'Airtime';
+  static const copyTxt = 'Copy';
   static const dataTxt = 'Data';
   static const electricityTxt = 'Electricity';
+  static const tvTxt = 'TV';
   static const moreTxt = 'More';
+  static const bettingTxt = 'Betting';
+  static const travelsTxt = 'Travels';
+  static const onlineShopping = 'Online Shopping';
   static const subscriptionTxt = 'Subscriptions';
   static const subscriptionDetailTxt = 'Subscription Details';
   static const statusTxt = 'Status\t:\t';
@@ -77,10 +80,29 @@ class AppStrings {
   static const seeOtherSubPlans = 'See other subscription plans';
   static const subscriptionHistoryTxt = 'Subscription History';
   static const totalAmountSpentTxt = 'Total amount spent';
-  static const viewAllTxt = 'View all';
-  static const allTxt = 'All';
-  static const activeTxt = 'Active';
-  static const expiredTxt = 'Expired';
+  static const productNameTxt = 'Product/service';
+  static const selectProductTxt = 'Select product';
+  static const selectSubTierText = 'Select package/tier';
+  static const priceTxt = 'Price';
+  static const subscriptionTierTxt = 'Subscription Tier';
+  static const subscriptionCyleTxt = 'Subscription Cycle';
+  static const autoRenewalTxt = 'Auto Renewal Date';
+  static const autoRenewalDuration = 'Auto Renewal Duration';
+  static const myCardTxt = 'My Cards';
+  static const addSubscriptionText = 'Add Subscription';
+  static const createCardTxt = 'Create Card';
+  static const totalExpensesTxt = 'Total Expenses';
+  static const subscriptionSummaryTxt = 'Subscription Summary';
+  static const totalSubscriptionTxt = 'Total Subscription';
+  static const paidSubscriptionTxt = 'Paid Subscription';
+  static const unPaidSubscriptionTxt = 'Unpaid Subscription';
+  static const subscriptionTypeTxt = 'Monthly & Yealy';
+  static const monthlySpentTxt = 'Monthly Spent';
+
+  static const oneMillionTxt = '1m';
+  static const thousand100k = '100k';
+  static const thousand10k = '1k';
+  static const zero = '0';
 
   //BottomNav index
   static const homeIndexTxt = 0;
@@ -100,4 +122,18 @@ class AppStrings {
   static const String upcomingSubscriptionTxt = 'Upcoming Subscription';
   static const String upcomingSubscriptionCaptionTxt =
       'Platforms due soon for subscription';
+  static const viewAllTxt = 'View all';
+  static const allTxt = 'All';
+  static const activeTxt = 'Active';
+  static const expiredTxt = 'Expired';
+  static const subscriptionPlansTxt = 'Subscription Plans';
+  static const addSubscriptionTxt = 'Add Subscription';
+  static const billPaymentTxt = 'Bills Payment';
+
+  static const depositWarningTitleTxt =
+      'Please Note: Send only USDT to this address';
+  static const depositNoteTxt =
+      'Sending coins or tokens other than usdt to the address will result in the loss of your deposit.';
+  static const tokenSentTxt = 'Token Sent';
+  static const cannotShareQrcodeTxt = 'Cannot share Qr code';
 }

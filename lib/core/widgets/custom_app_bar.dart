@@ -23,8 +23,8 @@ class CustomAppBar extends AppBar {
     this.titleText,
     this.bottomChild,
     this.bgColor,
-    super.shadowColor,
-    super.elevation = 0.0,
+    // super.shadowColor,
+    // super.elevation = 0.0,
     this.leadingIcon,
     this.style,
     this.noBackButton = false,
@@ -44,21 +44,19 @@ class CustomAppBar extends AppBar {
                   onPressed: onBackPressed,
                   padding: EdgeInsets.zero,
                   icon: Container(
-                    padding: const EdgeInsets.only(
+                    padding: EdgeInsets.only(
                       left: 6.0,
                       top: 4.0,
                       bottom: 4.0,
-                      right: 6.0,
+                      right: leadingIcon != null ? 6.0 : 2.0,
                     ),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(
-                        Corners.sm,
-                      ),
+                      borderRadius: BorderRadius.circular(Corners.sm),
                       color: context.colorScheme.surface,
                     ),
                     child: Icon(
                       leadingIcon ?? Icons.arrow_back_ios,
-                      size: 14,
+                      size: 16,
                       color: Colors.white,
                     ),
                   ),
@@ -69,6 +67,8 @@ class CustomAppBar extends AppBar {
             size: Sizes.iconSizeMd,
             color: AppColors.onAccentLight,
           ),
+          shadowColor: context.colorScheme.onSurface,
+          elevation: 0.3,
           backgroundColor: bgColor ?? context.colorScheme.background,
           titleTextStyle: style ??
               TextStyles.body1.copyWith(

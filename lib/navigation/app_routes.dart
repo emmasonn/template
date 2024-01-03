@@ -14,10 +14,14 @@ import 'package:peniremit/features/auth/app/screens/update_password_screen.dart'
 import 'package:peniremit/features/auth/app/screens/update_pin_screen.dart';
 import 'package:peniremit/features/auth/app/screens/verify_account_screen.dart';
 import 'package:peniremit/features/auth/app/screens/verify_otp_screen.dart';
+import 'package:peniremit/features/home/app/screens/add_subscription_screen.dart';
+import 'package:peniremit/features/home/app/screens/fund_wallet_screen.dart';
 import 'package:peniremit/features/home/app/screens/home_screen.dart';
 import 'package:peniremit/features/home/app/screens/main_screen.dart';
+import 'package:peniremit/features/home/app/screens/more_services_screen.dart';
 import 'package:peniremit/features/home/app/screens/subscription_detail_screen.dart';
 import 'package:peniremit/features/home/app/screens/subscriptions_screen.dart';
+import 'package:peniremit/features/home/app/screens/upcoming_subscriptions_screen.dart';
 import 'package:peniremit/features/home/app/widgets/subscription_filter_widget.dart';
 import 'package:peniremit/features/wallet/app/screens/wallet_screen.dart';
 import 'package:peniremit/navigation/app_router.dart';
@@ -127,14 +131,53 @@ class AppRoutes {
     },
   );
 
+  static final addSubscriptionScreen = GoRoute(
+    parentNavigatorKey: rootNavigator,
+    path: AppScreenPaths.addSubscriptionPath,
+    pageBuilder: (BuildContext context, state) {
+      return AddSubscriptionScreen.page(key: state.pageKey);
+    },
+  );
+
+  static final upcomingSubscriptionScreen = GoRoute(
+    parentNavigatorKey: rootNavigator,
+    path: AppScreenPaths.upcomingSubsriptionPath,
+    pageBuilder: (BuildContext context, state) {
+      return UpcomingSubscriptionsScreen.page(key: state.pageKey);
+    },
+  );
+
+  static final moreServicesScreen = GoRoute(
+    parentNavigatorKey: rootNavigator,
+    path: AppScreenPaths.moreServicesPath,
+    pageBuilder: (BuildContext context, state) {
+      return MoreServicesScreen.page(key: state.pageKey);
+    },
+  );
+
+  static final subscriptionPlansScreen = GoRoute(
+    parentNavigatorKey: rootNavigator,
+    path: AppScreenPaths.subscriptionPlansPath,
+    pageBuilder: (BuildContext context, state) {
+      return SubscriptionScreen.page(key: state.pageKey);
+    },
+  );
+
+  static final fundWalletScreen = GoRoute(
+    parentNavigatorKey: rootNavigator,
+    path: AppScreenPaths.fundWalletPath,
+    pageBuilder: (BuildContext context, state) {
+      return FundWalletScreen.page(key: state.pageKey);
+    },
+  );
+
   static final subscriptionDetailScreen = GoRoute(
     parentNavigatorKey: rootNavigator,
     path: AppScreenPaths.subscriptionDetailPath,
     pageBuilder: (BuildContext context, state) {
       return SubscriptionDetailScreen.page(
-        key: state.pageKey,
-        params: state.extra as NavParamWrapper<Subscription>
-      );
+          key: state.pageKey,
+          params: state.extra as NavParamWrapper<Subscription>);
     },
   );
 

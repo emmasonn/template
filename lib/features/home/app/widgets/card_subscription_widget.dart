@@ -1,18 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:peniremit/core/utils/amount_formatter.dart';
+import 'package:peniremit/core/utils/extension_util.dart';
 import 'package:peniremit/features/home/app/widgets/subscription_filter_widget.dart';
 import 'package:peniremit/navigation/app_screen_paths.dart';
 import 'package:peniremit/navigation/nav_utils.dart';
+import 'package:peniremit/resources/app_colors.dart';
 import 'package:peniremit/resources/app_dimen.dart';
 import 'package:peniremit/resources/app_styles.dart';
 
 class CardSubscriptionWidget extends StatelessWidget {
   const CardSubscriptionWidget({
     super.key,
+    this.isDue = false,
     required this.sub,
   });
   final Subscription sub;
+  final bool isDue;
 
   @override
   Widget build(BuildContext context) {
@@ -37,8 +41,11 @@ class CardSubscriptionWidget extends StatelessWidget {
         ),
       ),
       subtitle: Text(
-        'Next due on 20th Aug',
-        style: TextStyles.caption.copyWith(fontSize: FontSizes.s10),
+        isDue ? 'Upcoming in 4 days' : 'Next due on 20th Aug',
+        style: TextStyles.caption.copyWith(
+          fontSize: FontSizes.s10,
+          color: isDue ? AppColors.error : context.colorScheme.onPrimary,
+        ),
       ),
       trailing: RichText(
         text: TextSpan(

@@ -44,8 +44,10 @@ class SubscriptionFlexibleSpaceWidget extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: 35,
+                backgroundColor: context.colorScheme.surface,
                 child: Image.asset(
                   sub.asset,
+                  fit: BoxFit.fill,
                 ),
               ),
               //space vertiically
@@ -84,9 +86,7 @@ class SubscriptionFlexibleSpaceWidget extends StatelessWidget {
                   Text(
                     'Active',
                     style: TextStyles.h4.copyWith(
-                      fontSize: FontSizes.s14,
-                      color: AppColors.accentLight
-                    ),
+                        fontSize: FontSizes.s14, color: AppColors.accentLight),
                   ),
                   const Spacer(),
                   Text(

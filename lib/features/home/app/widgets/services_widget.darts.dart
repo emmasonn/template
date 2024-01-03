@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:peniremit/core/helpers/spacer_widgets.dart';
 import 'package:peniremit/core/icon_fonts/peniremit_font.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
+import 'package:peniremit/navigation/app_screen_paths.dart';
 import 'package:peniremit/resources/app_colors.dart';
 import 'package:peniremit/resources/app_dimen.dart';
 import 'package:peniremit/resources/app_strings.dart';
@@ -33,7 +35,9 @@ class ServicesWidget extends StatelessWidget {
         ServiceItem(
           icon: Icons.more_horiz,
           title: AppStrings.moreTxt,
-          onPressed: () {},
+          onPressed: () {
+            context.push(AppScreenPaths.moreServicesPath);
+          },
         ),
       ],
     );
@@ -53,29 +57,35 @@ class ServiceItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        CircleAvatar(
-          radius: 25.0,
-          backgroundColor: context.colorScheme.surface,
-          child: Align(
-            alignment: Alignment.center,
-            child: Icon(
-              icon,
-              size: 20,
-              color: AppColors.accent,
+    return GestureDetector(
+      onTap: () {
+        onPressed.call();
+      },
+      child: Column(
+        children: [
+          CircleAvatar(
+            radius: 25.0,
+            backgroundColor: context.colorScheme.surface,
+            child: Align(
+              alignment: Alignment.center,
+              child: Icon(
+                icon,
+                size: 20,
+                color: AppColors.accent,
+              ),
             ),
           ),
-        ),
-        //space vertiically
-        vSpacer(10.0),
-        Text(
-          title,
-          style: TextStyles.body1.copyWith(
-            fontSize: FontSizes.s13,
+          //space vertiically
+          vSpacer(8.0),
+          Text(
+            title,
+            textAlign: TextAlign.center,
+            style: TextStyles.body1.copyWith(
+              fontSize: FontSizes.s13,
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

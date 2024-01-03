@@ -35,8 +35,8 @@ class AppTheme {
     bgColor = isDark ? AppColors.bgBlack : AppColors.bgWhite;
     mainTextColor = isDark ? Colors.white : Colors.black;
     inverseTextColor = isDark ? Colors.black : Colors.white;
-    surfaceColor = isDark ? AppColors.surface900 : AppColors.surface300;
-    inverseSurfaceColor = isDark ? AppColors.surface300 : AppColors.surface900;
+    surfaceColor = isDark ? AppColors.surface700 : AppColors.surface200;
+    inverseSurfaceColor = isDark ? AppColors.surface200 : AppColors.surface700;
   }
 
   //Creates an AppTheme from a provided type

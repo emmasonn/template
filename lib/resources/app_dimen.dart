@@ -33,8 +33,6 @@ class Sizes {
   static double get flexibleTopPadding => 80.0;
 
   static double get flexibleHeight => 250;
-
-  
 }
 
 class FontSizes {
@@ -84,6 +82,7 @@ class Corners {
   static const double vsm = 3.0;
   static const double sm = 4.0;
   static const double md = 8.0;
+  static const double hMd = 20.0;
   static const double lg = 30.0;
   static const double vLg = 40.0;
 }

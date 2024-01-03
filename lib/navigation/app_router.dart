@@ -35,6 +35,11 @@ class AppRouter {
       AppRoutes.updatePinScreen,
       AppRoutes.subscriptionsScreen,
       AppRoutes.subscriptionDetailScreen,
+      AppRoutes.fundWalletScreen,
+      AppRoutes.addSubscriptionScreen,
+      AppRoutes.moreServicesScreen,
+      AppRoutes.upcomingSubscriptionScreen,
+      AppRoutes.subscriptionPlansScreen,
     ],
   );
 }

@@ -57,7 +57,7 @@ class _SubscriptionDetailScreenState extends State<SubscriptionDetailScreen> {
                   left: 6.0,
                   top: 4.0,
                   bottom: 4.0,
-                  right: 6.0,
+                  right: 4.0,
                 ),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(

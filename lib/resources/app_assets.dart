@@ -8,4 +8,7 @@ class AppAssets {
   static const youtubePng = 'assets/images/youtube_icon.png';
   static const figmaPng = 'assets/images/figma_icon.png';
   static const convasPng = 'assets/images/canvas_icon.png';
+
+  //others
+  static const tetherPng = 'assets/images/tether.png';
 }

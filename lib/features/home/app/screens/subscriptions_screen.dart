@@ -46,6 +46,8 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              //space vertiically
+              vSpacer(20.0),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: AppTextFieldEx(
@@ -77,7 +79,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                 ),
               ),
               //space vertiically
-              vSpacer(20.0),
+              vSpacer(24.0),
               const Expanded(
                 child: SubscriptionFilterWidget(),
               ),
