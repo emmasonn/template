@@ -38,7 +38,6 @@ class TextStyles {
         fontSize: FontSizes.s20,
         weight: FontWeight.w600,
         letterSpacing: -.32,
-        height: 0.5,
       );
 
   static TextStyle get t2 => _createTextStyle(

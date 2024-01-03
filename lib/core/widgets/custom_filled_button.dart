@@ -13,18 +13,20 @@ class CustomFilledButton extends StatelessWidget {
   final TextStyle? style;
   final double? height;
   final double? width;
-  const CustomFilledButton(
-      {Key? key,
-      required this.text,
-      this.prefixIcon,
-      this.onPressed,
-      this.suffixIcon,
-      this.cornerRadius,
-      this.backgroudColor,
-      this.height,
-      this.width,
-      this.style})
-      : super(key: key);
+  final bool wrapContent;
+  const CustomFilledButton({
+    Key? key,
+    required this.text,
+    this.prefixIcon,
+    this.onPressed,
+    this.suffixIcon,
+    this.cornerRadius,
+    this.backgroudColor,
+    this.height,
+    this.width,
+    this.wrapContent = false,
+    this.style,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -40,29 +42,38 @@ class CustomFilledButton extends StatelessWidget {
         color: backgroudColor ?? AppColors.accentDark,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(
-            cornerRadius ?? Corners.md,
+            cornerRadius ?? Corners.sm,
           ),
         ),
         onPressed: onPressed,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: wrapContent ? MainAxisSize.min : MainAxisSize.max,
           children: [
             if (prefixIcon != null) ...[
               prefixIcon!,
             ],
-            Expanded(
-              child: Align(
-                alignment: Alignment.center,
-                child: Text(
-                  text,
-                  style: style ??
-                      TextStyles.btnStyle.copyWith(
-                        color: AppColors.onAccent,
+            wrapContent
+                ? Text(
+                    text,
+                    style: style ??
+                        TextStyles.btnStyle.copyWith(
+                          color: AppColors.onAccent,
+                        ),
+                  )
+                : Expanded(
+                    child: Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        text,
+                        style: style ??
+                            TextStyles.btnStyle.copyWith(
+                              color: AppColors.onAccent,
+                            ),
                       ),
-                ),
-              ),
-            ),
+                    ),
+                  ),
             if (suffixIcon != null) ...[
               suffixIcon!,
             ]

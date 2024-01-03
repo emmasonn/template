@@ -42,7 +42,7 @@ class MainBottomNav extends StatelessWidget {
           title: AppStrings.analyticsTxt,
         ),
         PersistentBottomNavBarItem(
-          icon: const Icon(Icons.settings_outlined),
+          icon: const Icon(PeniremitIcon.settings),
           title: AppStrings.settingsTxt,
         ),
       ],

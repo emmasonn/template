@@ -24,11 +24,17 @@ class Sizes {
 
   /////////////////////////////////
   static double get bottonNavHeight => 70;
-  static double get bottomNavIconSize => 24;
+  static double get bottomNavIconSize => 20;
   static double get toolBarHeigth => 80;
   static double get iconSizeMd => 24;
   static double get btnWidthMd => 350;
   static double get btnHeightMd => 50;
+
+  static double get flexibleTopPadding => 80.0;
+
+  static double get flexibleHeight => 250;
+
+  
 }
 
 class FontSizes {
@@ -44,6 +50,8 @@ class FontSizes {
 
   static double s14 = 14;
 
+  static double s15 = 15;
+
   static double s16 = 16;
 
   static double s18 = 18;
@@ -53,6 +61,8 @@ class FontSizes {
   static double s24 = 24;
 
   static double s28 = 28;
+
+  static double s30 = 30;
 
   static double s36 = 36;
 
@@ -74,7 +84,7 @@ class Corners {
   static const double vsm = 3.0;
   static const double sm = 4.0;
   static const double md = 8.0;
-  static const double lg = 32.0;
+  static const double lg = 30.0;
   static const double vLg = 40.0;
 }
 

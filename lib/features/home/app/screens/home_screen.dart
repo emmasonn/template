@@ -1,6 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import 'package:peniremit/core/helpers/spacer_widgets.dart';
+import 'package:peniremit/core/icon_fonts/peniremit_font.dart';
+import 'package:peniremit/core/utils/extension_util.dart';
+import 'package:peniremit/core/widgets/app_action_button.dart';
+import 'package:peniremit/core/widgets/custom_app_bar.dart';
+import 'package:peniremit/features/home/app/widgets/balance_card_widget.dart';
+import 'package:peniremit/features/home/app/widgets/services_widget.darts.dart';
+import 'package:peniremit/features/home/app/widgets/subscription_filter_widget.dart';
+import 'package:peniremit/features/home/app/widgets/upcoming_subscription_widget.dart';
+import 'package:peniremit/navigation/app_screen_paths.dart';
 import 'package:peniremit/navigation/custom_page_transition.dart';
+import 'package:peniremit/peniremit_app.dart';
+import 'package:peniremit/resources/app_colors.dart';
+import 'package:peniremit/resources/app_dimen.dart';
 import 'package:peniremit/resources/app_strings.dart';
+import 'package:peniremit/resources/app_styles.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -20,13 +36,83 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Stack(
-      alignment: Alignment.center,
-      children: [
-        Text(
-          AppStrings.homeTxt,
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+      appBar: CustomAppBar(
+        context,
+        titleText: AppStrings.appNameTxt,
+        shadowColor: context.colorScheme.onSurface,
+        elevation: 0.2,
+        noBackButton: true,
+        style: TextStyles.h4.copyWith(fontWeight: FontWeight.w600),
+        actionIcons: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.notifications,
+              color: context.colorScheme.onPrimary,
+            ),
+          ),
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: AppColors.accent,
+        child: Icon(
+          PeniremitIcon.add,
+          size: Sizes.iconSizeMd,
+          color: Colors.white,
         ),
-      ],
+      ),
+      body: SingleChildScrollView(
+        padding: EdgeInsets.symmetric(
+          horizontal: 16.w,
+          vertical: 20.0,
+        ),
+        child: Column(
+          children: [
+            //balance card
+            const BalanceCardWidget(),
+            //space vertiically
+            vSpacer(20.0),
+            //upcoming subscription
+            const UpcomingSubscriptionWidget(),
+            //space vertiically
+            vSpacer(20.0),
+            //services widgets
+            const ServicesWidget(),
+            //space vertiically
+            vSpacer(20.0),
+            //subscription heading
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  AppStrings.subscriptionTxt,
+                  style: TextStyles.t2.copyWith(fontSize: FontSizes.s15),
+                ),
+                TextButton(
+                  onPressed: () {
+                    context.push(AppScreenPaths.subscriptionsPath);
+                  },
+                  child: Text(
+                    AppStrings.viewAllTxt,
+                    style: TextStyles.body1.copyWith(
+                        color: AppColors.accent, fontSize: FontSizes.s13),
+                  ),
+                ),
+              ],
+            ),
+            //subscription
+            const SizedBox(
+              height: 250,
+              child: SubscriptionFilterWidget(
+                primary: true,
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

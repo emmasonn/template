@@ -7,6 +7,7 @@ import 'package:peniremit/core/widgets/custom_app_bar.dart';
 import 'package:peniremit/navigation/custom_page_transition.dart';
 import 'package:peniremit/navigation/nav_utils.dart';
 import 'package:peniremit/resources/app_colors.dart';
+import 'package:peniremit/resources/app_dimen.dart';
 import 'package:peniremit/resources/app_strings.dart';
 import 'package:peniremit/resources/app_styles.dart';
 
@@ -15,11 +16,11 @@ class CountryScreen extends StatefulWidget {
     super.key,
     required this.navCallBack,
   });
-  final NavCallBack<Country> navCallBack;
+  final NavParamWrapper<Country> navCallBack;
 
   static Page page({
     LocalKey? key,
-    required NavCallBack<Country> callBack,
+    required NavParamWrapper<Country> callBack,
   }) {
     return CustomPageTransition(
       key: key,
@@ -42,7 +43,7 @@ class _CountryScreenState extends State<CountryScreen> {
     return Scaffold(
         appBar: CustomAppBar(
           context,
-          titleText: AppStrings.searchCountryTxt,
+          titleText: AppStrings.searchTxt,
           leadingIcon: Icons.close,
           onBackPressed: () {
             Navigator.pop(context);
@@ -60,8 +61,10 @@ class _CountryScreenState extends State<CountryScreen> {
                     size: 24,
                     color: AppColors.surfaceLighter,
                   ),
-                  hintText: AppStrings.searchCountryTxt,
-                  style: TextStyles.body2,
+                  hintText: AppStrings.searchTxt,
+                  style: TextStyles.notoSerifJP.copyWith(
+                    fontSize: FontSizes.s13,
+                  ),
                   onChanged: (value) {
                     if (value != null && value.isNotEmpty) {
                       setState(() {

@@ -1,3 +1,5 @@
+import 'package:peniremit/features/home/app/screens/subscription_detail_screen.dart';
+
 class AppStrings {
   //app name
   static const appNameTxt = 'Peniremit';
@@ -31,7 +33,7 @@ class AppStrings {
 
   //app bar titles
   static const selectCountryTxt = 'Select Country';
-  static const searchCountryTxt = 'Search Country';
+  static const searchTxt = 'Search';
 
   //Form Information
   static const fullNameLabel = 'Full Name';
@@ -63,6 +65,23 @@ class AppStrings {
   static const analyticsTxt = 'Analytics';
   static const settingsTxt = 'Settings';
 
+  //items text
+  static const airtimeTxt = 'Airtime';
+  static const dataTxt = 'Data';
+  static const electricityTxt = 'Electricity';
+  static const moreTxt = 'More';
+  static const subscriptionTxt = 'Subscriptions';
+  static const subscriptionDetailTxt = 'Subscription Details';
+  static const statusTxt = 'Status\t:\t';
+  static const planTxt = 'Plan\t:\t';
+  static const seeOtherSubPlans = 'See other subscription plans';
+  static const subscriptionHistoryTxt = 'Subscription History';
+  static const totalAmountSpentTxt = 'Total amount spent';
+  static const viewAllTxt = 'View all';
+  static const allTxt = 'All';
+  static const activeTxt = 'Active';
+  static const expiredTxt = 'Expired';
+
   //BottomNav index
   static const homeIndexTxt = 0;
   static const walletIndexTxt = 1;
@@ -73,4 +92,12 @@ class AppStrings {
   static const themePrefKey = 'theme_pref_key';
   static const onboardingPrefKey = 'onboard_pref_Key';
   static const onPageTypePref = 'page_pref_key';
+
+  //home text
+  static const String availableBalanceTxt = 'Available Balance';
+  static const String transactionHistoryTxt = 'Transaction History';
+  static const String fundWalletTxt = 'Fund Wallet';
+  static const String upcomingSubscriptionTxt = 'Upcoming Subscription';
+  static const String upcomingSubscriptionCaptionTxt =
+      'Platforms due soon for subscription';
 }

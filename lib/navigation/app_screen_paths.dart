@@ -1,3 +1,4 @@
+
 class AppScreenPaths {
   //* authentication & onboarding
   static const splashPath = '/';
@@ -11,6 +12,8 @@ class AppScreenPaths {
   static const updatePasswordPath = '/update-password';
   static const verifyAccountPath = '/verify-account';
   static const verifyOtpPath = '/verify-otp';
+  static const subscriptionsPath = '/subscriptions';
+  static const subscriptionDetailPath = '/subscription-detail';
 
   //* Landings
   static const homePath = '/home';

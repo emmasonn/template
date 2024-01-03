@@ -90,6 +90,7 @@ class AppTheme {
 
     t.copyWith(
       materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+      useMaterial3: true,
       textSelectionTheme: TextSelectionThemeData(
         cursorColor: accent1,
         selectionHandleColor: Colors.transparent,

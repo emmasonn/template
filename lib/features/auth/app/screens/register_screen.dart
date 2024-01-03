@@ -120,10 +120,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 child: CustomFilledButton(
                   text: AppStrings.signUpTxt,
                   onPressed: () {
-                    context.go(AppScreenPaths.verifyAccountPath,
-                        extra: NavCallBack(
-                          object: emailAddress,
-                        ));
+                    // context.go(AppScreenPaths.verifyAccountPath,
+                    //     extra: NavCallBack(
+                    //       object: emailAddress,
+                    //     ));
+                    context.go(AppScreenPaths.homePath);
                   },
                 ),
               ),

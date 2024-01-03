@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:peniremit/navigation/custom_page_transition.dart';
-import 'package:peniremit/resources/app_colors.dart';
 import 'package:peniremit/resources/app_strings.dart';
 
 class VerifyOtpScreen extends StatefulWidget {

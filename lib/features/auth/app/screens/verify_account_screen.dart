@@ -14,7 +14,7 @@ import 'package:peniremit/resources/app_strings.dart';
 import 'package:peniremit/resources/app_styles.dart';
 
 class VerifyAccountScreen extends StatefulWidget {
-  final NavCallBack<String> navCallBack;
+  final NavParamWrapper<String> navCallBack;
   const VerifyAccountScreen({
     super.key,
     required this.navCallBack,
@@ -22,7 +22,7 @@ class VerifyAccountScreen extends StatefulWidget {
 
   static Page page({
     LocalKey? key,
-    required NavCallBack<String> navCallBack,
+    required NavParamWrapper<String> navCallBack,
   }) {
     return CustomPageTransition(
       key: key,

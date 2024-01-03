@@ -18,24 +18,6 @@ class MainScaffoldView extends StatefulWidget {
 class _MainScaffoldViewState extends State<MainScaffoldView> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      resizeToAvoidBottomInset: false,
-      appBar: CustomAppBar(
-        context,
-        titleText: AppStrings.appNameTxt,
-        
-        style: TextStyles.h4.copyWith(fontWeight: FontWeight.w600),
-        actionIcons: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.notifications,
-              color: context.colorScheme.onPrimary,
-            ),
-          ),
-        ],
-      ),
-      body: widget.child,
-    );
+    return widget.child;
   }
 }

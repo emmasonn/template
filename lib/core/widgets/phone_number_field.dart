@@ -110,7 +110,7 @@ class _PhoneNumberFieldState extends State<PhoneNumberField> {
                 onTap: () {
                   //navigate to select country
                   context.push(AppScreenPaths.countryPath,
-                      extra: NavCallBack<Country>(callBack: (country) {
+                      extra: NavParamWrapper<Country>(callBack: (country) {
                     widget.onCountrySelected.call(country);
                     setState(() {
                       selectedCountry = country!;

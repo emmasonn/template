@@ -33,6 +33,8 @@ class AppRouter {
       AppRoutes.recoverPasswordScreen,
       AppRoutes.updatePasswordScreen,
       AppRoutes.updatePinScreen,
+      AppRoutes.subscriptionsScreen,
+      AppRoutes.subscriptionDetailScreen,
     ],
   );
 }

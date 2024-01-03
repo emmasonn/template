@@ -10,6 +10,7 @@ class AppColors {
 
   //*surface
   static const Color surfaceDark = Color(0xff1A1A1A);
+  static const Color lightSurface = Color(0xffB7B7B7);
   static const Color surfaceLight = Color(0xff979797);
   static const Color surfaceLighter = Color(0xff6A6A6A);
 

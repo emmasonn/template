@@ -1,7 +1,7 @@
-class NavCallBack<T> {
+class NavParamWrapper<T> {
   final Function(T?)? callBack;
   final T? object;
-  NavCallBack({
+  NavParamWrapper({
     this.object,
     this.callBack,
   });

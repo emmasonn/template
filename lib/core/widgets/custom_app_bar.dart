@@ -23,6 +23,8 @@ class CustomAppBar extends AppBar {
     this.titleText,
     this.bottomChild,
     this.bgColor,
+    super.shadowColor,
+    super.elevation = 0.0,
     this.leadingIcon,
     this.style,
     this.noBackButton = false,
@@ -33,7 +35,7 @@ class CustomAppBar extends AppBar {
               ? Text(titleText)
               : null,
           toolbarHeight: Sizes.toolBarHeigth,
-          leadingWidth: 30,
+          leadingWidth: noBackButton ? 0 : 30,
           leading: noBackButton
               ? const SizedBox()
               : IconButton(
@@ -42,7 +44,12 @@ class CustomAppBar extends AppBar {
                   onPressed: onBackPressed,
                   padding: EdgeInsets.zero,
                   icon: Container(
-                    padding: const EdgeInsets.all(4.0),
+                    padding: const EdgeInsets.only(
+                      left: 6.0,
+                      top: 4.0,
+                      bottom: 4.0,
+                      right: 6.0,
+                    ),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(
                         Corners.sm,
@@ -52,12 +59,12 @@ class CustomAppBar extends AppBar {
                     child: Icon(
                       leadingIcon ?? Icons.arrow_back_ios,
                       size: 14,
+                      color: Colors.white,
                     ),
                   ),
                 ),
           actions: actionIcons,
           bottom: bottomChild,
-          elevation: 0.0,
           iconTheme: IconThemeData(
             size: Sizes.iconSizeMd,
             color: AppColors.onAccentLight,

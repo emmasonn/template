@@ -16,6 +16,9 @@ import 'package:peniremit/features/auth/app/screens/verify_account_screen.dart';
 import 'package:peniremit/features/auth/app/screens/verify_otp_screen.dart';
 import 'package:peniremit/features/home/app/screens/home_screen.dart';
 import 'package:peniremit/features/home/app/screens/main_screen.dart';
+import 'package:peniremit/features/home/app/screens/subscription_detail_screen.dart';
+import 'package:peniremit/features/home/app/screens/subscriptions_screen.dart';
+import 'package:peniremit/features/home/app/widgets/subscription_filter_widget.dart';
 import 'package:peniremit/features/wallet/app/screens/wallet_screen.dart';
 import 'package:peniremit/navigation/app_router.dart';
 import 'package:peniremit/navigation/app_screen_paths.dart';
@@ -60,7 +63,7 @@ class AppRoutes {
     pageBuilder: (BuildContext context, state) {
       return CountryScreen.page(
         key: state.pageKey,
-        callBack: state.extra as NavCallBack<Country>,
+        callBack: state.extra as NavParamWrapper<Country>,
       );
     },
   );
@@ -103,7 +106,7 @@ class AppRoutes {
     pageBuilder: (BuildContext context, state) {
       return VerifyAccountScreen.page(
         key: state.pageKey,
-        navCallBack: state.extra as NavCallBack<String>,
+        navCallBack: state.extra as NavParamWrapper<String>,
       );
     },
   );
@@ -113,6 +116,25 @@ class AppRoutes {
     path: AppScreenPaths.verifyOtpPath,
     pageBuilder: (BuildContext context, state) {
       return VerifyOtpScreen.page(key: state.pageKey);
+    },
+  );
+
+  static final subscriptionsScreen = GoRoute(
+    parentNavigatorKey: rootNavigator,
+    path: AppScreenPaths.subscriptionsPath,
+    pageBuilder: (BuildContext context, state) {
+      return SubscriptionScreen.page(key: state.pageKey);
+    },
+  );
+
+  static final subscriptionDetailScreen = GoRoute(
+    parentNavigatorKey: rootNavigator,
+    path: AppScreenPaths.subscriptionDetailPath,
+    pageBuilder: (BuildContext context, state) {
+      return SubscriptionDetailScreen.page(
+        key: state.pageKey,
+        params: state.extra as NavParamWrapper<Subscription>
+      );
     },
   );
 
