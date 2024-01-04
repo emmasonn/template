@@ -46,7 +46,7 @@ class CardTransactionWidget extends StatelessWidget {
             ),
           ),
           //space vertiically
-          vSpacer(8.0),
+          vSpacer(2.0),
           Text(
             'Successful',
             style: TextStyles.notoSerifJP.copyWith(

@@ -25,6 +25,7 @@ class ServicesWidget extends StatelessWidget {
         ServiceItem(
           icon: PeniremitIcon.wifi,
           title: AppStrings.dataTxt,
+          padRight: true,
           onPressed: () {},
         ),
         ServiceItem(
@@ -48,10 +49,12 @@ class ServiceItem extends StatelessWidget {
   final IconData icon;
   final String title;
   final Function() onPressed;
+  final bool padRight;
   const ServiceItem({
     super.key,
     required this.icon,
     required this.title,
+    this.padRight = false,
     required this.onPressed,
   });
 
@@ -66,11 +69,13 @@ class ServiceItem extends StatelessWidget {
           CircleAvatar(
             radius: 25.0,
             backgroundColor: context.colorScheme.surface,
-            child: Align(
-              alignment: Alignment.center,
+            child: Padding(
+              padding: EdgeInsets.only(
+                right: padRight ? 6.0 : 0,
+              ),
               child: Icon(
                 icon,
-                size: 20,
+                size: 22,
                 color: AppColors.accent,
               ),
             ),

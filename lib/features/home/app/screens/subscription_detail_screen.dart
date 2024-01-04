@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:peniremit/core/helpers/spacer_widgets.dart';
 import 'package:peniremit/core/utils/amount_formatter.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
@@ -45,6 +46,8 @@ class _SubscriptionDetailScreenState extends State<SubscriptionDetailScreen> {
           SliverAppBar(
             elevation: 0.0,
             backgroundColor: context.colorScheme.surface,
+            leadingWidth: 40.0,
+            centerTitle: false,
             leading: IconButton(
               highlightColor: Colors.transparent,
               splashColor: Colors.transparent,
@@ -92,10 +95,13 @@ class _SubscriptionDetailScreenState extends State<SubscriptionDetailScreen> {
               delegate: SliverChildListDelegate([
             //space vertiically
             vSpacer(30.0),
-            Text(
-              AppStrings.subscriptionHistoryTxt,
-              style: TextStyles.t1.copyWith(
-                fontSize: FontSizes.s15,
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16.w),
+              child: Text(
+                AppStrings.subscriptionHistoryTxt,
+                style: TextStyles.t1.copyWith(
+                  fontSize: FontSizes.s15,
+                ),
               ),
             ),
             //space vertiically
@@ -107,6 +113,7 @@ class _SubscriptionDetailScreenState extends State<SubscriptionDetailScreen> {
                   color: context.colorScheme.onSurface,
                 ),
               ),
+              margin: EdgeInsets.symmetric(horizontal: 16.w),
               padding: const EdgeInsets.all(16.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -126,6 +133,7 @@ class _SubscriptionDetailScreenState extends State<SubscriptionDetailScreen> {
             //space vertiically
             vSpacer(10.0),
             ListView.separated(
+              padding: EdgeInsets.zero,
               shrinkWrap: true,
               primary: true,
               physics: const NeverScrollableScrollPhysics(),

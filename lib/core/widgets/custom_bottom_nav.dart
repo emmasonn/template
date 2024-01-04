@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:peniremit/resources/app_assets.dart';
 import 'package:peniremit/resources/app_dimen.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
@@ -65,7 +66,15 @@ class CustomBottomNavWidget extends StatelessWidget {
 
   @override
   Widget build(final BuildContext context) => Container(
-        color: defaultBgColor,
+        decoration: BoxDecoration(
+          color: defaultBgColor,
+          image: const DecorationImage(
+            image: AssetImage(
+              AppAssets.bottomNavBg,
+            ),
+            fit: BoxFit.cover,
+          ),
+        ),
         child: SizedBox(
           width: double.infinity,
           height: bottomNavHeight ?? kBottomNavigationBarHeight,

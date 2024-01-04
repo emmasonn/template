@@ -54,65 +54,74 @@ class _WalletScreenState extends State<WalletScreen> {
         bottom: false,
         top: false,
         child: SingleChildScrollView(
-          padding: EdgeInsets.symmetric(
-            horizontal: 16.w,
+          padding: const EdgeInsets.symmetric(
             vertical: 20.0,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              //balance card
-              BalanceCardWidget(
-                onPressed: () {
-                  context.push(
-                    AppScreenPaths.fundWalletPath,
-                  );
-                },
-              ),
-              //space vertiically
-              vSpacer(20.0),
-              //card widget
-              Text(
-                AppStrings.myCardTxt,
-                style: TextStyles.notoSerifJP.copyWith(
-                  fontSize: 16.0,
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 16.w,
                 ),
-              ),
-              //space vertiically
-              vSpacer(20.0),
-              //emptyCard
-              const VirtualCardContainer(),
-              vSpacer(20.0),
-              //card widget
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    AppStrings.transactionHistoryTxt,
-                    style: TextStyles.body1.copyWith(fontSize: 15.0),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      context.push(
-                        AppScreenPaths.subscriptionsPath,
-                      );
-                    },
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                        top: 10.0,
-                        bottom: 10.0,
-                        left: 10.0,
-                      ),
-                      child: Text(
-                        AppStrings.viewAllTxt,
-                        style: TextStyles.body1.copyWith(
-                          color: AppColors.accent,
-                          fontSize: FontSizes.s13,
-                        ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    //balance card
+                    BalanceCardWidget(
+                      onPressed: () {
+                        context.push(
+                          AppScreenPaths.fundWalletPath,
+                        );
+                      },
+                    ),
+                    //space vertiically
+                    vSpacer(20.0),
+                    //card widget
+                    Text(
+                      AppStrings.myCardTxt,
+                      style: TextStyles.notoSerifJP.copyWith(
+                        fontSize: 16.0,
                       ),
                     ),
-                  ),
-                ],
+                    //space vertiically
+                    vSpacer(20.0),
+                    //emptyCard
+                    const VirtualCardContainer(),
+                    vSpacer(20.0),
+                    //card widget
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          AppStrings.transactionHistoryTxt,
+                          style: TextStyles.body1.copyWith(fontSize: 15.0),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            context.push(
+                              AppScreenPaths.subscriptionsPath,
+                            );
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.only(
+                              top: 10.0,
+                              bottom: 10.0,
+                              left: 10.0,
+                            ),
+                            child: Text(
+                              AppStrings.viewAllTxt,
+                              style: TextStyles.body1.copyWith(
+                                color: AppColors.accent,
+                                fontSize: FontSizes.s13,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
               //list the transactions
               const TransactionListWidget(),

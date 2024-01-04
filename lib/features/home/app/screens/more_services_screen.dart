@@ -3,12 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:peniremit/core/helpers/spacer_widgets.dart';
 import 'package:peniremit/core/icon_fonts/peniremit_font.dart';
 import 'package:peniremit/core/utils/country.dart';
-import 'package:peniremit/core/widgets/app_text_field.dart';
 import 'package:peniremit/core/widgets/custom_app_bar.dart';
 import 'package:peniremit/features/home/app/widgets/services_widget.darts.dart';
-import 'package:peniremit/features/home/app/widgets/subscription_filter_widget.dart';
 import 'package:peniremit/navigation/custom_page_transition.dart';
-import 'package:peniremit/resources/app_colors.dart';
 import 'package:peniremit/resources/app_dimen.dart';
 import 'package:peniremit/resources/app_strings.dart';
 import 'package:peniremit/resources/app_styles.dart';
@@ -76,6 +73,7 @@ class _MoreServicesScreenState extends State<MoreServicesScreen> {
                     ),
                     ServiceItem(
                       icon: PeniremitIcon.wifi,
+                      padRight: true,
                       title: AppStrings.dataTxt,
                       onPressed: () {},
                     ),
@@ -85,22 +83,22 @@ class _MoreServicesScreenState extends State<MoreServicesScreen> {
                       onPressed: () {},
                     ),
                     ServiceItem(
-                      icon: Icons.tv,
+                      icon: PeniremitIcon.tv,
                       title: AppStrings.tvTxt,
                       onPressed: () {},
                     ),
                     ServiceItem(
-                      icon: Icons.games,
+                      icon: PeniremitIcon.betting,
                       title: AppStrings.bettingTxt,
                       onPressed: () {},
                     ),
                     ServiceItem(
-                      icon: Icons.flight,
+                      icon: PeniremitIcon.flight,
                       title: AppStrings.travelsTxt,
                       onPressed: () {},
                     ),
                     ServiceItem(
-                      icon: Icons.shopping_basket,
+                      icon: PeniremitIcon.cart,
                       title: AppStrings.onlineShopping,
                       onPressed: () {},
                     ),

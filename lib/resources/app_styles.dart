@@ -18,6 +18,7 @@ class TextStyles {
   static const TextStyle notoSerifJP = TextStyle(
     fontFamily: Fonts.notoSerifJP,
     fontWeight: FontWeight.w400,
+    letterSpacing: .5
   );
 
   static TextStyle get appTitle => _createTextStyle(

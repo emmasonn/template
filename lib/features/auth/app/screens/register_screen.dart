@@ -44,6 +44,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
       appBar: CustomAppBar(
         context,
         centerTitle: true,
+        showShadow: false,
         noBackButton: true,
         titleText: AppStrings.appNameTxt,
         style: TextStyles.t1.copyWith(
@@ -54,9 +55,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         bottom: false,
         top: false,
         child: SingleChildScrollView(
-          padding: EdgeInsets.symmetric(
-            horizontal: 16.w,
-          ),
+          padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 20.0),
           child: Column(
             children: [
               Align(

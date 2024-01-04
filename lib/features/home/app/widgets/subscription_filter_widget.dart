@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:peniremit/core/utils/extension_util.dart';
 import 'package:peniremit/core/widgets/dot_tab_indicator.dart';
 import 'package:peniremit/features/home/app/widgets/card_subscription_widget.dart';
 import 'package:peniremit/resources/app_assets.dart';
@@ -61,7 +62,7 @@ class SubscriptionFilterWidget extends StatelessWidget {
               indicatorColor: AppColors.accent,
               indicatorPadding: EdgeInsets.zero,
               labelPadding: const EdgeInsets.only(right: 50.0),
-              padding: const EdgeInsets.only(left: 10.0),
+              padding: const EdgeInsets.only(left: 20.0),
               unselectedLabelStyle:
                   TextStyles.body1.copyWith(fontSize: FontSizes.s13),
               labelStyle: TextStyles.body1.copyWith(fontSize: FontSizes.s13),
@@ -139,9 +140,9 @@ class SubscriptionList extends StatelessWidget {
           sub: item,
         );
       },
-      separatorBuilder: (BuildContext context, index) => const Divider(
+      separatorBuilder: (BuildContext context, index) => Divider(
         height: 2.0,
-        color: AppColors.surface500,
+        color: context.colorScheme.onSurface,
       ),
     );
   }

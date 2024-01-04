@@ -69,60 +69,67 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.only(
-          left: 16.w,
-          right: 16.w,
-          top: 20.0,
-          bottom: 20.0,
+        padding: const EdgeInsets.symmetric(
+          vertical: 20.0,
         ),
         child: Column(
           children: [
-            //balance card
-            BalanceCardWidget(
-              onPressed: () {
-                context.push(
-                  AppScreenPaths.fundWalletPath,
-                );
-              },
-            ),
-            //space vertiically
-            vSpacer(20.0),
-            //upcoming subscription
-            const UpcomingSubscriptionWidget(),
-            //space vertiically
-            vSpacer(20.0),
-            //services widgets
-            const ServicesWidget(),
-            //space vertiically
-            vSpacer(20.0),
-            //subscription heading
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  AppStrings.subscriptionTxt,
-                  style: TextStyles.t2.copyWith(fontSize: FontSizes.s15),
-                ),
-                GestureDetector(
-                  onTap: () {
-                    context.push(AppScreenPaths.subscriptionsPath);
-                  },
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                      top: 10.0,
-                      bottom: 10.0,
-                      left: 10.0,
-                    ),
-                    child: Text(
-                      AppStrings.viewAllTxt,
-                      style: TextStyles.body1.copyWith(
-                        color: AppColors.accent,
-                        fontSize: FontSizes.s13,
-                      ),
-                    ),
+            Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: 16.w,
+              ),
+              child: Column(
+                children: [
+                  //balance card
+                  BalanceCardWidget(
+                    showHistory: true,
+                    onPressed: () {
+                      context.push(
+                        AppScreenPaths.fundWalletPath,
+                      );
+                    },
                   ),
-                ),
-              ],
+                  //space vertiically
+                  vSpacer(20.0),
+                  //upcoming subscription
+                  const UpcomingSubscriptionWidget(),
+                  //space vertiically
+                  vSpacer(20.0),
+                  //services widgets
+                  const ServicesWidget(),
+                  //space vertiically
+                  vSpacer(20.0),
+                  //subscription heading
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        AppStrings.subscriptionTxt,
+                        style: TextStyles.t2.copyWith(fontSize: FontSizes.s15),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          context.push(AppScreenPaths.subscriptionsPath);
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                            top: 10.0,
+                            bottom: 10.0,
+                            left: 10.0,
+                          ),
+                          child: Text(
+                            AppStrings.viewAllTxt,
+                            style: TextStyles.body1.copyWith(
+                              color: AppColors.accent,
+                              fontSize: FontSizes.s13,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
             //space vertiically
             vSpacer(16.0),

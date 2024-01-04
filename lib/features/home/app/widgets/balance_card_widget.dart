@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:peniremit/core/helpers/spacer_widgets.dart';
 import 'package:peniremit/core/utils/amount_formatter.dart';
-import 'package:peniremit/core/widgets/custom_filled_button.dart';
-import 'package:peniremit/navigation/app_screen_paths.dart';
+import 'package:peniremit/resources/app_assets.dart';
 import 'package:peniremit/resources/app_colors.dart';
 import 'package:peniremit/resources/app_dimen.dart';
 import 'package:peniremit/resources/app_strings.dart';
@@ -23,12 +22,22 @@ class BalanceCardWidget extends StatelessWidget {
     return Card(
       elevation: 0.0,
       margin: EdgeInsets.zero,
+      clipBehavior: Clip.hardEdge,
       shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(Corners.md)),
-      child: Padding(
+        borderRadius: BorderRadius.circular(Corners.md),
+      ),
+      child: Container(
         padding: const EdgeInsets.symmetric(
           horizontal: 16.0,
           vertical: 16.0,
+        ),
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+              AppAssets.balanceBg,
+            ),
+            fit: BoxFit.cover,
+          ),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

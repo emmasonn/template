@@ -98,7 +98,11 @@ class AppStrings {
   static const unPaidSubscriptionTxt = 'Unpaid Subscription';
   static const subscriptionTypeTxt = 'Monthly & Yealy';
   static const monthlySpentTxt = 'Monthly Spent';
-
+  static const editProfileTxt = 'Edit Profile';
+  static const referralsTxt = 'Referrals';
+  static const privacyPolicyTxt = 'Privacy Policy';
+  static const shareAppTxt = 'Share App';
+  static const logoutTxt = 'Logout';
   static const oneMillionTxt = '1m';
   static const thousand100k = '100k';
   static const thousand10k = '1k';

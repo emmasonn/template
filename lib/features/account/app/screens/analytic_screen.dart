@@ -60,7 +60,7 @@ class _AnalyticScreenState extends State<AnalyticScreen> {
             children: [
               //Total expense
               const AnalyticsHeaderWidget(),
-//space vertiically
+              //space vertiically
               vSpacer(20.0),
               //summary
               const AnalyticsSummaryWidget(),

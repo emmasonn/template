@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:peniremit/core/icon_fonts/peniremit_font.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
 import 'package:peniremit/resources/app_colors.dart';
 import 'package:peniremit/resources/app_dimen.dart';
@@ -9,6 +10,7 @@ class CustomAppBar extends AppBar {
   final List<Widget>? actionIcons;
   final BuildContext context;
   final PreferredSize? bottomChild;
+  final bool showShadow;
   final Color? bgColor;
   final TextStyle? style;
   final IconData? leadingIcon;
@@ -20,11 +22,10 @@ class CustomAppBar extends AppBar {
     Key? key,
     this.actionIcons,
     super.centerTitle = false,
+    this.showShadow = true,
     this.titleText,
     this.bottomChild,
     this.bgColor,
-    // super.shadowColor,
-    // super.elevation = 0.0,
     this.leadingIcon,
     this.style,
     this.noBackButton = false,
@@ -35,7 +36,7 @@ class CustomAppBar extends AppBar {
               ? Text(titleText)
               : null,
           toolbarHeight: Sizes.toolBarHeigth,
-          leadingWidth: noBackButton ? 0 : 30,
+          leadingWidth: noBackButton ? 0 : 40,
           leading: noBackButton
               ? const SizedBox()
               : IconButton(
@@ -44,18 +45,15 @@ class CustomAppBar extends AppBar {
                   onPressed: onBackPressed,
                   padding: EdgeInsets.zero,
                   icon: Container(
-                    padding: EdgeInsets.only(
-                      left: 6.0,
-                      top: 4.0,
-                      bottom: 4.0,
-                      right: leadingIcon != null ? 6.0 : 2.0,
+                    padding: const EdgeInsets.all(
+                      4.0,
                     ),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(Corners.sm),
                       color: context.colorScheme.surface,
                     ),
                     child: Icon(
-                      leadingIcon ?? Icons.arrow_back_ios,
+                      leadingIcon ?? Icons.arrow_back_ios_rounded,
                       size: 16,
                       color: Colors.white,
                     ),
@@ -67,8 +65,8 @@ class CustomAppBar extends AppBar {
             size: Sizes.iconSizeMd,
             color: AppColors.onAccentLight,
           ),
-          shadowColor: context.colorScheme.onSurface,
-          elevation: 0.3,
+          shadowColor: showShadow ? context.colorScheme.onSurface : null,
+          elevation: showShadow ? 0.3 : 0.0,
           backgroundColor: bgColor ?? context.colorScheme.background,
           titleTextStyle: style ??
               TextStyles.body1.copyWith(

@@ -16,7 +16,7 @@ class TransactionListWidget extends StatelessWidget {
       },
       separatorBuilder: (context, index) => Divider(
         height: 1,
-        color: context.colorScheme.surface,
+        color: context.colorScheme.onSurface,
       ),
       itemCount: 4,
     );

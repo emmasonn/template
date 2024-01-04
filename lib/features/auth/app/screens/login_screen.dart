@@ -40,6 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
       appBar: CustomAppBar(
         context,
         centerTitle: true,
+        showShadow: false,
         titleText: AppStrings.appNameTxt,
         noBackButton: true,
         style: TextStyles.t1.copyWith(
@@ -52,6 +53,7 @@ class _LoginScreenState extends State<LoginScreen> {
         child: SingleChildScrollView(
           padding: EdgeInsets.symmetric(
             horizontal: 16.w,
+            vertical: 20.0,
           ),
           child: Column(
             children: [
