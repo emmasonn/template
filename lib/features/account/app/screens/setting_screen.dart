@@ -82,7 +82,7 @@ class _SettingScreenState extends State<SettingScreen> {
                 ),
                 Divider(
                   height: 1,
-                  color: context.colorScheme.onSurface,
+                  color: context.colorScheme.surface,
                 ),
                 SettingsOptionWidget(
                   icon: PeniremitIcon.lock,
@@ -91,7 +91,7 @@ class _SettingScreenState extends State<SettingScreen> {
                 ),
                 Divider(
                   height: 1,
-                  color: context.colorScheme.onSurface,
+                  color: context.colorScheme.surface,
                 ),
                 SettingsOptionWidget(
                   icon: PeniremitIcon.referrals,
@@ -100,7 +100,7 @@ class _SettingScreenState extends State<SettingScreen> {
                 ),
                 Divider(
                   height: 1,
-                  color: context.colorScheme.onSurface,
+                  color: context.colorScheme.surface,
                 ),
                 SettingsOptionWidget(
                   icon: PeniremitIcon.policy,
@@ -109,7 +109,7 @@ class _SettingScreenState extends State<SettingScreen> {
                 ),
                 Divider(
                   height: 1,
-                  color: context.colorScheme.onSurface,
+                  color: context.colorScheme.surface,
                 ),
                 SettingsOptionWidget(
                   icon: PeniremitIcon.share,
@@ -118,7 +118,7 @@ class _SettingScreenState extends State<SettingScreen> {
                 ),
                 Divider(
                   height: 1,
-                  color: context.colorScheme.onSurface,
+                  color: context.colorScheme.surface,
                 ),
                 SettingsOptionWidget(
                   icon: PeniremitIcon.logout,
@@ -127,7 +127,7 @@ class _SettingScreenState extends State<SettingScreen> {
                 ),
                 Divider(
                   height: 1,
-                  color: context.colorScheme.onSurface,
+                  color: context.colorScheme.surface,
                 ),
               ],
             ),

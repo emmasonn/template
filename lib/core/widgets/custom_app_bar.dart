@@ -37,6 +37,7 @@ class CustomAppBar extends AppBar {
               : null,
           toolbarHeight: Sizes.toolBarHeigth,
           leadingWidth: noBackButton ? 0 : 40,
+          scrolledUnderElevation: 0.0,
           leading: noBackButton
               ? const SizedBox()
               : IconButton(

@@ -84,7 +84,7 @@ class _SubscriptionDetailScreenState extends State<SubscriptionDetailScreen> {
             floating: true,
             snap: true,
             pinned: true,
-            expandedHeight: Sizes.flexibleHeight + 60,
+            expandedHeight: Sizes.flexibleHeight + 65,
             flexibleSpace: FlexibleSpaceBar(
               background: SubscriptionFlexibleSpaceWidget(
                 sub: widget.params.object!,

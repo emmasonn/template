@@ -69,7 +69,7 @@ class FontSizes {
   static double s48 = 48;
 }
 
-class Durations {
+class DurationsConfig {
   static const Duration fastest = Duration(milliseconds: 150);
   static const Duration fast = Duration(milliseconds: 250);
   static const Duration medium = Duration(milliseconds: 350);
@@ -85,6 +85,7 @@ class Corners {
   static const double hMd = 20.0;
   static const double lg = 30.0;
   static const double vLg = 40.0;
+  static const double vvLg = 60.0;
 }
 
 class Insets {

@@ -31,7 +31,7 @@ class CustomBottomNavWidget extends StatelessWidget {
   Widget _buildItem(
           final PersistentBottomNavBarItem item, final bool isSelected) =>
       AnimatedContainer(
-        duration: Durations.slow,
+        duration: DurationsConfig.slow,
         alignment: Alignment.center,
         curve: Curves.fastLinearToSlowEaseIn,
         color: isSelected ? activeBgColor : Colors.transparent,

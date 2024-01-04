@@ -62,8 +62,8 @@ class _MoreServicesScreenState extends State<MoreServicesScreen> {
                   crossAxisCount: 4,
                   shrinkWrap: true,
                   crossAxisSpacing: context.widthPx * 0.005,
-                  mainAxisSpacing: 20.0,
-                  childAspectRatio: 0.9,
+                  mainAxisSpacing: 10.0,
+                  childAspectRatio: 0.85,
                   physics: const BouncingScrollPhysics(),
                   children: [
                     ServiceItem(

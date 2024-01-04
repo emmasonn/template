@@ -83,10 +83,23 @@ class SubscriptionFlexibleSpaceWidget extends StatelessWidget {
                       color: context.colorScheme.onSurface,
                     ),
                   ),
-                  Text(
-                    'Active',
-                    style: TextStyles.h4.copyWith(
-                        fontSize: FontSizes.s14, color: AppColors.accentLight),
+                  Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 4,
+                    ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(
+                        Corners.sm,
+                      ),
+                      color: context.colorScheme.primary,
+                    ),
+                    child: Text(
+                      'Active',
+                      style: TextStyles.h4.copyWith(
+                        fontSize: FontSizes.s14,
+                        color: AppColors.bgWhite,
+                      ),
+                    ),
                   ),
                   const Spacer(),
                   Text(

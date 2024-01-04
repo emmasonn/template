@@ -96,7 +96,7 @@ class AppStrings {
   static const totalSubscriptionTxt = 'Total Subscription';
   static const paidSubscriptionTxt = 'Paid Subscription';
   static const unPaidSubscriptionTxt = 'Unpaid Subscription';
-  static const subscriptionTypeTxt = 'Monthly & Yealy';
+  static const subscriptionTypeTxt = 'Type';
   static const monthlySpentTxt = 'Monthly Spent';
   static const editProfileTxt = 'Edit Profile';
   static const referralsTxt = 'Referrals';
@@ -105,7 +105,8 @@ class AppStrings {
   static const logoutTxt = 'Logout';
   static const oneMillionTxt = '1m';
   static const thousand100k = '100k';
-  static const thousand10k = '1k';
+  static const thousand10k = '10k';
+  static const thousand1 = '1k';
   static const zero = '0';
 
   //BottomNav index

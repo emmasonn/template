@@ -74,6 +74,11 @@ class AnalyticsHeaderWidget extends StatelessWidget {
                   fontSize: FontSizes.s11,
                 ),
               ),
+              Icon(
+                Icons.arrow_drop_down_rounded,
+                size: 16,
+                color: context.colorScheme.onPrimary,
+              ),
             ],
           ),
         )
