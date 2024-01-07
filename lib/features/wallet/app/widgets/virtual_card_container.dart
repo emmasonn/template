@@ -31,7 +31,7 @@ class VirtualCardContainer extends StatelessWidget {
             size: 16.0,
           ),
           //space horizontally
-          hSpacer(10.0),
+          hSpacer(5.0),
           Text(
             AppStrings.createCardTxt,
             style: TextStyles.h4,

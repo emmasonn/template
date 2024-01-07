@@ -4,6 +4,7 @@ import 'package:peniremit/core/helpers/spacer_widgets.dart';
 import 'package:peniremit/core/icon_fonts/peniremit_font.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
 import 'package:peniremit/core/widgets/custom_app_bar.dart';
+import 'package:peniremit/core/widgets/custom_divider_widget.dart';
 import 'package:peniremit/features/account/app/widgets/settings_option_widget.dart';
 import 'package:peniremit/navigation/custom_page_transition.dart';
 import 'package:peniremit/resources/app_dimen.dart';
@@ -80,55 +81,38 @@ class _SettingScreenState extends State<SettingScreen> {
                   title: AppStrings.editProfileTxt,
                   onPressed: () {},
                 ),
-                Divider(
-                  height: 1,
-                  color: context.colorScheme.surface,
-                ),
+                const HDividerWidget(),
                 SettingsOptionWidget(
                   icon: PeniremitIcon.lock,
                   title: AppStrings.changePasswordTxt,
                   onPressed: () {},
                 ),
-                Divider(
-                  height: 1,
-                  color: context.colorScheme.surface,
-                ),
+                const HDividerWidget(),
                 SettingsOptionWidget(
-                  icon: PeniremitIcon.referrals,
+                  iconSize: 18,
+                  icon: PeniremitIcon.refer,
                   title: AppStrings.referralsTxt,
                   onPressed: () {},
                 ),
-                Divider(
-                  height: 1,
-                  color: context.colorScheme.surface,
-                ),
+                const HDividerWidget(),
                 SettingsOptionWidget(
-                  icon: PeniremitIcon.policy,
+                  icon: PeniremitIcon.file,
                   title: AppStrings.privacyPolicyTxt,
                   onPressed: () {},
                 ),
-                Divider(
-                  height: 1,
-                  color: context.colorScheme.surface,
-                ),
+                const HDividerWidget(),
                 SettingsOptionWidget(
                   icon: PeniremitIcon.share,
                   title: AppStrings.shareAppTxt,
                   onPressed: () {},
                 ),
-                Divider(
-                  height: 1,
-                  color: context.colorScheme.surface,
-                ),
+                const HDividerWidget(),
                 SettingsOptionWidget(
                   icon: PeniremitIcon.logout,
                   title: AppStrings.logoutTxt,
                   onPressed: () {},
                 ),
-                Divider(
-                  height: 1,
-                  color: context.colorScheme.surface,
-                ),
+                const HDividerWidget()
               ],
             ),
           ),

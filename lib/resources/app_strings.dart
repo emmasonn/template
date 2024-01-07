@@ -63,6 +63,11 @@ class AppStrings {
   static const analyticsTxt = 'Analytics';
   static const settingsTxt = 'Settings';
 
+  //Atm card
+  static const cardHolderTxt = 'Card holder name';
+  static const expireDateTxt = 'Expiry date';
+  static const smcTxt = 'SMC';
+
   //items text
   static const airtimeTxt = 'Airtime';
   static const copyTxt = 'Copy';
@@ -121,6 +126,8 @@ class AppStrings {
   static const onPageTypePref = 'page_pref_key';
 
   //home text
+  static const String transferFundTxt = 'Transfer Funds';
+  static const String withdrawFundTxt = 'Withdraw Funds';
   static const String availableBalanceTxt = 'Available Balance';
   static const String transactionHistoryTxt = 'Transaction History';
   static const String fundWalletTxt = 'Fund Wallet';

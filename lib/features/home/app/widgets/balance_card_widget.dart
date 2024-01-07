@@ -52,7 +52,7 @@ class BalanceCardWidget extends StatelessWidget {
                   ),
                 ),
                 //space vertiically
-                vSpacer(10.0),
+                vSpacer(5.0),
                 Text(
                   addDollarToAmount('100000'),
                   style: TextStyles.t1.copyWith(

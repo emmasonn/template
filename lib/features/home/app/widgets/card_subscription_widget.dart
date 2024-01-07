@@ -37,6 +37,7 @@ class CardSubscriptionWidget extends StatelessWidget {
       title: Text(
         sub.title,
         style: TextStyles.t2.copyWith(
+          color: context.colorScheme.onPrimary,
           fontSize: FontSizes.s13,
         ),
       ),
@@ -44,7 +45,7 @@ class CardSubscriptionWidget extends StatelessWidget {
         isDue ? 'Upcoming in 4 days' : 'Next due on 20th Aug',
         style: TextStyles.caption.copyWith(
           fontSize: FontSizes.s10,
-          color: isDue ? AppColors.error : context.colorScheme.onPrimary,
+          color: isDue ? AppColors.error : AppColors.onAccentLight,
         ),
       ),
       trailing: RichText(

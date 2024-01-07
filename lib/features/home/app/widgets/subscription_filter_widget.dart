@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
+import 'package:peniremit/core/widgets/custom_divider_widget.dart';
 import 'package:peniremit/core/widgets/dot_tab_indicator.dart';
 import 'package:peniremit/features/home/app/widgets/card_subscription_widget.dart';
 import 'package:peniremit/resources/app_assets.dart';
@@ -62,6 +63,7 @@ class SubscriptionFilterWidget extends StatelessWidget {
               indicatorColor: AppColors.accent,
               indicatorPadding: EdgeInsets.zero,
               labelPadding: const EdgeInsets.only(right: 50.0),
+              dividerColor: Colors.transparent,
               padding: const EdgeInsets.only(left: 20.0),
               unselectedLabelStyle:
                   TextStyles.body1.copyWith(fontSize: FontSizes.s13),
@@ -140,10 +142,7 @@ class SubscriptionList extends StatelessWidget {
           sub: item,
         );
       },
-      separatorBuilder: (BuildContext context, index) => Divider(
-        height: 2.0,
-        color: context.colorScheme.onSurface,
-      ),
+      separatorBuilder: (BuildContext context, index) => const HDividerWidget(),
     );
   }
 }

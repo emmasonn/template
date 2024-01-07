@@ -18,7 +18,6 @@ class DotTabIndicator extends Decoration {
 class _DotTabIndicatorPainter extends BoxPainter {
   final Color color;
   final double radius;
-
   _DotTabIndicatorPainter(this.color, this.radius);
 
   @override

@@ -6,7 +6,9 @@ import 'package:peniremit/core/utils/extension_util.dart';
 import 'package:peniremit/core/widgets/custom_app_bar.dart';
 import 'package:peniremit/features/home/app/screens/transaction_history_list.dart';
 import 'package:peniremit/features/home/app/widgets/balance_card_widget.dart';
-import 'package:peniremit/features/home/app/widgets/virtual_card_container.dart';
+import 'package:peniremit/features/wallet/app/widgets/virtual_card_container.dart';
+import 'package:peniremit/features/wallet/app/widgets/atm_card_widget.dart';
+import 'package:peniremit/features/wallet/app/widgets/card_wallet_action.dart';
 import 'package:peniremit/navigation/app_screen_paths.dart';
 import 'package:peniremit/navigation/custom_page_transition.dart';
 import 'package:peniremit/resources/app_colors.dart';
@@ -75,6 +77,7 @@ class _WalletScreenState extends State<WalletScreen> {
                         );
                       },
                     ),
+
                     //space vertiically
                     vSpacer(20.0),
                     //card widget
@@ -86,8 +89,10 @@ class _WalletScreenState extends State<WalletScreen> {
                     ),
                     //space vertiically
                     vSpacer(20.0),
-                    //emptyCard
-                    const VirtualCardContainer(),
+                    // //emptyCard
+                    // const VirtualCardContainer(),
+                    // const CardWalletAction(),
+                    const AtmCardWidget(),
                     vSpacer(20.0),
                     //card widget
                     Row(

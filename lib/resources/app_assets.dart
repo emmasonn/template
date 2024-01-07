@@ -13,4 +13,5 @@ class AppAssets {
   static const tetherPng = 'assets/images/tether.png';
   static const balanceBg = 'assets/images/balance_bg.png';
   static const bottomNavBg = 'assets/images/bottom_nav_bg.png';
+  static const cardBg = 'assets/images/card_bg.png';
 }

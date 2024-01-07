@@ -24,6 +24,7 @@ class CardTransactionWidget extends StatelessWidget {
         'Youtube',
         style: TextStyles.notoSerifJP.copyWith(
           fontSize: FontSizes.s13,
+          color: context.colorScheme.onPrimary,
           fontWeight: FontWeight.w500,
         ),
       ),
@@ -31,6 +32,7 @@ class CardTransactionWidget extends StatelessWidget {
         '16 September, 2023',
         style: TextStyles.notoSerifJP.copyWith(
           fontSize: FontSizes.s10,
+          color: AppColors.onAccentLight,
           fontWeight: FontWeight.w300,
         ),
       ),

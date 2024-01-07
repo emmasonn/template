@@ -18,6 +18,7 @@ class AppColors {
 
   //*others
   static const copyBg = Color(0xffB1C0BC);
+  static const white = Color(0xffffffff);
   static const Color bgWhite = Color(0xfff3f3f3);
   static const Color bgBlack = Color(0xff000000);
   static const Color splashBg = Color(0xff000000);

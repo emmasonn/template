@@ -5,20 +5,25 @@ import 'package:peniremit/resources/app_dimen.dart';
 class Fonts {
   static const String lexend = 'Lexend';
   static const String notoSerifJP = 'NotoSerifJP';
+  static const String inter = 'Inter';
 }
 
 class TextStyles {
   static const TextStyle lexend = TextStyle(
     fontFamily: Fonts.lexend,
     fontWeight: FontWeight.w400,
-    // letterSpacing: 0,
-    // height: 1,
   );
 
   static const TextStyle notoSerifJP = TextStyle(
     fontFamily: Fonts.notoSerifJP,
     fontWeight: FontWeight.w400,
-    letterSpacing: .5
+    letterSpacing: .5,
+  );
+
+  static const TextStyle inter = TextStyle(
+    fontFamily: Fonts.inter,
+    fontWeight: FontWeight.w400,
+    letterSpacing: .5,
   );
 
   static TextStyle get appTitle => _createTextStyle(

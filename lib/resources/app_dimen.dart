@@ -50,6 +50,8 @@ class FontSizes {
 
   static double s15 = 15;
 
+  static double s17 = 17;
+
   static double s16 = 16;
 
   static double s18 = 18;
@@ -82,6 +84,7 @@ class Corners {
   static const double vsm = 3.0;
   static const double sm = 4.0;
   static const double md = 8.0;
+  static const double mmd = 10.0;
   static const double hMd = 20.0;
   static const double lg = 30.0;
   static const double vLg = 40.0;

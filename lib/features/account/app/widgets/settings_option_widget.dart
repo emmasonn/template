@@ -27,22 +27,22 @@ class SettingsOptionWidget extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         decoration: BoxDecoration(
           border: Border.all(
-            color: AppColors.surface100,
+            color: AppColors.surface100.withOpacity(0.2),
           ),
           color: context.colorScheme.surface,
           shape: BoxShape.circle,
         ),
         child: Icon(
           icon,
-          size: iconSize ?? 12,
+          size: iconSize ?? 13,
           weight: 24,
-          opticalSize: 24,
           color: AppColors.accent,
         ),
       ),
       title: Text(
         title,
         style: TextStyles.h1.copyWith(
+          color: context.colorScheme.onPrimary,
           fontSize: FontSizes.s13,
         ),
       ),
