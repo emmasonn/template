@@ -56,6 +56,8 @@ class AppStrings {
   static const createPinTxt = 'Create Pin';
   static const recoverPasswordTxt = 'Recover Password';
   static const createNewPasswordTxt = 'Create New Password';
+  static const allCategoriesTxt = 'All Categories';
+  static const allStatusTxt = 'All Status';
 
   //BottomNav item title
   static const homeTxt = 'Home';
@@ -85,7 +87,7 @@ class AppStrings {
   static const seeOtherSubPlans = 'See other subscription plans';
   static const subscriptionHistoryTxt = 'Subscription History';
   static const totalAmountSpentTxt = 'Total amount spent';
-  static const productNameTxt = 'Product/service';
+  static const productNameLabelTxt = 'Product/service';
   static const selectProductTxt = 'Select product';
   static const selectSubTierText = 'Select package/tier';
   static const priceTxt = 'Price';
@@ -127,6 +129,7 @@ class AppStrings {
 
   //home text
   static const String transferFundTxt = 'Transfer Funds';
+  static const String transferTxt = 'Transfer';
   static const String withdrawFundTxt = 'Withdraw Funds';
   static const String availableBalanceTxt = 'Available Balance';
   static const String transactionHistoryTxt = 'Transaction History';
@@ -134,6 +137,18 @@ class AppStrings {
   static const String upcomingSubscriptionTxt = 'Upcoming Subscription';
   static const String upcomingSubscriptionCaptionTxt =
       'Platforms due soon for subscription';
+  static const String walletAddressTxt = 'Wallet Address';
+  static const String amountTxt = 'Amount';
+  static const String usdTxt = 'USD';
+  static const String amountToFundTxt = 'Amount to Fund';
+  static const String enterYourPinTxt = 'Enter your Pin';
+  static const String transactionSuccessTxt =
+      'Your transaction has been successful';
+  static const String enterTransactionPinTxt = 'Enter Your Transaction Pin';
+  static const String productNamext = 'Product Name';
+  static const String balanceTxt = 'Balance';
+  static const String enterAmountHintTxt = 'Enter amount';
+  static const String enterWalletAddressHintTxt = 'Enter address';
   static const viewAllTxt = 'View all';
   static const allTxt = 'All';
   static const activeTxt = 'Active';

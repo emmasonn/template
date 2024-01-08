@@ -6,7 +6,6 @@ import 'package:peniremit/core/utils/extension_util.dart';
 import 'package:peniremit/core/widgets/custom_app_bar.dart';
 import 'package:peniremit/features/home/app/screens/transaction_history_list.dart';
 import 'package:peniremit/features/home/app/widgets/balance_card_widget.dart';
-import 'package:peniremit/features/wallet/app/widgets/virtual_card_container.dart';
 import 'package:peniremit/features/wallet/app/widgets/atm_card_widget.dart';
 import 'package:peniremit/features/wallet/app/widgets/card_wallet_action.dart';
 import 'package:peniremit/navigation/app_screen_paths.dart';
@@ -80,6 +79,13 @@ class _WalletScreenState extends State<WalletScreen> {
 
                     //space vertiically
                     vSpacer(20.0),
+
+                    //perform transaction widget
+                    const CardWalletAction(),
+
+                    //space vertiically
+                    vSpacer(20.0),
+
                     //card widget
                     Text(
                       AppStrings.myCardTxt,
@@ -91,7 +97,6 @@ class _WalletScreenState extends State<WalletScreen> {
                     vSpacer(20.0),
                     // //emptyCard
                     // const VirtualCardContainer(),
-                    // const CardWalletAction(),
                     const AtmCardWidget(),
                     vSpacer(20.0),
                     //card widget
@@ -104,9 +109,7 @@ class _WalletScreenState extends State<WalletScreen> {
                         ),
                         GestureDetector(
                           onTap: () {
-                            context.push(
-                              AppScreenPaths.subscriptionsPath,
-                            );
+                            context.push(AppScreenPaths.transactionHistoryPath);
                           },
                           child: Padding(
                             padding: const EdgeInsets.only(

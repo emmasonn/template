@@ -14,4 +14,5 @@ class AppAssets {
   static const balanceBg = 'assets/images/balance_bg.png';
   static const bottomNavBg = 'assets/images/bottom_nav_bg.png';
   static const cardBg = 'assets/images/card_bg.png';
+  static const chipBg = 'assets/images/chip.png';
 }

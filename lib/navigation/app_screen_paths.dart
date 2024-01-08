@@ -18,7 +18,12 @@ class AppScreenPaths {
   static const moreServicesPath = '/more-service';
   static const subscriptionPlansPath = '/subscription-plans';
   static const upcomingSubsriptionPath = '/upcoming-subscriptions';
-
+  static const transactionHistoryPath = '/transaction_history';
+  static const createCardPath = '/create_card';
+  static const transferFundPath = '/transfer_funds';
+  static const confirmTransactionPath = '/confirm_transaction_path';
+  static const transactionCompletedPath = '/transaction_completed';
+  static const withdrawFundPath = '/withdraw_path';
   //* Landings
   static const homePath = '/home';
   static const walletPath = '/wallet';

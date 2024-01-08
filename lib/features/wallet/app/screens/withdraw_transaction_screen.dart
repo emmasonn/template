@@ -3,8 +3,8 @@ import 'package:peniremit/core/widgets/custom_app_bar.dart';
 import 'package:peniremit/navigation/custom_page_transition.dart';
 import 'package:peniremit/resources/app_strings.dart';
 
-class CreateCardScreen extends StatefulWidget {
-  const CreateCardScreen({
+class WithdrawFundScreen extends StatefulWidget {
+  const WithdrawFundScreen({
     super.key,
   });
 
@@ -14,17 +14,15 @@ class CreateCardScreen extends StatefulWidget {
     return CustomPageTransition(
       key: key,
       transitionStyle: PageTransitionStyle.fade,
-      child: const CreateCardScreen(),
+      child: const WithdrawFundScreen(),
     );
   }
 
   @override
-  State<CreateCardScreen> createState() =>
-      _CreateCardScreenState();
+  State<WithdrawFundScreen> createState() => _WithdrawFundScreenState();
 }
 
-class _CreateCardScreenState extends State<CreateCardScreen> {
-
+class _WithdrawFundScreenState extends State<WithdrawFundScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -3,8 +3,8 @@ import 'package:peniremit/core/widgets/custom_app_bar.dart';
 import 'package:peniremit/navigation/custom_page_transition.dart';
 import 'package:peniremit/resources/app_strings.dart';
 
-class TransactionsScreen extends StatefulWidget {
-  const TransactionsScreen({
+class PrivacyPolicyScreen extends StatefulWidget {
+  const PrivacyPolicyScreen({
     super.key,
   });
 
@@ -14,16 +14,16 @@ class TransactionsScreen extends StatefulWidget {
     return CustomPageTransition(
       key: key,
       transitionStyle: PageTransitionStyle.fade,
-      child: const TransactionsScreen(),
+      child: const PrivacyPolicyScreen(),
     );
   }
 
   @override
-  State<TransactionsScreen> createState() =>
-      _TransactionsScreenState();
+  State<PrivacyPolicyScreen> createState() =>
+      _PrivacyPolicyScreenState();
 }
 
-class _TransactionsScreenState extends State<TransactionsScreen> {
+class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
 
   @override
   Widget build(BuildContext context) {

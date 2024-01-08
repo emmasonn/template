@@ -23,7 +23,13 @@ import 'package:peniremit/features/home/app/screens/subscription_detail_screen.d
 import 'package:peniremit/features/home/app/screens/subscriptions_screen.dart';
 import 'package:peniremit/features/home/app/screens/upcoming_subscriptions_screen.dart';
 import 'package:peniremit/features/home/app/widgets/subscription_filter_widget.dart';
+import 'package:peniremit/features/wallet/app/screens/confirm_transaction_screen.dart';
+import 'package:peniremit/features/wallet/app/screens/create_card_screen.dart';
+import 'package:peniremit/features/wallet/app/screens/transaction_completed_screen.dart';
+import 'package:peniremit/features/wallet/app/screens/transaction_history_screen.dart';
+import 'package:peniremit/features/wallet/app/screens/transfer_funds_screen.dart';
 import 'package:peniremit/features/wallet/app/screens/wallet_screen.dart';
+import 'package:peniremit/features/wallet/app/screens/withdraw_transaction_screen.dart';
 import 'package:peniremit/navigation/app_router.dart';
 import 'package:peniremit/navigation/app_screen_paths.dart';
 import 'package:peniremit/navigation/nav_utils.dart';
@@ -160,6 +166,54 @@ class AppRoutes {
     path: AppScreenPaths.subscriptionPlansPath,
     pageBuilder: (BuildContext context, state) {
       return SubscriptionScreen.page(key: state.pageKey);
+    },
+  );
+
+  static final transactionHistoryScreen = GoRoute(
+    parentNavigatorKey: rootNavigator,
+    path: AppScreenPaths.transactionHistoryPath,
+    pageBuilder: (BuildContext context, state) {
+      return TransactionHistoryScreen.page(key: state.pageKey);
+    },
+  );
+
+  static final createCardScreen = GoRoute(
+    parentNavigatorKey: rootNavigator,
+    path: AppScreenPaths.createCardPath,
+    pageBuilder: (BuildContext context, state) {
+      return CreateCardScreen.page(key: state.pageKey);
+    },
+  );
+
+  static final confirmTransactionScreen = GoRoute(
+    parentNavigatorKey: rootNavigator,
+    path: AppScreenPaths.confirmTransactionPath,
+    pageBuilder: (BuildContext context, state) {
+      return ConfirmTransactionScreen.page(key: state.pageKey);
+    },
+  );
+
+  static final transactionCompletedScreen = GoRoute(
+    parentNavigatorKey: rootNavigator,
+    path: AppScreenPaths.transactionCompletedPath,
+    pageBuilder: (BuildContext context, state) {
+      return TransactionCompletedScreen.page(key: state.pageKey);
+    },
+  );
+
+  static final transferFundScreen = GoRoute(
+    parentNavigatorKey: rootNavigator,
+    path: AppScreenPaths.transferFundPath,
+    pageBuilder: (BuildContext context, state) {
+      return TransferFundScreen.page(key: state.pageKey);
+    },
+  );
+
+  static final withdrawFundScreen = GoRoute(
+    parentNavigatorKey: rootNavigator,
+    path: AppScreenPaths.withdrawFundPath,
+    pageBuilder: (BuildContext context, state) {
+      return WithdrawFundScreen.page(key: state.pageKey);
     },
   );
 

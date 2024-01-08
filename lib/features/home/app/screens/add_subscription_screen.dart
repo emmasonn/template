@@ -49,7 +49,7 @@ class _AddSubscriptionScreenState extends State<AddSubscriptionScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 AppTextFieldEx(
-                  label: AppStrings.productNameTxt,
+                  label: AppStrings.productNameLabelTxt,
                   hintText: AppStrings.selectProductTxt,
                   onChanged: (value) {},
                 ),

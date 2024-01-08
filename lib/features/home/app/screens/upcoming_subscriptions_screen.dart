@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
 import 'package:peniremit/core/widgets/custom_app_bar.dart';
+import 'package:peniremit/core/widgets/custom_divider_widget.dart';
 import 'package:peniremit/features/home/app/widgets/card_subscription_widget.dart';
 import 'package:peniremit/features/home/app/widgets/subscription_filter_widget.dart';
 import 'package:peniremit/navigation/custom_page_transition.dart';
@@ -57,10 +58,8 @@ class _UpcomingSubscriptionsScreenState
                         isDue: true,
                       );
                     },
-                    separatorBuilder: (context, index) => Divider(
-                      height: 1,
-                      color: context.colorScheme.surface,
-                    ),
+                    separatorBuilder: (context, index) =>
+                        const HDividerWidget(),
                     itemCount: subs.length,
                   ),
                 ),

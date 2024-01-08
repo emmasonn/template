@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:peniremit/core/helpers/spacer_widgets.dart';
 import 'package:peniremit/core/utils/amount_formatter.dart';
+import 'package:peniremit/navigation/app_screen_paths.dart';
 import 'package:peniremit/resources/app_assets.dart';
 import 'package:peniremit/resources/app_colors.dart';
 import 'package:peniremit/resources/app_dimen.dart';
@@ -63,7 +64,11 @@ class BalanceCardWidget extends StatelessWidget {
                   //space vertiically
                   vSpacer(10.0),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      context.push(
+                        AppScreenPaths.transactionHistoryPath,
+                      );
+                    },
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -88,7 +93,6 @@ class BalanceCardWidget extends StatelessWidget {
                 ],
               ],
             ),
-
             SizedBox(
               height: 30,
               child: MaterialButton(
@@ -115,13 +119,6 @@ class BalanceCardWidget extends StatelessWidget {
                 ),
               ),
             ),
-            // SizedBox(
-            //   height: 30.0,
-            //   child: CustomFilledButton(
-            //     text: AppStrings.tokenSentTxt,
-            //     onPressed: () {},
-            //   ),
-            // ),
           ],
         ),
       ),

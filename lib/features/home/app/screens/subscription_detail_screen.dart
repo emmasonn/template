@@ -3,11 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:peniremit/core/helpers/spacer_widgets.dart';
 import 'package:peniremit/core/utils/amount_formatter.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
+import 'package:peniremit/core/widgets/custom_divider_widget.dart';
 import 'package:peniremit/features/home/app/widgets/subscription_filter_widget.dart';
 import 'package:peniremit/features/home/app/widgets/subscription_flexible_space_widget.dart';
 import 'package:peniremit/navigation/custom_page_transition.dart';
 import 'package:peniremit/navigation/nav_utils.dart';
-import 'package:peniremit/resources/app_assets.dart';
 import 'package:peniremit/resources/app_colors.dart';
 import 'package:peniremit/resources/app_dimen.dart';
 import 'package:peniremit/resources/app_strings.dart';
@@ -48,6 +48,7 @@ class _SubscriptionDetailScreenState extends State<SubscriptionDetailScreen> {
             backgroundColor: context.colorScheme.surface,
             leadingWidth: 40.0,
             centerTitle: false,
+            scrolledUnderElevation: 0.0,
             leading: IconButton(
               highlightColor: Colors.transparent,
               splashColor: Colors.transparent,
@@ -163,11 +164,8 @@ class _SubscriptionDetailScreenState extends State<SubscriptionDetailScreen> {
                   ),
                 );
               },
-              separatorBuilder: (context, index) => const Divider(
-                color: AppColors.surface300,
-                height: 1,
-              ),
-              itemCount: 3,
+              separatorBuilder: (context, index) => const HDividerWidget(),
+              itemCount: 10,
             )
           ]))
         ],

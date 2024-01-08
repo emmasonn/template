@@ -30,6 +30,7 @@ class AppTextFieldEx extends StatefulWidget {
     this.onSuffixClicked,
     this.color,
     this.inputAction,
+    this.expands = false,
     required this.onChanged,
   }) : super(key: key);
   final TextEditingController? controller;
@@ -56,6 +57,7 @@ class AppTextFieldEx extends StatefulWidget {
   final Function()? onSuffixClicked;
   final int? maxLine;
   final Color? color;
+  final bool expands;
 
   @override
   State<AppTextFieldEx> createState() => _AppTextFieldExState();
@@ -105,6 +107,7 @@ class _AppTextFieldExState extends State<AppTextFieldEx> {
             autocorrect: false,
             inputFormatters: widget.formatter,
             textInputAction: widget.inputAction,
+            expands: widget.expands,
             maxLines: widget.maxLine,
             obscureText: obscureText,
             obscuringCharacter: '∗'.toString(),

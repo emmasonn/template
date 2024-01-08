@@ -37,7 +37,7 @@ class AtmCardWidget extends StatelessWidget {
               //nfc icon
               const Icon(
                 PeniremitIcon.nfcRight,
-                size: 20,
+                size: 17,
               ),
               //smc
               Text(
@@ -54,17 +54,24 @@ class AtmCardWidget extends StatelessWidget {
           ),
           //space vertically
           const SizedBox(
-            height: 20.0,
+            height: 16.0,
           ),
-          Icon(
-            PeniremitIcon.chip,
-            size: 25,
-            color: context.colorScheme.onPrimary.withOpacity(
-              0.7,
+          // Icon(
+          //   PeniremitIcon.chip,
+          //   size: 25,
+          //   color: context.colorScheme.onPrimary.withOpacity(
+          //     0.7,
+          //   ),
+          // ),
+          SizedBox(
+            height: 21,
+            width: 29,
+            child: Image.asset(
+              AppAssets.chipBg,
             ),
           ),
           //space vertiically
-          vSpacer(10.0),
+          vSpacer(5.0),
           Text(
             '3445 4562 7710 3507',
             style: TextStyles.inter.copyWith(
@@ -76,7 +83,7 @@ class AtmCardWidget extends StatelessWidget {
             ),
           ),
           //space vertiically
-          vSpacer(10.0),
+          vSpacer(16.0),
           Row(
             children: [
               Column(
@@ -86,7 +93,7 @@ class AtmCardWidget extends StatelessWidget {
                   Text(
                     AppStrings.cardHolderTxt,
                     style: TextStyles.inter.copyWith(
-                      fontSize: FontSizes.s10,
+                      fontSize: FontSizes.s8,
                       color: AppColors.white,
                       fontWeight: FontWeight.w500,
                     ),
@@ -94,7 +101,7 @@ class AtmCardWidget extends StatelessWidget {
                   //space vertiically
                   vSpacer(5.0),
                   Text(
-                    'John Carter',
+                    'M.Mfon Peter',
                     style: TextStyles.inter.copyWith(
                         fontSize: FontSizes.s12,
                         color: AppColors.white,
@@ -111,7 +118,7 @@ class AtmCardWidget extends StatelessWidget {
                   Text(
                     AppStrings.expireDateTxt,
                     style: TextStyles.inter.copyWith(
-                      fontSize: FontSizes.s10,
+                      fontSize: FontSizes.s8,
                       color: AppColors.white,
                       fontWeight: FontWeight.w500,
                     ),

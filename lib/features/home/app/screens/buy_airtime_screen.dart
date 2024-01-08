@@ -3,8 +3,8 @@ import 'package:peniremit/core/widgets/custom_app_bar.dart';
 import 'package:peniremit/navigation/custom_page_transition.dart';
 import 'package:peniremit/resources/app_strings.dart';
 
-class CreateCardScreen extends StatefulWidget {
-  const CreateCardScreen({
+class BuyAirtimeScreen extends StatefulWidget {
+  const BuyAirtimeScreen({
     super.key,
   });
 
@@ -14,16 +14,16 @@ class CreateCardScreen extends StatefulWidget {
     return CustomPageTransition(
       key: key,
       transitionStyle: PageTransitionStyle.fade,
-      child: const CreateCardScreen(),
+      child: const BuyAirtimeScreen(),
     );
   }
 
   @override
-  State<CreateCardScreen> createState() =>
-      _CreateCardScreenState();
+  State<BuyAirtimeScreen> createState() =>
+      _BuyAirtimeScreenState();
 }
 
-class _CreateCardScreenState extends State<CreateCardScreen> {
+class _BuyAirtimeScreenState extends State<BuyAirtimeScreen> {
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,9 @@ class _CreateCardScreenState extends State<CreateCardScreen> {
         body: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [],
+            children: [
+              
+            ],
           ),
         ));
   }

@@ -40,6 +40,12 @@ class AppRouter {
       AppRoutes.moreServicesScreen,
       AppRoutes.upcomingSubscriptionScreen,
       AppRoutes.subscriptionPlansScreen,
+      AppRoutes.createCardScreen,
+      AppRoutes.transactionHistoryScreen,
+      AppRoutes.confirmTransactionScreen,
+      AppRoutes.transferFundScreen,
+      AppRoutes.withdrawFundScreen,
+      AppRoutes.transactionCompletedScreen,
     ],
   );
 }
