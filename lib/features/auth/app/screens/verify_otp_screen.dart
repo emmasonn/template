@@ -21,7 +21,6 @@ class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      resizeToAvoidBottomInset: false,
       body: SafeArea(
         bottom: false,
         top: false,

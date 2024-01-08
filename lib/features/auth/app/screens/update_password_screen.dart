@@ -29,7 +29,6 @@ class _UpdatePasswordScreenState extends State<UpdatePasswordScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
       body: Padding(
         padding: EdgeInsets.symmetric(
           horizontal: 16.w,

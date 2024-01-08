@@ -21,7 +21,6 @@ class _UpdatePinScreenState extends State<UpdatePinScreen> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      resizeToAvoidBottomInset: false,
       body: SafeArea(
         bottom: false,
         top: false,
