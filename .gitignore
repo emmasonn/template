@@ -1,4 +1,6 @@
 lib/api_credentials.dart
+.env
+
 # Miscellaneous
 *.class
 *.log
