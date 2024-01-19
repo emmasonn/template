@@ -62,7 +62,7 @@ class _BillPhoneNumberWidgetState extends State<BillPhoneNumberWidget> {
             TextButton(
               onPressed: () {},
               child: Text(
-                AppStrings.selectContactTxt,
+                AppStrings.chooseContactTxt,
                 style: widget.style.copyWith(
                   fontSize: FontSizes.s12,
                   color: AppColors.accent,

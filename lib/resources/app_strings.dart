@@ -166,7 +166,7 @@ class AppStrings {
       'Sending coins or tokens other than usdt to the address will result in the loss of your deposit.';
   static const tokenSentTxt = 'Token Sent';
   static const cannotShareQrcodeTxt = 'Cannot share Qr code';
-  static const selectContactTxt = 'Select Contact';
+  static const chooseContactTxt = 'Choose Contact';
   //* network providers
   static const mtnTxt = 'MTN';
   static const gloTxt = 'GLO';
