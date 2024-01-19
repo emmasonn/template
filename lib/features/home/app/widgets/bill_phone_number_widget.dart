@@ -75,6 +75,7 @@ class _BillPhoneNumberWidgetState extends State<BillPhoneNumberWidget> {
           height: widget.height ?? 50.0,
           width: Sizes.btnWidthMd,
           child: TextFormField(
+            clipBehavior: Clip.hardEdge,
             controller: _textEditingController,
             style: widget.style,
             enabled: true,

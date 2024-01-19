@@ -39,51 +39,58 @@ class _NetworkProviderWidgetState extends State<NetworkProviderWidget> {
         brandColor: AppColors.mobile9Color,
       ),
     ];
-
-    return PopupMenuButton<NetworkProvider>(
-      elevation: 1.0,
-      position: PopupMenuPosition.under,
-      padding: EdgeInsets.zero,
-      initialValue: null, // selectedNetworkProvider ?? widget.networkProvider,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(
-          Corners.md,
-        ),
-      ),
-      onSelected: (provider) {
-        setState(() {
-          selectedNetworkProvider = provider;
-        });
-        widget.onChanged.call(provider);
-      },
-      surfaceTintColor: context.colorScheme.background,
-      color: context.colorScheme.background,
-      itemBuilder: (context) {
-        return networkProviders
-            .map(
-              (provider) => PopupMenuItem<NetworkProvider>(
-                value: provider,
-                // padding: const EdgeInsets.only(left: 20.0),
-                child: CircleAvatar(
-                  radius: 18.0,
-                  backgroundColor: provider.brandColor,
-                  child: Text(
-                    provider.title,
-                    textAlign: TextAlign.center,
-                    style: TextStyles.inter.copyWith(
-                      color: Colors.white,
-                      fontSize: FontSizes.s8,
-                      fontWeight: FontWeight.w600,
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        PopupMenuButton<NetworkProvider>(
+          clipBehavior: Clip.hardEdge,
+          elevation: 1.0,
+          tooltip: null,
+          position: PopupMenuPosition.under,
+          padding: EdgeInsets.zero,
+          initialValue:
+              null, // selectedNetworkProvider ?? widget.networkProvider,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(
+              Corners.md,
+            ),
+          ),
+          onSelected: (provider) {
+            setState(() {
+              selectedNetworkProvider = provider;
+            });
+            widget.onChanged.call(provider);
+          },
+          surfaceTintColor: context.colorScheme.background,
+          color: context.colorScheme.background,
+          itemBuilder: (context) {
+            return networkProviders
+                .map(
+                  (provider) => PopupMenuItem<NetworkProvider>(
+                    value: provider,
+                    child: CircleAvatar(
+                      radius: 18.0,
+                      backgroundColor: provider.brandColor,
+                      child: Text(
+                        provider.title,
+                        textAlign: TextAlign.center,
+                        style: TextStyles.inter.copyWith(
+                          color: Colors.white,
+                          fontSize: FontSizes.s8,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
                     ),
                   ),
-                ),
-              ),
-            )
-            .toList();
-      },
-      child: NetworkProviderItemWidget(
-        networkProvider: selectedNetworkProvider ?? widget.networkProvider,
-      ),
+                )
+                .toList();
+          },
+          child: NetworkProviderItemWidget(
+            networkProvider: selectedNetworkProvider ?? widget.networkProvider,
+          ),
+        ),
+        const Gap(10),
+      ],
     );
   }
 }
@@ -121,10 +128,11 @@ class NetworkProviderItemWidget extends StatelessWidget {
         ),
         SizedBox(
           height: 50.0,
+          width: 0,
           child: VerticalDivider(
             color: context.dividerColor,
           ),
-        )
+        ),
       ],
     );
   }
