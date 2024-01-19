@@ -46,6 +46,7 @@ dependencies:
   simple_animations: ^5.0.2
   sized_context: ^1.0.0+4
   fl_chart: ^0.66.0
+  gap: ^3.0.1
 
 dev_dependencies:
   flutter_launcher_icons: ^0.13.1

@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:peniremit/core/icon_fonts/peniremit_font.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
 import 'package:peniremit/resources/app_colors.dart';
 import 'package:peniremit/resources/app_dimen.dart';
 import 'package:peniremit/resources/app_styles.dart';
 
-class CustomAppBar extends AppBar {
+class DashboardAppBar extends AppBar {
   final String? titleText;
   final List<Widget>? actionIcons;
   final BuildContext context;
@@ -13,11 +12,11 @@ class CustomAppBar extends AppBar {
   final bool showShadow;
   final Color? bgColor;
   final TextStyle? style;
-  final IconData? leadingIcon;
+  final Widget? leadingIcon;
   final bool noBackButton;
   final Function()? onBackPressed;
 
-  CustomAppBar(
+  DashboardAppBar(
     this.context, {
     Key? key,
     this.actionIcons,
@@ -38,26 +37,7 @@ class CustomAppBar extends AppBar {
           toolbarHeight: Sizes.toolBarHeigth,
           leadingWidth: noBackButton ? 0 : 40,
           scrolledUnderElevation: 0.0,
-          leading: noBackButton
-              ? const SizedBox()
-              : IconButton(
-                  highlightColor: Colors.transparent,
-                  splashColor: Colors.transparent,
-                  onPressed: onBackPressed,
-                  padding: EdgeInsets.zero,
-                  icon: Container(
-                    padding: const EdgeInsets.all(4.0),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(Corners.sm),
-                      color: context.colorScheme.surface,
-                    ),
-                    child: Icon(
-                      leadingIcon ?? Icons.arrow_back_ios_rounded,
-                      size: 16,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
+          leading: noBackButton ? const SizedBox() : leadingIcon,
           actions: actionIcons,
           bottom: bottomChild,
           iconTheme: IconThemeData(

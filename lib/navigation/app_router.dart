@@ -46,6 +46,10 @@ class AppRouter {
       AppRoutes.transferFundScreen,
       AppRoutes.withdrawFundScreen,
       AppRoutes.transactionCompletedScreen,
+      AppRoutes.buyAirtimeScreen,
+      AppRoutes.buyDataScreen,
+      AppRoutes.buyElectricityScreen,
+      AppRoutes.buyTvScreen,
     ],
   );
 }

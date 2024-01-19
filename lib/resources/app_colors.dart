@@ -27,4 +27,10 @@ class AppColors {
   static Color greyLight = Colors.grey.shade100;
   static Color greyStrong = Colors.grey.shade500;
   static Color greyStronger = Colors.grey.shade700;
+
+  //*brand color
+  static const mtnColor = Color(0xffffcc00);
+  static const airtelColor = Color(0xffFF0000);
+  static const mobile9Color = Color(0xffB9B611);
+  static const gloColor = Color(0xff72AE49);
 }

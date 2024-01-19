@@ -5,6 +5,8 @@ import 'package:peniremit/core/icon_fonts/peniremit_font.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
 import 'package:peniremit/core/widgets/custom_app_bar.dart';
 import 'package:peniremit/core/widgets/custom_divider_widget.dart';
+import 'package:peniremit/core/widgets/dashboard_app_bar_widget.dart';
+import 'package:peniremit/core/widgets/rounded_image_widget.dart';
 import 'package:peniremit/features/account/app/widgets/settings_option_widget.dart';
 import 'package:peniremit/navigation/custom_page_transition.dart';
 import 'package:peniremit/resources/app_dimen.dart';
@@ -30,10 +32,13 @@ class _SettingScreenState extends State<SettingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(
+      appBar: DashboardAppBar(
         context,
         titleText: AppStrings.appNameTxt,
-        noBackButton: true,
+        centerTitle: true,
+        leadingIcon: const RoundedImageWidget(
+          radius: 23.0,
+        ),
         style: TextStyles.h4.copyWith(
           fontWeight: FontWeight.w600,
         ),

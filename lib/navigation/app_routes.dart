@@ -15,6 +15,10 @@ import 'package:peniremit/features/auth/app/screens/update_pin_screen.dart';
 import 'package:peniremit/features/auth/app/screens/verify_account_screen.dart';
 import 'package:peniremit/features/auth/app/screens/verify_otp_screen.dart';
 import 'package:peniremit/features/home/app/screens/add_subscription_screen.dart';
+import 'package:peniremit/features/home/app/screens/buy_airtime_screen.dart';
+import 'package:peniremit/features/home/app/screens/buy_cabletv_screen.dart';
+import 'package:peniremit/features/home/app/screens/buy_data_screen.dart';
+import 'package:peniremit/features/home/app/screens/buy_electricity_screen.dart';
 import 'package:peniremit/features/home/app/screens/fund_wallet_screen.dart';
 import 'package:peniremit/features/home/app/screens/home_screen.dart';
 import 'package:peniremit/features/home/app/screens/main_screen.dart';
@@ -235,6 +239,52 @@ class AppRoutes {
     },
   );
 
+  //** bill payment routes
+
+  static final buyAirtimeScreen = GoRoute(
+    parentNavigatorKey: rootNavigator,
+    path: AppScreenPaths.buyAirtimePath,
+    pageBuilder: (BuildContext context, state) {
+      return BuyAirtimeScreen.page(
+        key: state.pageKey,
+      );
+    },
+  );
+
+  static final buyDataScreen = GoRoute(
+    parentNavigatorKey: rootNavigator,
+    path: AppScreenPaths.buyDataPath,
+    pageBuilder: (BuildContext context, state) {
+      return BuyDataScreen.page(
+        key: state.pageKey,
+      );
+    },
+  );
+
+  static final buyElectricityScreen = GoRoute(
+    parentNavigatorKey: rootNavigator,
+    path: AppScreenPaths.buyElectricityPath,
+    pageBuilder: (BuildContext context, state) {
+      return BuyElectricityScreen.page(
+        key: state.pageKey,
+      );
+    },
+  );
+
+  static final buyTvScreen = GoRoute(
+    parentNavigatorKey: rootNavigator,
+    path: AppScreenPaths.buyTvPath,
+    pageBuilder: (BuildContext context, state) {
+      return BuyCableTvScreen.page(
+        key: state.pageKey,
+      );
+    },
+  );
+
+//*/
+
+
+  //** Dashboard screen routes
   static final mainScreen = ShellRoute(
     navigatorKey: shellNavigator,
     pageBuilder: (context, state, child) {
@@ -278,4 +328,6 @@ class AppRoutes {
       return SettingScreen.page(key: state.pageKey);
     },
   );
+ // */
+
 }

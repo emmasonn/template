@@ -32,7 +32,7 @@ class CustomFilledButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: height ?? Sizes.btnHeightMd,
-      width: width ?? Sizes.btnWidthMd,
+      width: width,
       child: MaterialButton(
         elevation: 0.0,
         hoverElevation: 0.0,

@@ -21,13 +21,12 @@ class MainBottomNav extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomBottomNavWidget(
       bottomNavHeight: Sizes.bottonNavHeight,
-      iconSize: Sizes.bottomNavIconSize,
-      style: TextStyles.body1.copyWith(
-        fontWeight: FontWeight.w500,
-      ),
+      iconSize: Sizes.bottomNavIconSizeSm,
+      style: TextStyles.body1
+          .copyWith(fontWeight: FontWeight.w500, fontSize: FontSizes.s13),
       activeColor: AppColors.accent,
       activeBgColor: context.colorScheme.surface,
-      color: context.colorScheme.onSecondary,
+      color: const Color(0xff8F8F8F),
       items: <PersistentBottomNavBarItem>[
         PersistentBottomNavBarItem(
           icon: const Icon(PeniremitIcon.home),
@@ -38,8 +37,8 @@ class MainBottomNav extends StatelessWidget {
           title: AppStrings.walletTxt,
         ),
         PersistentBottomNavBarItem(
-          icon: const Icon(PeniremitIcon.analytics), 
-          title: AppStrings.analyticsTxt,
+          icon: const Icon(PeniremitIcon.analytics),
+          title: AppStrings.subscriptionTxt,
         ),
         PersistentBottomNavBarItem(
           icon: const Icon(PeniremitIcon.settings),

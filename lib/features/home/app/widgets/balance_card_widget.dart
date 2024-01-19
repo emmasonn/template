@@ -1,8 +1,10 @@
+import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:peniremit/core/helpers/spacer_widgets.dart';
+import 'package:gap/gap.dart';
 import 'package:peniremit/core/utils/amount_formatter.dart';
-import 'package:peniremit/navigation/app_screen_paths.dart';
+import 'package:peniremit/core/utils/extension_util.dart';
+import 'package:peniremit/core/widgets/simple_filled_buttom.dart';
+import 'package:peniremit/features/home/app/widgets/simple_outlined_button.dart';
 import 'package:peniremit/resources/app_assets.dart';
 import 'package:peniremit/resources/app_colors.dart';
 import 'package:peniremit/resources/app_dimen.dart';
@@ -20,107 +22,115 @@ class BalanceCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 0.0,
-      margin: EdgeInsets.zero,
-      clipBehavior: Clip.hardEdge,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(Corners.md),
+    return Container(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 16.0,
       ),
-      child: Container(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 16.0,
-          vertical: 16.0,
-        ),
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(
-              AppAssets.balanceBg,
-            ),
-            fit: BoxFit.cover,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(Corners.md),
+        image: const DecorationImage(
+          image: AssetImage(
+            AppAssets.balanceBg,
           ),
+          fit: BoxFit.cover,
         ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Spacer(
+                flex: 4,
+              ),
+              Align(
+                alignment: Alignment.center,
+                child: Text(
                   AppStrings.availableBalanceTxt,
                   style: TextStyles.body1.copyWith(
                     fontSize: FontSizes.s13,
                   ),
                 ),
-                //space vertiically
-                vSpacer(5.0),
-                Text(
-                  addDollarToAmount('100000'),
-                  style: TextStyles.t1.copyWith(
-                    fontSize: FontSizes.s30,
-                  ),
+              ),
+              const Spacer(
+                flex: 2,
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.visibility_off_outlined,
+                  size: 20.0,
                 ),
-                if (showHistory) ...[
-                  //space vertiically
-                  vSpacer(10.0),
-                  GestureDetector(
-                    onTap: () {
-                      context.push(
-                        AppScreenPaths.transactionHistoryPath,
-                      );
-                    },
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text(
-                          AppStrings.transactionHistoryTxt,
-                          style: TextStyles.h4.copyWith(
-                            fontSize: FontSizes.s13,
-                            color: AppColors.accent,
-                          ),
-                        ),
-                        //space horizontally
-                        hSpacer(5.0),
-                        const Icon(
-                          Icons.arrow_forward_ios,
-                          size: 12,
-                          color: AppColors.accent,
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ],
+              ),
+            ],
+          ),
+          Text(
+            addDollarToAmount('100000'),
+            style: TextStyles.t1.copyWith(
+              fontSize: FontSizes.s30,
             ),
-            SizedBox(
-              height: 30,
-              child: MaterialButton(
-                elevation: 0.0,
-                hoverElevation: 0.0,
-                focusElevation: 0.0,
-                highlightElevation: 0.0,
-                disabledElevation: 0.0,
-                color: AppColors.accentDark,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(
-                    Corners.sm,
-                  ),
-                ),
-                onPressed: () {
-                  onPressed.call();
-                },
-                child: Text(
-                  AppStrings.fundWalletTxt,
-                  style: TextStyles.body2.copyWith(
-                    fontSize: FontSizes.s12,
-                    fontWeight: FontWeight.w500,
+          ),
+          const Gap(10.0),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(bottom: 5.0),
+                child: SizedBox(
+                  height: 30,
+                  child: SimpleFilledButton(
+                    text: Text(
+                      AppStrings.fundWalletTxt,
+                      style: TextStyles.body2.copyWith(
+                        fontSize: FontSizes.s12,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    backGroundColor: AppColors.accentDark,
+                    onPressed: () {},
                   ),
                 ),
               ),
-            ),
-          ],
-        ),
+              SizedBox(
+                height: 40,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10.0,
+                  ),
+                  child: DottedLine(
+                    direction: Axis.vertical,
+                    dashLength: 3.0,
+                    dashGapLength: 1.0,
+                    lineThickness: 1.0,
+                    dashColor: context.colorScheme.onSurface.withOpacity(
+                      0.4,
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 5.0),
+                child: SizedBox(
+                  height: 30.0,
+                  child: SimpleOutlinedButton(
+                    text: Text(
+                      AppStrings.transferFundTxt,
+                      style: TextStyles.body2.copyWith(
+                        fontSize: FontSizes.s12,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    backgroundColor: context.colorScheme.background,
+                    onPressed: () {},
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }

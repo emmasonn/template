@@ -20,24 +20,31 @@ class ServicesWidget extends StatelessWidget {
         ServiceItem(
           icon: PeniremitIcon.airtime,
           title: AppStrings.airtimeTxt,
-          onPressed: () {},
+          onPressed: () {
+            context.push(AppScreenPaths.buyAirtimePath);
+          },
         ),
         ServiceItem(
           icon: PeniremitIcon.wifi,
           title: AppStrings.dataTxt,
+          iconSize: 18,
           padRight: true,
-          onPressed: () {},
+          onPressed: () {
+            context.push(AppScreenPaths.buyDataPath);
+          },
         ),
         ServiceItem(
           icon: PeniremitIcon.electricity,
           title: AppStrings.electricityTxt,
-          onPressed: () {},
+          onPressed: () {
+            context.push(AppScreenPaths.buyElectricityPath);
+          },
         ),
         ServiceItem(
-          icon: Icons.more_horiz,
-          title: AppStrings.moreTxt,
+          icon: Icons.tv,
+          title: AppStrings.tvTxt,
           onPressed: () {
-            context.push(AppScreenPaths.moreServicesPath);
+            context.push(AppScreenPaths.buyTvPath);
           },
         ),
       ],
@@ -50,11 +57,13 @@ class ServiceItem extends StatelessWidget {
   final String title;
   final Function() onPressed;
   final bool padRight;
+  final double? iconSize;
   const ServiceItem({
     super.key,
     required this.icon,
     required this.title,
     this.padRight = false,
+    this.iconSize,
     required this.onPressed,
   });
 
@@ -67,7 +76,7 @@ class ServiceItem extends StatelessWidget {
       child: Column(
         children: [
           CircleAvatar(
-            radius: 25.0,
+            radius: 22.0,
             backgroundColor: context.colorScheme.surface,
             child: Padding(
               padding: EdgeInsets.only(
@@ -75,7 +84,7 @@ class ServiceItem extends StatelessWidget {
               ),
               child: Icon(
                 icon,
-                size: 22,
+                size: iconSize ?? 20,
                 color: AppColors.accent,
               ),
             ),

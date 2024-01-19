@@ -36,27 +36,28 @@ class CustomOutlineButton extends StatelessWidget {
           elevation: 0.0,
           side: BorderSide(color: context.colorScheme.onSurface),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(Corners.md),
+            borderRadius: BorderRadius.circular(
+              cornerRadius ?? Corners.md,
+            ),
           ),
         ),
         onPressed: onPressed,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
           children: [
             if (prefixIcon != null) ...[
               prefixIcon!,
             ],
-            Expanded(
-              child: Align(
-                alignment: Alignment.center,
-                child: Text(
-                  text,
-                  style: style ??
-                      TextStyles.btnStyle.copyWith(
-                        color: AppColors.onAccent,
-                      ),
-                ),
+            Align(
+              alignment: Alignment.center,
+              child: Text(
+                text,
+                style: style ??
+                    TextStyles.btnStyle.copyWith(
+                      color: AppColors.onAccent,
+                    ),
               ),
             ),
             if (suffixIcon != null) ...[

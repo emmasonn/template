@@ -2,16 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:peniremit/core/helpers/spacer_widgets.dart';
-import 'package:peniremit/core/icon_fonts/peniremit_font.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
-import 'package:peniremit/core/widgets/custom_app_bar.dart';
+import 'package:peniremit/core/widgets/dashboard_app_bar_widget.dart';
+import 'package:peniremit/core/widgets/rounded_image_widget.dart';
+import 'package:peniremit/features/home/app/screens/transaction_history_list.dart';
 import 'package:peniremit/features/home/app/widgets/balance_card_widget.dart';
 import 'package:peniremit/features/home/app/widgets/services_widget.darts.dart';
-import 'package:peniremit/features/home/app/widgets/subscription_filter_widget.dart';
 import 'package:peniremit/features/home/app/widgets/upcoming_subscription_widget.dart';
 import 'package:peniremit/navigation/app_screen_paths.dart';
 import 'package:peniremit/navigation/custom_page_transition.dart';
-import 'package:peniremit/navigation/nav_utils.dart';
 import 'package:peniremit/resources/app_colors.dart';
 import 'package:peniremit/resources/app_dimen.dart';
 import 'package:peniremit/resources/app_strings.dart';
@@ -37,13 +36,14 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: CustomAppBar(
+      appBar: DashboardAppBar(
         context,
         titleText: AppStrings.appNameTxt,
-        noBackButton: true,
-        style: TextStyles.h4.copyWith(
-          fontWeight: FontWeight.w600,
+        centerTitle: true,
+        leadingIcon: const RoundedImageWidget(
+          radius: 17.0,
         ),
+        style: TextStyles.h4.copyWith(fontWeight: FontWeight.w600),
         actionIcons: [
           IconButton(
             onPressed: () {},
@@ -53,20 +53,6 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
         ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          context.push(
-            AppScreenPaths.addSubscriptionPath,
-            extra: NavParamWrapper<Subscription>(),
-          );
-        },
-        backgroundColor: AppColors.accent,
-        child: Icon(
-          PeniremitIcon.add,
-          size: Sizes.iconSizeMd,
-          color: Colors.white,
-        ),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(
@@ -94,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   //upcoming subscription
                   const UpcomingSubscriptionWidget(),
                   //space vertiically
-                  vSpacer(20.0),
+                  vSpacer(24.0),
                   //services widgets
                   const ServicesWidget(),
                   //space vertiically
@@ -104,7 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        AppStrings.subscriptionTxt,
+                        AppStrings.transactionsTxt,
                         style: TextStyles.t2.copyWith(fontSize: FontSizes.s15),
                       ),
                       GestureDetector(
@@ -134,11 +120,8 @@ class _HomeScreenState extends State<HomeScreen> {
             //space vertiically
             vSpacer(16.0),
             //subscription
-            const SizedBox(
-              height: 250,
-              child: SubscriptionFilterWidget(
-                primary: true,
-              ),
+            const TransactionListWidget(
+              itemCount: 4,
             ),
           ],
         ),

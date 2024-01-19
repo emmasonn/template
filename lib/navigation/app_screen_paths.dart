@@ -24,6 +24,13 @@ class AppScreenPaths {
   static const confirmTransactionPath = '/confirm_transaction_path';
   static const transactionCompletedPath = '/transaction_completed';
   static const withdrawFundPath = '/withdraw_path';
+
+  //* bill payment
+  static const buyAirtimePath = '/buy_airtime';
+  static const buyDataPath = '/buy_data';
+  static const buyElectricityPath = '/buy_electricity';
+  static const buyTvPath = '/buy_tv';
+
   //* Landings
   static const homePath = '/home';
   static const walletPath = '/wallet';

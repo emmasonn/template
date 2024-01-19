@@ -13,27 +13,33 @@ class CardTransactionWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: CircleAvatar(
-        radius: 23,
-        backgroundColor: context.colorScheme.background,
+      leading: Container(
+        width: 40,
+        height: 40,
+        decoration: BoxDecoration(
+          border: Border.all(
+            color: AppColors.accentLighter,
+          ),
+          shape: BoxShape.circle,
+          color: context.colorScheme.background,
+        ),
+        padding: const EdgeInsets.all(4.0),
         child: Image.asset(
           AppAssets.youtubePng,
         ),
       ),
       title: Text(
         'Youtube',
-        style: TextStyles.notoSerifJP.copyWith(
+        style: TextStyles.h1.copyWith(
           fontSize: FontSizes.s13,
           color: context.colorScheme.onPrimary,
-          fontWeight: FontWeight.w500,
         ),
       ),
       subtitle: Text(
         '16 September, 2023',
-        style: TextStyles.notoSerifJP.copyWith(
+        style: TextStyles.caption.copyWith(
           fontSize: FontSizes.s10,
           color: AppColors.onAccentLight,
-          fontWeight: FontWeight.w300,
         ),
       ),
       trailing: Column(
@@ -41,19 +47,18 @@ class CardTransactionWidget extends StatelessWidget {
         children: [
           Text(
             '-${addDollarToAmount('2000')}',
-            style: TextStyles.notoSerifJP.copyWith(
+            style: TextStyles.t3.copyWith(
               fontSize: FontSizes.s16,
               fontWeight: FontWeight.w600,
-              color: AppColors.error,
+              color: AppColors.white,
             ),
           ),
           //space vertiically
           vSpacer(2.0),
           Text(
             'Successful',
-            style: TextStyles.notoSerifJP.copyWith(
+            style: TextStyles.caption.copyWith(
               fontSize: FontSizes.s10,
-              fontWeight: FontWeight.w300,
               color: AppColors.accentLighter,
             ),
           ),

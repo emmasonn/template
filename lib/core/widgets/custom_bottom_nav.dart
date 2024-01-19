@@ -35,23 +35,20 @@ class CustomBottomNavWidget extends StatelessWidget {
         alignment: Alignment.center,
         curve: Curves.fastLinearToSlowEaseIn,
         color: isSelected ? activeBgColor : Colors.transparent,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            Flexible(
-              child: IconTheme(
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              IconTheme(
                 data: IconThemeData(
                   size: iconSize,
                   color: isSelected ? activeColor : color,
                 ),
                 child: isSelected ? item.icon : item.inactiveIcon ?? item.icon,
               ),
-            ),
-            if (isSelected)
               Padding(
                 padding: const EdgeInsets.only(
-                  left: 10,
+                  top: 5.0,
                 ),
                 child: Text(
                   item.title ?? '',
@@ -60,8 +57,7 @@ class CustomBottomNavWidget extends StatelessWidget {
                   ),
                 ),
               )
-          ],
-        ),
+            ]),
       );
 
   @override
@@ -82,8 +78,14 @@ class CustomBottomNavWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: items.map((final item) {
               final int index = items.indexOf(item);
+              final textLength = item.title!.length;
+
               return Flexible(
-                flex: selectedIndex == index ? 3 : 2,
+                flex: selectedIndex == index
+                    ? textLength < 9
+                        ? 2
+                        : 4
+                    : 3,
                 child: GestureDetector(
                   onTap: () {
                     onItemSelected(index);

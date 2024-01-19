@@ -25,6 +25,7 @@ class Sizes {
   /////////////////////////////////
   static double get bottonNavHeight => 70;
   static double get bottomNavIconSize => 20;
+  static double get bottomNavIconSizeSm => 18;
   static double get toolBarHeigth => 70;
   static double get iconSizeMd => 24;
   static double get btnWidthMd => 350;

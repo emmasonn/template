@@ -4,6 +4,8 @@ import 'package:go_router/go_router.dart';
 import 'package:peniremit/core/helpers/spacer_widgets.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
 import 'package:peniremit/core/widgets/custom_app_bar.dart';
+import 'package:peniremit/core/widgets/dashboard_app_bar_widget.dart';
+import 'package:peniremit/core/widgets/rounded_image_widget.dart';
 import 'package:peniremit/features/home/app/screens/transaction_history_list.dart';
 import 'package:peniremit/features/home/app/widgets/balance_card_widget.dart';
 import 'package:peniremit/features/wallet/app/widgets/atm_card_widget.dart';
@@ -34,10 +36,13 @@ class _WalletScreenState extends State<WalletScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(
+      appBar: DashboardAppBar(
         context,
         titleText: AppStrings.appNameTxt,
-        noBackButton: true,
+        centerTitle: true,
+        leadingIcon: const RoundedImageWidget(
+          radius: 23.0,
+        ),
         style: TextStyles.h4.copyWith(
           fontWeight: FontWeight.w600,
         ),
@@ -80,17 +85,11 @@ class _WalletScreenState extends State<WalletScreen> {
                     //space vertiically
                     vSpacer(20.0),
 
-                    //perform transaction widget
-                    const CardWalletAction(),
-
-                    //space vertiically
-                    vSpacer(20.0),
-
                     //card widget
                     Text(
                       AppStrings.myCardTxt,
-                      style: TextStyles.notoSerifJP.copyWith(
-                        fontSize: 16.0,
+                      style: TextStyles.h1.copyWith(
+                        fontSize: FontSizes.s15,
                       ),
                     ),
                     //space vertiically

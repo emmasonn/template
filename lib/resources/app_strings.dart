@@ -16,6 +16,8 @@ class AppStrings {
   static const changePasswordTxt = 'Change Password';
 
   //caption text
+  static const billPriceTxt = 'Price:\t';
+  static const chooseAmountTxt = 'Choose an amount';
   static const signInCaption = 'Welcome back! sign into your account';
   static const signUpCaptionTxt = 'Hello, create your account to get started!';
   static const signInCaptionTxt = 'Welcome back! sign into your account';
@@ -95,7 +97,7 @@ class AppStrings {
   static const subscriptionCyleTxt = 'Subscription Cycle';
   static const autoRenewalTxt = 'Auto Renewal Date';
   static const autoRenewalDuration = 'Auto Renewal Duration';
-  static const myCardTxt = 'My Cards';
+  static const myCardTxt = 'Cards';
   static const addSubscriptionText = 'Add Subscription';
   static const createCardTxt = 'Create Card';
   static const totalExpensesTxt = 'Total Expenses';
@@ -133,6 +135,7 @@ class AppStrings {
   static const String withdrawFundTxt = 'Withdraw Funds';
   static const String availableBalanceTxt = 'Available Balance';
   static const String transactionHistoryTxt = 'Transaction History';
+  static const String transactionsTxt = 'Transactions';
   static const String fundWalletTxt = 'Fund Wallet';
   static const String upcomingSubscriptionTxt = 'Upcoming Subscription';
   static const String upcomingSubscriptionCaptionTxt =
@@ -163,4 +166,10 @@ class AppStrings {
       'Sending coins or tokens other than usdt to the address will result in the loss of your deposit.';
   static const tokenSentTxt = 'Token Sent';
   static const cannotShareQrcodeTxt = 'Cannot share Qr code';
+  static const selectContactTxt = 'Select Contact';
+  //* network providers
+  static const mtnTxt = 'MTN';
+  static const gloTxt = 'GLO';
+  static const mobile9Txt = '9Mobile';
+  static const airtelTxt = 'Airtel';
 }
