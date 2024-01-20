@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:peniremit/core/utils/extension_util.dart';
+import 'package:peniremit/resources/app_colors.dart';
 import 'package:peniremit/resources/app_dimen.dart';
 
 class PinKeyboardController {
@@ -74,7 +76,7 @@ class _PinKeyboardState extends State<PinKeyboard> {
       ),
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.grey.shade50,
+          color: context.onSurfaceVt,
         ),
         padding: const EdgeInsets.symmetric(
           vertical: 5.0,
@@ -269,9 +271,10 @@ class _BackspaceIconWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) => _ImageWidget(
         widget: widget,
-        icon: const Icon(
+        icon: Icon(
           Icons.backspace,
           size: 25,
+          color: widget.textColor,
         ),
         onPress: onPress,
       );
@@ -329,7 +332,7 @@ class _ImageWidget extends StatelessWidget {
           height: widget.space,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(Corners.sm),
-            color: Colors.white,
+            color: context.colorScheme.surface,
           ),
           child: Center(child: icon),
         ),
@@ -360,7 +363,7 @@ class _NumberWidget extends StatelessWidget {
           height: widget.space,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(Corners.sm),
-            color: Colors.white,
+            color: context.colorScheme.surface,
           ),
           child: Center(
             child: Text(
@@ -370,7 +373,8 @@ class _NumberWidget extends StatelessWidget {
                 color: widget.textColor ?? const Color(0xCD000000),
                 shadows: [
                   Shadow(
-                    color: Colors.grey.shade100,
+                    color: widget.textColor?.withOpacity(0.4) ??
+                        Colors.grey.shade100,
                     offset: const Offset(1, 1),
                   )
                 ],

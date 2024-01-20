@@ -82,7 +82,7 @@ class _TransactionPinWidgetState extends State<TransactionPinWidget> {
                   onCompleted: (value) {
                     FocusManager.instance.primaryFocus!.unfocus();
                     if (value != null && value.length == 4) {
-                      // widget.onChanged.call(value);
+                      widget.onChanged.call(value);
                     }
                   },
                 ),
@@ -92,7 +92,7 @@ class _TransactionPinWidgetState extends State<TransactionPinWidget> {
               TextButton(
                 onPressed: () {},
                 child: Text(
-                 AppStrings.forgotPasswordTxt,
+                 AppStrings.forgotPinTxt,
                   style: TextStyles.h1.copyWith(
                     fontSize: FontSizes.s13,
                     color: AppColors.accent,
@@ -107,6 +107,7 @@ class _TransactionPinWidgetState extends State<TransactionPinWidget> {
                 length: 4,
                 enableBiometric: true,
                 iconBiometricColor: AppColors.accent,
+                textColor: context.colorScheme.onPrimary,
                 onChange: (pin) {
                   _controller.text = pin;
                   setState(() {});

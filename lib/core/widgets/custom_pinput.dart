@@ -41,7 +41,7 @@ class CustomPinput extends StatelessWidget {
             Corners.sm,
           ),
           border: Border.all(
-            color: context.colorScheme.onSurface,
+            color: context.onSurfaceVt,
           ),
         ),
       ),

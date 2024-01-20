@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
+import 'package:peniremit/core/helpers/helpers_utils.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
 import 'package:peniremit/core/widgets/app_text_field.dart';
 import 'package:peniremit/core/widgets/custom_app_bar.dart';
 import 'package:peniremit/core/widgets/custom_filled_button.dart';
 import 'package:peniremit/core/widgets/show_bottom_dialog.dart';
+import 'package:peniremit/features/wallet/app/widgets/authorize_transaction.dart';
 import 'package:peniremit/features/wallet/app/widgets/bill_payment_widget.dart';
 import 'package:peniremit/features/home/app/widgets/bill_phone_number_widget.dart';
 import 'package:peniremit/features/home/app/widgets/choose_amount_widget.dart';
@@ -93,13 +95,11 @@ class _BuyAirtimeScreenState extends State<BuyAirtimeScreen> {
                       child: BillPaymentWidget(
                         onPressed: () {
                           //show authentication dialog
-                          showSimpleBottomDialog(
+                          AuthorizeTransaction.useBiometric(
                             context,
-                            child: TransactionPinWidget(
-                              onChanged: (pin) {
-                                
-                              },
-                            ),
+                            onConfirm: (method, {String? pin}) {
+                              pp('---method');
+                            },
                           );
                         },
                       ),
