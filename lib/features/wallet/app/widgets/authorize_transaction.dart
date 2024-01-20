@@ -24,6 +24,7 @@ class AuthorizeTransaction {
                 ConfirmationMethod.pin,
                 pin: pin,
               );
+              Navigator.pop(context);
             },
           ),
         );
