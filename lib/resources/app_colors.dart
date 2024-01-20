@@ -11,16 +11,16 @@ class AppColors {
 
   //*surface
   static const Color surface700 = Color(0xff1A1A1A);
+  static const Color surface300 = Color(0xff979797);
   static const Color surface100 = Color(0xffE2E7F2);
   static const Color surface200 = Color(0xffB7B7B7);
-  static const Color surface300 = Color(0xff979797);
   static const Color surface500 = Color(0xff6A6A6A);
 
   //*others
   static const copyBg = Color(0xffB1C0BC);
   static const white = Color(0xffffffff);
   static const Color bgWhite = Color(0xfff3f3f3);
-  static const Color bgBlack = Color(0xff000000);
+  static const Color bgBlack = Color(0xff000000); //Color(0xff0D0D0D);
   static const Color splashBg = Color(0xff000000);
   static const Color error = Color(0xffFF0101);
   static const Color grey = Colors.grey;

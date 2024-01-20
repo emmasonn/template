@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:peniremit/core/icon_fonts/peniremit_font.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
 import 'package:peniremit/resources/app_colors.dart';
 import 'package:peniremit/resources/app_dimen.dart';
@@ -61,11 +60,9 @@ class CustomAppBar extends AppBar {
           actions: actionIcons,
           bottom: bottomChild,
           iconTheme: IconThemeData(
-            size: Sizes.iconSizeMd,
-            color: AppColors.onAccentLight,
-          ),
-          shadowColor: showShadow ? context.colorScheme.onSurface : null,
-          elevation: showShadow ? 0.3 : 0.0,
+              size: Sizes.iconSizeMd, color: AppColors.onAccentLight),
+          shadowColor: showShadow ? context.onSurfaceVt : null,
+          elevation: showShadow ? 0.1 : 0.0,
           backgroundColor: bgColor ?? context.colorScheme.background,
           titleTextStyle: style ??
               TextStyles.body1.copyWith(

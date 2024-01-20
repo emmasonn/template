@@ -16,7 +16,7 @@ class ChooseAmountWidget extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(Corners.md),
-        color: context.colorScheme.surface,
+        color: context.surfaceVt,
       ),
       padding: const EdgeInsets.symmetric(
         horizontal: 16.0,

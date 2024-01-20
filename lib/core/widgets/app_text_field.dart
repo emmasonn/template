@@ -113,7 +113,7 @@ class _AppTextFieldExState extends State<AppTextFieldEx> {
             obscuringCharacter: '∗'.toString(),
             cursorColor: widget.color,
             decoration: InputDecoration(
-              fillColor: context.colorScheme.surface,
+              fillColor: context.surfaceVt,
               filled: true,
               contentPadding: const EdgeInsets.only(
                 left: 15.0,
@@ -124,21 +124,21 @@ class _AppTextFieldExState extends State<AppTextFieldEx> {
               prefixIcon: widget.prefixIcon,
               border: OutlineInputBorder(
                 borderSide: BorderSide(
-                  color: context.colorScheme.surface,
+                  color: context.onSurfaceVt,
                   width: 1.0,
                 ),
                 borderRadius: BorderRadius.circular(Corners.md),
               ),
               enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(
-                  color: context.colorScheme.surface,
+                  color: context.onSurfaceVt,
                   width: 0.5,
                 ),
                 borderRadius: BorderRadius.circular(Corners.md),
               ),
               focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(
-                  color: context.colorScheme.surface,
+                  color: context.onSurfaceVt,
                   width: 0.5,
                 ),
                 borderRadius: BorderRadius.circular(Corners.md),

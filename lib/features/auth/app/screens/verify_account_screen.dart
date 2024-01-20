@@ -80,7 +80,9 @@ class _VerifyAccountScreenState extends State<VerifyAccountScreen> {
             //display pin put
             CustomPinput(
               length: 6,
-              style: TextStyles.notoSerifJP.copyWith(fontSize: FontSizes.s16),
+              style: TextStyles.notoSerifJP.copyWith(
+                fontSize: FontSizes.s16,
+              ),
               obscuringText: false,
               onCompleted: (value) {
                 FocusManager.instance.primaryFocus!.unfocus();

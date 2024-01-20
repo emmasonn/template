@@ -6,6 +6,8 @@ extension AppContext on BuildContext {
   ThemeData get theme => Theme.of(this);
   TextTheme get textTheme => theme.textTheme;
   ColorScheme get colorScheme => theme.colorScheme;
+  Color get onSurfaceVt => colorScheme.onSurface.withOpacity(0.34);
+  Color get surfaceVt => colorScheme.surface.withOpacity(0.34);
 }
 
 extension StringUtil on String {

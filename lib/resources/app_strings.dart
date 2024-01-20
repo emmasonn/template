@@ -52,6 +52,7 @@ class AppStrings {
   static const alreadyHaveAccountTxt = 'Already have an account?\t';
   static const verifyAccountTxt = 'Verify Account';
   static const forgotPasswordTxt = 'Forgot password';
+  static const forgotPinTxt = 'Forgot payment pin?';
   static const orTxt = 'or';
   static const pinTxt = 'Pin';
   static const confirmPinTxt = 'Confirm Pin';
@@ -60,6 +61,9 @@ class AppStrings {
   static const createNewPasswordTxt = 'Create New Password';
   static const allCategoriesTxt = 'All Categories';
   static const allStatusTxt = 'All Status';
+  static const verifyFingerPrintTxt = 'Verify Fingerprint';
+  static const usePinConfirmationTxt = 'Use pin for confirmation';
+  static const confirmPaymentTxt = 'Confirm payment with your fingerprint';
 
   //BottomNav item title
   static const homeTxt = 'Home';
@@ -159,6 +163,8 @@ class AppStrings {
   static const subscriptionPlansTxt = 'Subscription Plans';
   static const addSubscriptionTxt = 'Add Subscription';
   static const billPaymentTxt = 'Bills Payment';
+  static const amountRangeTxt = '\u20A650 - \u20A650,000';
+  static const payTxt = 'Pay';
 
   static const depositWarningTitleTxt =
       'Please Note: Send only USDT to this address';

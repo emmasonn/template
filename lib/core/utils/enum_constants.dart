@@ -1,8 +1,9 @@
 //drawer items
-enum ScreenTypes {
+enum ScreenTypes { none, home, wallet, analytics, settings }
+
+//payment confirmation
+enum ConfirmationMethod {
   none,
-  home,
-  wallet,
-  analytics,
-  settings
+  pin,
+  biometric,
 }

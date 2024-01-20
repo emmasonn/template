@@ -11,20 +11,23 @@ class CustomPinput extends StatelessWidget {
     required this.length,
     required this.style,
     required this.onCompleted,
+    this.controller,
   });
   final Function(String?) onCompleted;
   final bool obscuringText;
   final int length;
   final TextStyle style;
+  final TextEditingController? controller;
 
   @override
   Widget build(BuildContext context) {
     return Pinput(
+      controller: controller,
       length: length,
       obscuringCharacter: '*',
       obscureText: obscuringText,
       closeKeyboardWhenCompleted: true,
-      separatorBuilder: (index) => const SizedBox(width: 8),
+      separatorBuilder: (index) => const SizedBox(width: 5),
       defaultPinTheme: PinTheme(
         textStyle: style,
         constraints: const BoxConstraints(
@@ -34,8 +37,12 @@ class CustomPinput extends StatelessWidget {
           maxHeight: 48,
         ),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(Corners.sm),
-          border: Border.all(color: context.colorScheme.onSurface),
+          borderRadius: BorderRadius.circular(
+            Corners.sm,
+          ),
+          border: Border.all(
+            color: context.colorScheme.onSurface,
+          ),
         ),
       ),
       inputFormatters: [

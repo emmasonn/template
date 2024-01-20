@@ -47,6 +47,8 @@ dependencies:
   sized_context: ^1.0.0+4
   fl_chart: ^0.66.0
   gap: ^3.0.1
+  local_auth: ^2.1.8
+  # modal_bottom_sheet: ^2.1.2
 
 dev_dependencies:
   flutter_launcher_icons: ^0.13.1

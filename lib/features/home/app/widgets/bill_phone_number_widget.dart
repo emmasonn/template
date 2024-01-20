@@ -91,6 +91,8 @@ class _BillPhoneNumberWidgetState extends State<BillPhoneNumberWidget> {
               // PhoneNumberSpaceFormatter(),
             ],
             decoration: InputDecoration(
+              fillColor: context.surfaceVt,
+              filled: true,
               contentPadding: const EdgeInsets.only(
                 top: 16.0,
                 bottom: 10,
@@ -106,21 +108,21 @@ class _BillPhoneNumberWidgetState extends State<BillPhoneNumberWidget> {
               ),
               border: OutlineInputBorder(
                 borderSide: BorderSide(
-                  color: context.colorScheme.surface,
-                  width: 1.0,
+                  color: context.onSurfaceVt,
+                  width: 0.5,
                 ),
                 borderRadius: BorderRadius.circular(Corners.md),
               ),
               enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(
-                  color: context.colorScheme.surface,
+                  color: context.onSurfaceVt,
                   width: 0.5,
                 ),
                 borderRadius: BorderRadius.circular(Corners.md),
               ),
               focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(
-                  color: context.colorScheme.surface,
+                  color: context.onSurfaceVt,
                   width: 0.5,
                 ),
                 borderRadius: BorderRadius.circular(Corners.md),
