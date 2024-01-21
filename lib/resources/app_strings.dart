@@ -85,6 +85,7 @@ class AppStrings {
   static const moreTxt = 'More';
   static const bettingTxt = 'Betting';
   static const travelsTxt = 'Travels';
+  static const accountTxt = 'Account';
   static const onlineShopping = 'Online Shopping';
   static const subscriptionTxt = 'Subscriptions';
   static const subscriptionDetailTxt = 'Subscription Details';

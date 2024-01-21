@@ -61,8 +61,8 @@ class CustomAppBar extends AppBar {
           bottom: bottomChild,
           iconTheme: IconThemeData(
               size: Sizes.iconSizeMd, color: AppColors.onAccentLight),
-          shadowColor: showShadow ? context.onSurfaceVt : null,
-          elevation: showShadow ? 0.1 : 0.0,
+          shadowColor: showShadow ? context.colorScheme.onSurface : null,
+          elevation: showShadow ? 0.3 : 0.0,
           backgroundColor: bgColor ?? context.colorScheme.background,
           titleTextStyle: style ??
               TextStyles.body1.copyWith(

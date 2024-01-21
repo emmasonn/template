@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 import 'package:peniremit/core/helpers/spacer_widgets.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
@@ -41,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
         titleText: AppStrings.appNameTxt,
         centerTitle: true,
         leadingIcon: const RoundedImageWidget(
-          radius: 17.0,
+          radius: 20.0,
         ),
         style: TextStyles.h4.copyWith(fontWeight: FontWeight.w600),
         actionIcons: [
@@ -117,9 +118,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            //space vertiically
-            vSpacer(16.0),
-            //subscription
+            //transaction list
             const TransactionListWidget(
               itemCount: 4,
             ),

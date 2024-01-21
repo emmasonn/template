@@ -30,7 +30,7 @@ class _BuyElectricityScreenState extends State<BuyElectricityScreen> {
     return Scaffold(
         appBar: CustomAppBar(
           context,
-          titleText: AppStrings.subscriptionTxt,
+          titleText: AppStrings.electricityTxt,
           onBackPressed: () {
             Navigator.pop(context);
           },

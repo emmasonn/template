@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:peniremit/core/helpers/spacer_widgets.dart';
 import 'package:peniremit/core/icon_fonts/peniremit_font.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
-import 'package:peniremit/core/widgets/custom_app_bar.dart';
 import 'package:peniremit/core/widgets/custom_divider_widget.dart';
 import 'package:peniremit/core/widgets/dashboard_app_bar_widget.dart';
 import 'package:peniremit/core/widgets/rounded_image_widget.dart';
@@ -34,10 +32,10 @@ class _SettingScreenState extends State<SettingScreen> {
     return Scaffold(
       appBar: DashboardAppBar(
         context,
-        titleText: AppStrings.appNameTxt,
+        titleText: AppStrings.accountTxt,
         centerTitle: true,
         leadingIcon: const RoundedImageWidget(
-          radius: 23.0,
+          radius: 20.0,
         ),
         style: TextStyles.h4.copyWith(
           fontWeight: FontWeight.w600,
