@@ -50,6 +50,7 @@ class AppRouter {
       AppRoutes.buyDataScreen,
       AppRoutes.buyElectricityScreen,
       AppRoutes.buyTvScreen,
+      AppRoutes.recoverPasswordOtpScreen,
     ],
   );
 }

@@ -1,17 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:peniremit/core/utils/enum_constants.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
 import 'package:peniremit/features/home/app/widgets/card_amount_widget.dart';
 import 'package:peniremit/resources/app_dimen.dart';
 import 'package:peniremit/resources/app_strings.dart';
 import 'package:peniremit/resources/app_styles.dart';
 
-class ChooseAmountWidget extends StatelessWidget {
-  const ChooseAmountWidget({super.key});
+class SelectAmountWidget extends StatelessWidget {
+  const SelectAmountWidget({
+    super.key,
+    this.billType = BillType.none,
+  });
+  final BillType billType;
 
   @override
   Widget build(BuildContext context) {
-    final amounts = [100, 200, 500, 1000, 2000, 5000];
+    final amounts = billType == BillType.electricity
+        ? [500, 1000, 2000, 3000, 5000, 10000]
+        : [100, 200, 500, 1000, 2000, 5000];
 
     return Container(
       decoration: BoxDecoration(
@@ -26,7 +33,7 @@ class ChooseAmountWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            AppStrings.chooseAmountTxt,
+            AppStrings.selectAmountTxt,
             style: TextStyles.body2,
           ),
           const Gap(20.0),

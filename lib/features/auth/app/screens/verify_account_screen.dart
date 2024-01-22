@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:peniremit/core/helpers/spacer_widgets.dart';
+import 'package:peniremit/core/utils/extension_util.dart';
 import 'package:peniremit/core/widgets/custom_filled_button.dart';
 import 'package:peniremit/core/widgets/custom_pinput.dart';
 import 'package:peniremit/navigation/app_screen_paths.dart';
@@ -42,93 +43,87 @@ class _VerifyAccountScreenState extends State<VerifyAccountScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal: 16.w,
-        ),
+        padding: EdgeInsets.only(left: 16.w, right: 16.0),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Spacer(
               flex: 1,
             ),
-            Align(
-              alignment: Alignment.topLeft,
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    AppStrings.verifyPhoneNumberTxt,
-                    style: TextStyles.h1,
-                  ),
-                  //space vertiically
-                  vSpacer(10.0),
-                  Text(
-                    AppStrings.verifyAccountCaption,
-                    style: TextStyles.caption,
-                  ),
-                  Text(
-                    widget.navCallBack.object ?? '',
-                    style: TextStyles.caption,
-                  ),
-                ],
-              ),
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  AppStrings.verifyPhoneNumberTxt,
+                  style: TextStyles.h1,
+                ),
+                //space vertiically
+                vSpacer(10.0),
+                Text(
+                  AppStrings.verifyAccountCaption,
+                  style: TextStyles.caption,
+                ),
+                Text(
+                  widget.navCallBack.object ?? '',
+                  style: TextStyles.caption,
+                ),
+              ],
             ),
             //space vertiically
             vSpacer(30.0),
             //display pin put
             CustomPinput(
               length: 6,
-              style: TextStyles.notoSerifJP.copyWith(
-                fontSize: FontSizes.s16,
-              ),
+              style: TextStyles.body1.copyWith(fontSize: FontSizes.s16),
               obscuringText: false,
+              filledColor: context.colorScheme.surface,
               onCompleted: (value) {
                 FocusManager.instance.primaryFocus!.unfocus();
               },
             ),
             //space vertiically
             vSpacer(30.0),
-            Align(
-              alignment: Alignment.topLeft,
-              child: RichText(
-                text: TextSpan(
-                    text: AppStrings.didnotRecieveCodeCaption,
-                    style: TextStyles.caption.copyWith(
-                      fontSize: FontSizes.s13,
-                    ),
-                    children: [
-                      TextSpan(
-                        text: AppStrings.resendCodeCaption,
-                        style: TextStyles.h1.copyWith(
-                          color: AppColors.accent,
-                          fontSize: FontSizes.s13,
-                        ),
-                        recognizer: TapGestureRecognizer()
-                          ..onTap = () {
-                            context.go(AppScreenPaths.loginPath);
-                          },
+            RichText(
+              text: TextSpan(
+                  text: AppStrings.didnotRecieveCodeCaption,
+                  style: TextStyles.caption.copyWith(
+                    fontSize: FontSizes.s13,
+                  ),
+                  children: [
+                    TextSpan(
+                      text: AppStrings.resendCodeCaption,
+                      style: TextStyles.h1.copyWith(
+                        color: AppColors.accent,
+                        fontSize: FontSizes.s13,
                       ),
-                      TextSpan(
-                        text: '\n${AppStrings.resendCodeCaption}\t in 00:59',
-                        style: TextStyles.caption.copyWith(
-                          fontSize: FontSizes.s13,
-                          height: 1.5,
-                        ),
-                      )
-                    ]),
-              ),
+                      recognizer: TapGestureRecognizer()
+                        ..onTap = () {
+                          context.go(AppScreenPaths.loginPath);
+                        },
+                    ),
+                    TextSpan(
+                      text: '\n${AppStrings.resendCodeCaption}\t in 00:59',
+                      style: TextStyles.caption.copyWith(
+                        fontSize: FontSizes.s13,
+                        height: 1.5,
+                      ),
+                    )
+                  ]),
             ),
             //space vertiically
             vSpacer(40.0),
-            SizedBox(
-              width: Sizes.btnWidthMd,
-              child: CustomFilledButton(
-                text: AppStrings.verifyPhoneNumberTxt,
-                onPressed: () {
-                  context.go(AppScreenPaths.loginPath);
-                },
+            Center(
+              child: SizedBox(
+                width: Sizes.btnWidthMd,
+                child: CustomFilledButton(
+                  text: AppStrings.verifyPhoneNumberTxt,
+                  onPressed: () {
+                    context.go(AppScreenPaths.loginPath);
+                  },
+                ),
               ),
             ),
             const Spacer(

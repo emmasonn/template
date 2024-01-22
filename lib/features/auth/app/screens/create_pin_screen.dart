@@ -3,8 +3,10 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:peniremit/core/helpers/spacer_widgets.dart';
+import 'package:peniremit/core/utils/extension_util.dart';
 import 'package:peniremit/core/widgets/app_text_field.dart';
 import 'package:peniremit/core/widgets/custom_filled_button.dart';
+import 'package:peniremit/core/widgets/custom_pinput.dart';
 import 'package:peniremit/navigation/app_screen_paths.dart';
 import 'package:peniremit/navigation/custom_page_transition.dart';
 import 'package:peniremit/resources/app_dimen.dart';
@@ -62,38 +64,37 @@ class _CreatePinScreenState extends State<CreatePinScreen> {
             ),
             //space vertiically
             vSpacer(30.0),
-            AppTextFieldEx(
-              label: AppStrings.pinTxt,
-              hintText: AppStrings.pinHint,
-              keyboardType: TextInputType.number,
-              style: TextStyles.body1,
-              obscureText: true,
-              suffixIcon: const SizedBox(),
-              formatter: [
-                LengthLimitingTextInputFormatter(4),
-              ],
-              maxLine: 1,
-              onChanged: (value) {},
+            // AppTextFieldEx(
+            //   label: AppStrings.pinTxt,
+            //   hintText: AppStrings.pinHint,
+            //   keyboardType: TextInputType.number,
+            //   style: TextStyles.body1,
+            //   obscureText: true,
+            //   suffixIcon: const SizedBox(),
+            //   formatter: [
+            //     LengthLimitingTextInputFormatter(4),
+            //   ],
+            //   maxLine: 1,
+            //   onChanged: (value) {},
+            // ),
+            //display pin put
+            CustomPinput(
+              length: 4,
+              style: TextStyles.body1.copyWith(
+                fontSize: FontSizes.s16,
+              ),
+              obscuringText: false,
+              spacing: 20.0,
+              filledColor: context.colorScheme.surface,
+              onCompleted: (value) {
+                FocusManager.instance.primaryFocus!.unfocus();
+              },
             ),
-            vSpacer(20.0),
-            AppTextFieldEx(
-              label: AppStrings.confirmPinTxt,
-              hintText: AppStrings.confirmPinHint,
-              keyboardType: TextInputType.number,
-              style: TextStyles.body1,
-              formatter: [
-                LengthLimitingTextInputFormatter(4),
-              ],
-              obscureText: true,
-              suffixIcon: const SizedBox(),
-              maxLine: 1,
-              onChanged: (value) {},
-            ),
-            vSpacer(40.0),
+            vSpacer(70.h),
             SizedBox(
               width: Sizes.btnWidthMd,
               child: CustomFilledButton(
-                text: AppStrings.verifyPhoneNumberTxt,
+                text: AppStrings.createPinTxt,
                 onPressed: () {
                   context.go(AppScreenPaths.homePath);
                 },

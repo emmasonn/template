@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:peniremit/core/icon_fonts/peniremit_font.dart';
+import 'package:peniremit/core/utils/enum_constants.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
 import 'package:peniremit/resources/app_dimen.dart';
-import 'package:peniremit/resources/app_strings.dart';
 import 'package:peniremit/resources/app_styles.dart';
 import 'package:sized_context/sized_context.dart';
 
@@ -18,6 +18,7 @@ class AppPopUpField extends StatefulWidget {
     this.style,
     required this.hintText,
     this.initValue,
+    this.billType = BillType.none,
   });
   final String? label;
   final String hintText;
@@ -26,6 +27,7 @@ class AppPopUpField extends StatefulWidget {
   final TextStyle? style;
   final List<String> items;
   final Function(String) onChanged;
+  final BillType billType;
 
   @override
   State<AppPopUpField> createState() => _AppPopUpFieldState();
@@ -83,11 +85,14 @@ class _AppPopUpFieldState extends State<AppPopUpField> {
                         if (widget.items.indexOf(item) == 0) ...[
                           Padding(
                             padding: const EdgeInsets.symmetric(
-                                vertical: 10.0, horizontal: 16.0),
+                              vertical: 10.0,
+                              horizontal: 16.0,
+                            ),
                             child: Text(
-                              AppStrings.selectServiceProviderTxt,
+                              widget.hintText,
                               style: TextStyles.body1.copyWith(
-                                  color: context.colorScheme.onPrimary),
+                                color: context.colorScheme.onPrimary,
+                              ),
                             ),
                           ),
                           Divider(
@@ -103,8 +108,12 @@ class _AppPopUpFieldState extends State<AppPopUpField> {
                             leading: CircleAvatar(
                               radius: 18,
                               backgroundColor: context.onSurfaceVt,
-                              child: const Icon(
-                                PeniremitIcon.electricity,
+                              child: Icon(
+                                widget.billType == BillType.tv
+                                    ? PeniremitIcon.tv
+                                    : widget.billType == BillType.electricity
+                                        ? PeniremitIcon.electricity
+                                        : Icons.subscriptions,
                                 size: 18.0,
                               ),
                             ),
@@ -146,12 +155,14 @@ class AppPopUpItem extends StatelessWidget {
     this.style,
     required this.hintText,
     this.initValue,
+    this.billType = BillType.none,
   });
   final String? label;
   final String hintText;
   final String? initValue;
   final double? height;
   final TextStyle? style;
+  final BillType billType;
 
   @override
   Widget build(BuildContext context) {
@@ -195,8 +206,12 @@ class AppPopUpItem extends StatelessWidget {
               CircleAvatar(
                 radius: 18,
                 backgroundColor: context.onSurfaceVt,
-                child: const Icon(
-                  PeniremitIcon.electricity,
+                child: Icon(
+                  billType == BillType.tv
+                      ? PeniremitIcon.tv
+                      : billType == BillType.electricity
+                          ? PeniremitIcon.electricity
+                          : Icons.subscriptions,
                   size: 18.0,
                 ),
               ),
@@ -216,7 +231,9 @@ class AppPopUpItem extends StatelessWidget {
             ] else
               Text(
                 hintText,
-                style: TextStyles.body1,
+                style: TextStyles.body1.copyWith(
+                  color: context.colorScheme.onSurface,
+                ),
               ),
             const Spacer(
               flex: 1,

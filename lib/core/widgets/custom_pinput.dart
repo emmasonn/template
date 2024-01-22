@@ -11,12 +11,16 @@ class CustomPinput extends StatelessWidget {
     required this.length,
     required this.style,
     required this.onCompleted,
+    this.filledColor,
+    this.spacing,
     this.controller,
   });
   final Function(String?) onCompleted;
   final bool obscuringText;
   final int length;
   final TextStyle style;
+  final Color? filledColor;
+  final double? spacing;
   final TextEditingController? controller;
 
   @override
@@ -27,7 +31,10 @@ class CustomPinput extends StatelessWidget {
       obscuringCharacter: '*',
       obscureText: obscuringText,
       closeKeyboardWhenCompleted: true,
-      separatorBuilder: (index) => const SizedBox(width: 5),
+      separatorBuilder: (index) => SizedBox(
+        width:
+            (MediaQuery.of(context).size.width - (6 * 48)) / 6, // spacing ?? 5,
+      ),
       defaultPinTheme: PinTheme(
         textStyle: style,
         constraints: const BoxConstraints(
@@ -40,6 +47,7 @@ class CustomPinput extends StatelessWidget {
           borderRadius: BorderRadius.circular(
             Corners.sm,
           ),
+          color: filledColor,
           border: Border.all(
             color: context.onSurfaceVt,
           ),

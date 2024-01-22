@@ -10,8 +10,7 @@ import 'package:peniremit/core/widgets/show_bottom_dialog.dart';
 import 'package:peniremit/features/wallet/app/widgets/authorize_transaction.dart';
 import 'package:peniremit/features/wallet/app/widgets/bill_payment_widget.dart';
 import 'package:peniremit/features/home/app/widgets/bill_phone_number_widget.dart';
-import 'package:peniremit/features/home/app/widgets/choose_amount_widget.dart';
-import 'package:peniremit/features/wallet/app/widgets/transaction_pin_widget.dart';
+import 'package:peniremit/features/home/app/widgets/select_amount_widget.dart';
 import 'package:peniremit/navigation/custom_page_transition.dart';
 import 'package:peniremit/resources/app_colors.dart';
 import 'package:peniremit/resources/app_dimen.dart';
@@ -64,7 +63,7 @@ class _BuyAirtimeScreenState extends State<BuyAirtimeScreen> {
                   style: TextStyles.body1,
                 ),
                 const Gap(20.0),
-                const ChooseAmountWidget(),
+                const SelectAmountWidget(),
                 const Gap(20.0),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -74,7 +73,7 @@ class _BuyAirtimeScreenState extends State<BuyAirtimeScreen> {
                       style: TextStyles.body1,
                     ),
                     Text(
-                      'Balance: \$4,000',
+                      '${AppStrings.balanceSpacedTxt}\$4,000',
                       style: TextStyles.body2.copyWith(
                         color: context.onSurfaceVt,
                       ),
@@ -83,6 +82,13 @@ class _BuyAirtimeScreenState extends State<BuyAirtimeScreen> {
                 ),
                 const Gap(10.0),
                 AppTextFieldEx(
+                  prefixIcon: IconButton(
+                    onPressed: null,
+                    icon: Text(
+                      AppStrings.nairaCharTxt,
+                      style: TextStyles.body1,
+                    ),
+                  ),
                   hintText: AppStrings.amountRangeTxt,
                   onChanged: (value) {},
                 ),
@@ -97,9 +103,7 @@ class _BuyAirtimeScreenState extends State<BuyAirtimeScreen> {
                           //show authentication dialog
                           AuthorizeTransaction.useBiometric(
                             context,
-                            onConfirm: (method, {String? pin}) {
-                              pp('---method');
-                            },
+                            onConfirm: (method, {String? pin}) {},
                           );
                         },
                       ),

@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:peniremit/core/helpers/spacer_widgets.dart';
-import 'package:peniremit/core/widgets/app_text_field.dart';
+import 'package:peniremit/core/utils/phone_number_formatter.dart';
 import 'package:peniremit/core/widgets/custom_filled_button.dart';
+import 'package:peniremit/core/widgets/phone_number_field.dart';
 import 'package:peniremit/navigation/app_screen_paths.dart';
 import 'package:peniremit/navigation/custom_page_transition.dart';
 import 'package:peniremit/resources/app_dimen.dart';
@@ -26,6 +27,8 @@ class RecoverPasswordScreen extends StatefulWidget {
 }
 
 class _RecoverPasswordScreenState extends State<RecoverPasswordScreen> {
+  String? phoneNumber;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,7 +56,7 @@ class _RecoverPasswordScreenState extends State<RecoverPasswordScreen> {
                   //space vertiically
                   vSpacer(10.0),
                   Text(
-                    AppStrings.recoverPasswordCaption,
+                    AppStrings.recoverPasswordOtpCaption,
                     style: TextStyles.caption,
                   ),
                 ],
@@ -61,23 +64,23 @@ class _RecoverPasswordScreenState extends State<RecoverPasswordScreen> {
             ),
             //space vertiically
             vSpacer(30.0),
-            AppTextFieldEx(
-              label: AppStrings.emailLabel,
-              hintText: AppStrings.emailHint,
-              keyboardType: TextInputType.text,
+            PhoneNumberField(
+              hintText: formatNumberWithSpace(AppStrings.phoneNumberHint),
+              label: AppStrings.phoneNumberLabel,
               style: TextStyles.body1,
-              maxLine: 1,
-              onChanged: (value) {},
+              onCountrySelected: (country) {},
+              onChanged: (value) {
+                phoneNumber = value;
+              },
             ),
-            vSpacer(20.0),
-
-            vSpacer(40.0),
+            //space vertically
+            vSpacer(70.0),
             SizedBox(
               width: Sizes.btnWidthMd,
               child: CustomFilledButton(
                 text: AppStrings.recoverPasswordTxt,
                 onPressed: () {
-                  context.go(AppScreenPaths.updatePasswordPath);
+                  context.go(AppScreenPaths.recoverPasswordOtpPath);
                 },
               ),
             ),

@@ -79,6 +79,7 @@ class _TransactionPinWidgetState extends State<TransactionPinWidget> {
                   length: 4,
                   obscuringText: true,
                   style: TextStyles.h4,
+                  spacing: 20.0,
                   onCompleted: (value) {
                     FocusManager.instance.primaryFocus!.unfocus();
                     if (value != null && value.length == 4) {
@@ -92,7 +93,7 @@ class _TransactionPinWidgetState extends State<TransactionPinWidget> {
               TextButton(
                 onPressed: () {},
                 child: Text(
-                 AppStrings.forgotPinTxt,
+                  AppStrings.forgotPinTxt,
                   style: TextStyles.h1.copyWith(
                     fontSize: FontSizes.s13,
                     color: AppColors.accent,

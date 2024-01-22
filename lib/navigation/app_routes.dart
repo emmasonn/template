@@ -239,6 +239,16 @@ class AppRoutes {
     },
   );
 
+  static final recoverPasswordOtpScreen = GoRoute(
+    parentNavigatorKey: rootNavigator,
+    path: AppScreenPaths.recoverPasswordOtpPath,
+    pageBuilder: (BuildContext context, state) {
+      return VerifyOtpScreen.page(
+        key: state.pageKey,
+      );
+    },
+  );
+
   //** bill payment routes
 
   static final buyAirtimeScreen = GoRoute(
@@ -282,7 +292,6 @@ class AppRoutes {
   );
 
 //*/
-
 
   //** Dashboard screen routes
   static final mainScreen = ShellRoute(
@@ -328,6 +337,5 @@ class AppRoutes {
       return SettingScreen.page(key: state.pageKey);
     },
   );
- // */
-
+  // */
 }

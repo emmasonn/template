@@ -8,6 +8,7 @@ class AppStrings {
       'The effortless way to pay for your daily expenses and send funds with crypto';
 
   //Btn text
+  static const createAccountTxt = 'Create Account';
   static const signInTxt = 'Sign in';
   static const signUpTxt = 'Sign up';
   static const registerTxt = 'Register';
@@ -19,16 +20,20 @@ class AppStrings {
 
   //caption text
   static const billPriceTxt = 'Price:\t';
-  static const chooseAmountTxt = 'Choose an amount';
+  static const selectAmountTxt = 'Select an amount';
   static const verifyAccountCaption =
       'Enter the 6-digit verification code sent to';
   static const didnotRecieveCodeCaption = 'Didn\'t Receive Code?\t';
   static const resendCodeCaption = 'Resend code';
   static const donotHaveAccountCaption = 'Don\'t have an account?\t';
-  static const createPinCaption = 'Create your transaction pin to get started.';
+  static const createPinCaption =
+      'Set your transaction pin. You will use this pin to perform all transactions.';
   static const recoverPasswordCaption =
-      'Please enter your Email Address to recover your password.';
+      'Provide your phone number to recover password';
+  static const recoverPasswordOtpCaption =
+      'Please enter the code set to your phone number to recover your password.';
   static const createNewPasswordCaption = 'Please enter your new password';
+  static const nairaCharTxt = '\u20A6';
 
   //app bar titles
   static const selectCountryTxt = 'Select Country';
@@ -38,7 +43,12 @@ class AppStrings {
   static const selectServiceProviderTxt = 'Select Service Provider';
 
   static const meterNumberTxt = 'Meter Number';
+  static const meterNumberHintTxt = '23412334343';
   static const selectBeneficiariesTxt = 'Select Beneficiaries';
+  static const smartCardLabelTxt = 'Smart Card Number';
+  static const smartCardHintTxt = '343342343434';
+  static const packageTxt = 'Package';
+  static const packageHintTxt = 'Select Package';
 
   //Form Information
   static const fullNameLabel = 'Full Name';
@@ -160,6 +170,7 @@ class AppStrings {
   static const String enterTransactionPinTxt = 'Enter Your Transaction Pin';
   static const String productNamext = 'Product Name';
   static const String balanceTxt = 'Balance';
+  static const String balanceSpacedTxt = 'Balance:\t';
   static const String enterAmountHintTxt = 'Enter amount';
   static const String enterWalletAddressHintTxt = 'Enter address';
   static const viewAllTxt = 'View all';
@@ -169,7 +180,7 @@ class AppStrings {
   static const subscriptionPlansTxt = 'Subscription Plans';
   static const addSubscriptionTxt = 'Add Subscription';
   static const billPaymentTxt = 'Bills Payment';
-  static const amountRangeTxt = '\u20A650 - \u20A650,000';
+  static const amountRangeTxt = '50 - 50,000';
   static const payTxt = 'Pay';
 
   static const depositWarningTitleTxt =

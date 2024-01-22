@@ -42,7 +42,7 @@ class CustomFilledButton extends StatelessWidget {
         color: backgroudColor ?? AppColors.accentDark,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(
-            cornerRadius ?? Corners.sm,
+            cornerRadius ?? Corners.md,
           ),
         ),
         onPressed: onPressed,

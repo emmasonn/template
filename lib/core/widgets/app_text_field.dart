@@ -90,7 +90,7 @@ class _AppTextFieldExState extends State<AppTextFieldEx> {
           ),
           //vertical spacer
           const SizedBox(
-            height: 5.0,
+            height: 10.0,
           ),
         ],
         SizedBox(

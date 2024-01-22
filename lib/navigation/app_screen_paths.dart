@@ -30,6 +30,7 @@ class AppScreenPaths {
   static const buyDataPath = '/buy_data';
   static const buyElectricityPath = '/buy_electricity';
   static const buyTvPath = '/buy_tv';
+  static const recoverPasswordOtpPath = '/recover_password_otp';
 
   //* Landings
   static const homePath = '/home';

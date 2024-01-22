@@ -85,7 +85,7 @@ class _PhoneNumberFieldState extends State<PhoneNumberField> {
         ),
         //vertical spacer
         const SizedBox(
-          height: 5,
+          height: 10,
         ),
         SizedBox(
           height: 50.0,

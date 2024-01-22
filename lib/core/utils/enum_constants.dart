@@ -7,3 +7,18 @@ enum ConfirmationMethod {
   pin,
   biometric,
 }
+
+//bill type
+enum BillType {
+  none,
+  airtime,
+  data,
+  electricity,
+  tv,
+}
+
+//Meter type
+enum MeterType {
+  prepaid,
+  postpaid,
+}

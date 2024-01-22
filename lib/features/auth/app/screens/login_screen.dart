@@ -1,17 +1,18 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 import 'package:peniremit/core/helpers/spacer_widgets.dart';
-import 'package:peniremit/core/loading_spinner/progress_widgets.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
+import 'package:peniremit/core/utils/phone_number_formatter.dart';
 import 'package:peniremit/core/widgets/app_text_field.dart';
 import 'package:peniremit/core/widgets/custom_app_bar.dart';
 import 'package:peniremit/core/widgets/custom_filled_button.dart';
 import 'package:peniremit/core/widgets/custom_outline_button.dart';
+import 'package:peniremit/core/widgets/phone_number_field.dart';
 import 'package:peniremit/navigation/app_screen_paths.dart';
 import 'package:peniremit/navigation/custom_page_transition.dart';
-import 'package:peniremit/resources/app_assets.dart';
 import 'package:peniremit/resources/app_colors.dart';
 import 'package:peniremit/resources/app_dimen.dart';
 import 'package:peniremit/resources/app_strings.dart';
@@ -33,6 +34,8 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  String? phoneNumber;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,11 +80,14 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               //space vertiically
               vSpacer(30.0),
-              AppTextFieldEx(
-                label: AppStrings.emailLabel,
-                hintText: AppStrings.emailHint,
+              PhoneNumberField(
+                hintText: formatNumberWithSpace(AppStrings.phoneNumberHint),
+                label: AppStrings.phoneNumberLabel,
                 style: TextStyles.body1,
-                onChanged: (value) {},
+                onCountrySelected: (country) {},
+                onChanged: (value) {
+                  phoneNumber = value;
+                },
               ),
               vSpacer(20.0),
               AppTextFieldEx(
@@ -121,54 +127,36 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               //space vertiically
-              vSpacer(16.0),
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    AppStrings.orTxt,
-                  )
-                ],
-              ),
-
-              //space vertiically
-              vSpacer(16.0),
+              const Gap(20.0),
               SizedBox(
                 width: Sizes.btnWidthMd,
                 child: CustomOutlineButton(
-                  prefixIcon: SizedBox.square(
-                    dimension: 18,
-                    child: Image.asset(
-                      AppAssets.googlePng,
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                  text: AppStrings.googleSignInTxt,
+                  text: AppStrings.createAccountTxt,
                   onPressed: () {
-                    Navigator.pop(context);
+                    context.go(AppScreenPaths.registerPath);
                   },
                 ),
               ),
-              //space vertiically
-              vSpacer(16.0),
-              RichText(
-                text: TextSpan(
-                    text: AppStrings.donotHaveAccountCaption,
-                    style: TextStyles.body1,
-                    children: [
-                      TextSpan(
-                        text: AppStrings.signUpTxt,
-                        style: TextStyles.body1.copyWith(
-                          color: AppColors.accent,
-                          fontSize: FontSizes.s14,
-                        ),
-                        recognizer: TapGestureRecognizer()
-                          ..onTap = () {
-                            context.go(AppScreenPaths.registerPath);
-                          },
-                      )
-                    ]),
-              ),
+              // //space vertiically
+              // vSpacer(16.0),
+              // RichText(
+              //   text: TextSpan(
+              //       text: AppStrings.donotHaveAccountCaption,
+              //       style: TextStyles.body1,
+              //       children: [
+              //         TextSpan(
+              //           text: AppStrings.signUpTxt,
+              //           style: TextStyles.body1.copyWith(
+              //             color: AppColors.accent,
+              //             fontSize: FontSizes.s14,
+              //           ),
+              //           recognizer: TapGestureRecognizer()
+              //             ..onTap = () {
+              //               context.go(AppScreenPaths.registerPath);
+              //             },
+              //         )
+              //       ]),
+              // ),
               const SizedBox(
                 height: 20.0,
               )
