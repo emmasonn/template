@@ -2,27 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:peniremit/core/helpers/helpers_utils.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
+import 'package:peniremit/features/home/app/widgets/expandable_page_view_widget.dart';
+import 'package:peniremit/features/home/app/widgets/expandable_tab_view_widget.dart';
 import 'package:peniremit/features/home/app/widgets/scrollable_content_widget.dart';
 import 'package:peniremit/resources/app_dimen.dart';
 import 'package:peniremit/resources/app_styles.dart';
 
-class ScrollableTabs extends StatefulWidget {
+class ScrollableTabsWidget extends StatefulWidget {
   final Map<String, List> tabTitles;
 
-  const ScrollableTabs({
+  const ScrollableTabsWidget({
     super.key,
     required this.tabTitles,
   });
 
   @override
-  ScrollableTabsState createState() => ScrollableTabsState();
+  ScrollableTabsWidgetState createState() => ScrollableTabsWidgetState();
 }
 
-class ScrollableTabsState extends State<ScrollableTabs>
+class ScrollableTabsWidgetState extends State<ScrollableTabsWidget>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
   late PageController _pageController;
-
   int _currentIndex = 0;
 
   @override
@@ -36,19 +37,21 @@ class ScrollableTabsState extends State<ScrollableTabs>
       vsync: this,
     );
     _tabController.addListener(() {
-      // setState(() {});
-      _pageController.animateToPage(
-        _tabController.index,
-        duration: const Duration(milliseconds: 300),
-        curve: Curves.easeInOut,
-      );
+      // _pageController.animateToPage(
+      //   _tabController.index,
+      //   curve: Curves.easeInOut,
+      //   duration: const Duration(milliseconds: 300),
+      // );
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(top: 16.0),
+      padding: const EdgeInsets.only(
+        top: 16.0,
+        bottom: 16.0,
+      ),
       decoration: BoxDecoration(
         border: Border.all(
           width: 0.5,
@@ -57,10 +60,10 @@ class ScrollableTabsState extends State<ScrollableTabs>
         borderRadius: BorderRadius.circular(
           Corners.md,
         ),
-        color: context.surfaceVt,
+        color: context.colorScheme.surface,
       ),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
           _buildTabBar(),
@@ -87,24 +90,29 @@ class ScrollableTabsState extends State<ScrollableTabs>
   }
 
   Widget _buildTabContent() {
-    final title = widget.tabTitles[_tabController.index];
-    // return const ScrollableContentWidget(
-    //   items: [],
+    // return CustomExpandablePageView(
+    //   controller: _pageController,
+    //   itemCount: widget.tabTitles.length,
+    //   onPageChanged: (index) {
+    //     // _tabController.index = index;
+    //     // _tabController.animateTo(index);
+    //   },
+    //   itemBuilder: (context, index) {
+    //     return ScrollableContentWidget(
+    //       itemCount: (index + 1) * 4,
+    //       items: const [],
+    //     );
+    //   },
     // );
-    return SizedBox(
-      height: 200,
-      child: PageView.builder(
-        controller: _pageController,
-        itemCount: widget.tabTitles.keys.length,
-        onPageChanged: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-          _tabController.animateTo(index);
-        },
-        itemBuilder: (context, index) {
-          return const ScrollableContentWidget(items: []);
-        },
+
+    return ExpandableTabViewWidget(
+      tabController: _tabController,
+      children: List.generate(
+        widget.tabTitles.length,
+        (index) => ScrollableContentWidget(
+          itemCount: (index + 1) * 4,
+          items: const [],
+        ),
       ),
     );
   }

@@ -55,7 +55,7 @@ class _BuyDataScreenState extends State<BuyDataScreen> {
                   style: TextStyles.body1,
                 ),
                 const Gap(20.0),
-                const ScrollableTabs(
+                const ScrollableTabsWidget(
                   tabTitles: {
                     'Hot': [],
                     'Daily': [],

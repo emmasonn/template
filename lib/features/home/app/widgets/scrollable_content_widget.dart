@@ -4,9 +4,11 @@ import 'package:peniremit/features/home/app/widgets/scrollable_item_widget.dart'
 class ScrollableContentWidget extends StatelessWidget {
   const ScrollableContentWidget({
     super.key,
+    required this.itemCount,
     required this.items,
   });
   final List<String> items;
+  final int itemCount;
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +22,10 @@ class ScrollableContentWidget extends StatelessWidget {
         runSpacing: 16.0,
         children: [
           ...List.generate(
-            5, // items.length,
-            (index) => const ScrollableItemWidget(),
+           itemCount ?? 6, // items.length,
+            (index) => ScrollableItemWidget(
+              onPressed: () {},
+            ),
           ),
         ],
       ),
