@@ -23,26 +23,29 @@ class ScrollableTabsWidget extends StatefulWidget {
 class ScrollableTabsWidgetState extends State<ScrollableTabsWidget>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
-  late PageController _pageController;
-  int _currentIndex = 0;
+
+  // late PageController _pageController;
+  // int _currentIndex = 0;
 
   @override
   void initState() {
     super.initState();
-    //initialize page controller
-    _pageController = PageController(initialPage: _currentIndex);
+    // //initialize page controller
+    // _pageController = PageController(initialPage: _currentIndex);
+
     //initialize tab controller
     _tabController = TabController(
       length: widget.tabTitles.length,
       vsync: this,
     );
-    _tabController.addListener(() {
-      // _pageController.animateToPage(
-      //   _tabController.index,
-      //   curve: Curves.easeInOut,
-      //   duration: const Duration(milliseconds: 300),
-      // );
-    });
+
+    // _tabController.addListener(() {
+    //   // _pageController.animateToPage(
+    //   //   _tabController.index,
+    //   //   curve: Curves.easeInOut,
+    //   //   duration: const Duration(milliseconds: 300),
+    //   // );
+    // });
   }
 
   @override
@@ -119,7 +122,7 @@ class ScrollableTabsWidgetState extends State<ScrollableTabsWidget>
 
   @override
   void dispose() {
-    _tabController.dispose();
+    if (mounted) _tabController.dispose();
     super.dispose();
   }
 }

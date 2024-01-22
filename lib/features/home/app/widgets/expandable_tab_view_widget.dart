@@ -24,17 +24,13 @@ class _ExpandableTabViewWidgetState extends State<ExpandableTabViewWidget> {
     _heights = widget.children.map((e) => 0.0).toList();
     super.initState();
     widget.tabController.addListener(() {
-      final newPageIndex = widget.tabController.index;
-      if (_currentPage != newPageIndex) {
-        setState(() => _currentPage = newPageIndex);
+      if (mounted) {
+        final newPageIndex = widget.tabController.index;
+        if (_currentPage != newPageIndex) {
+          setState(() => _currentPage = newPageIndex);
+        }
       }
     });
-  }
-
-  @override
-  void dispose() {
-    widget.tabController.dispose();
-    super.dispose();
   }
 
   @override
@@ -92,7 +88,9 @@ class SizeReportingWidgetState extends State<SizeReportingWidget> {
 
   @override
   Widget build(BuildContext context) {
-    WidgetsBinding.instance.addPostFrameCallback((_) => _notifySize());
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) _notifySize();
+    });
     return widget.child;
   }
 
