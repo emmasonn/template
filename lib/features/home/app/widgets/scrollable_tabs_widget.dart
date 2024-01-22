@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:peniremit/core/helpers/helpers_utils.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
-import 'package:peniremit/features/home/app/widgets/expandable_page_view_widget.dart';
 import 'package:peniremit/features/home/app/widgets/expandable_tab_view_widget.dart';
 import 'package:peniremit/features/home/app/widgets/scrollable_content_widget.dart';
 import 'package:peniremit/resources/app_dimen.dart';
@@ -23,29 +21,14 @@ class ScrollableTabsWidget extends StatefulWidget {
 class ScrollableTabsWidgetState extends State<ScrollableTabsWidget>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
-
-  // late PageController _pageController;
-  // int _currentIndex = 0;
-
   @override
   void initState() {
     super.initState();
-    // //initialize page controller
-    // _pageController = PageController(initialPage: _currentIndex);
-
     //initialize tab controller
     _tabController = TabController(
       length: widget.tabTitles.length,
       vsync: this,
     );
-
-    // _tabController.addListener(() {
-    //   // _pageController.animateToPage(
-    //   //   _tabController.index,
-    //   //   curve: Curves.easeInOut,
-    //   //   duration: const Duration(milliseconds: 300),
-    //   // );
-    // });
   }
 
   @override
@@ -93,21 +76,6 @@ class ScrollableTabsWidgetState extends State<ScrollableTabsWidget>
   }
 
   Widget _buildTabContent() {
-    // return CustomExpandablePageView(
-    //   controller: _pageController,
-    //   itemCount: widget.tabTitles.length,
-    //   onPageChanged: (index) {
-    //     // _tabController.index = index;
-    //     // _tabController.animateTo(index);
-    //   },
-    //   itemBuilder: (context, index) {
-    //     return ScrollableContentWidget(
-    //       itemCount: (index + 1) * 4,
-    //       items: const [],
-    //     );
-    //   },
-    // );
-
     return ExpandableTabViewWidget(
       tabController: _tabController,
       children: List.generate(
