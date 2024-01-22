@@ -8,7 +8,6 @@ import 'package:peniremit/core/widgets/app_text_field.dart';
 import 'package:peniremit/core/widgets/custom_app_bar.dart';
 import 'package:peniremit/core/widgets/custom_filled_button.dart';
 import 'package:peniremit/core/widgets/show_bottom_dialog.dart';
-import 'package:peniremit/features/home/app/widgets/select_amount_widget.dart';
 import 'package:peniremit/features/wallet/app/widgets/authorize_transaction.dart';
 import 'package:peniremit/features/wallet/app/widgets/bill_payment_widget.dart';
 import 'package:peniremit/navigation/custom_page_transition.dart';
@@ -131,7 +130,7 @@ class _BuyCableTvScreenState extends State<BuyCableTvScreen> {
                   onChanged: (value) {},
                 ),
                 //spaced vertically
-                const Gap(20.0),
+                const Gap(40.0),
 
                 CustomFilledButton(
                   onPressed: () {

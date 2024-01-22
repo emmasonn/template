@@ -27,7 +27,7 @@ class ServicesWidget extends StatelessWidget {
         ServiceItem(
           icon: PeniremitIcon.wifi,
           title: AppStrings.dataTxt,
-          iconSize: 18,
+          iconSize: 15,
           padRight: true,
           onPressed: () {
             context.push(AppScreenPaths.buyDataPath);
@@ -84,7 +84,7 @@ class ServiceItem extends StatelessWidget {
               ),
               child: Icon(
                 icon,
-                size: iconSize ?? 20,
+                size: iconSize ?? 18,
                 color: AppColors.accent,
               ),
             ),

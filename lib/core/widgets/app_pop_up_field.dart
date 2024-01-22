@@ -140,6 +140,7 @@ class _AppPopUpFieldState extends State<AppPopUpField> {
             hintText: widget.hintText,
             initValue: selectedItem,
             style: widget.style,
+            billType: widget.billType,
           ),
         ),
       ],
@@ -180,26 +181,6 @@ class AppPopUpItem extends StatelessWidget {
         padding: const EdgeInsets.symmetric(
           horizontal: 10.0,
         ),
-        // child: ListTile(
-        //   leading: CircleAvatar(
-        //     radius: 18,
-        //     backgroundColor: context.onSurfaceVt,
-        //     child: const Icon(
-        //       PeniremitIcon.electricity,
-        //       size: 18.0,
-        //     ),
-        //   ),
-        //   title: Text(
-        //     initValue!,
-        //     style: style?.copyWith(color: context.colorScheme.onPrimary) ??
-        //         TextStyles.body2,
-        //   ),
-        //   trailing: Icon(
-        //     Icons.keyboard_arrow_down,
-        //     size: 18,
-        //     color: context.onSurfaceVt,
-        //   ),
-        // ),
         child: Row(
           children: [
             if (initValue != null) ...[
