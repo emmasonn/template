@@ -2,9 +2,9 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:nb_utils/nb_utils.dart';
 import 'package:peniremit/core/helpers/spacer_widgets.dart';
 import 'package:peniremit/core/loading_spinner/progress_widgets.dart';
+import 'package:peniremit/core/utils/extension_util.dart';
 import 'package:peniremit/core/widgets/app_text_field.dart';
 import 'package:peniremit/core/widgets/custom_app_bar.dart';
 import 'package:peniremit/core/widgets/custom_filled_button.dart';
@@ -43,7 +43,7 @@ class _LoginScreenState extends State<LoginScreen> {
         titleText: AppStrings.appNameTxt,
         noBackButton: true,
         style: TextStyles.t1.copyWith(
-          color: AppColors.accent,
+          color: context.colorScheme.onPrimary,
         ),
       ),
       body: SafeArea(
@@ -158,8 +158,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     children: [
                       TextSpan(
                         text: AppStrings.signUpTxt,
-                        style: TextStyles.notoSerifJP.copyWith(
-                            color: AppColors.accent, fontSize: FontSizes.s14),
+                        style: TextStyles.body1.copyWith(
+                          color: AppColors.accent,
+                          fontSize: FontSizes.s14,
+                        ),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
                             context.go(AppScreenPaths.registerPath);

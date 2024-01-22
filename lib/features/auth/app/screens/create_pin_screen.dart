@@ -93,7 +93,7 @@ class _CreatePinScreenState extends State<CreatePinScreen> {
             SizedBox(
               width: Sizes.btnWidthMd,
               child: CustomFilledButton(
-                text: AppStrings.verifyAccountTxt,
+                text: AppStrings.verifyPhoneNumberTxt,
                 onPressed: () {
                   context.go(AppScreenPaths.homePath);
                 },

@@ -86,7 +86,7 @@ class _UpdatePasswordScreenState extends State<UpdatePasswordScreen> {
             SizedBox(
               width: Sizes.btnWidthMd,
               child: CustomFilledButton(
-                text: AppStrings.verifyAccountTxt,
+                text: AppStrings.verifyPhoneNumberTxt,
                 onPressed: () {
                   context.go(AppScreenPaths.loginPath);
                 },

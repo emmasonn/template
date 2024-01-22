@@ -3,10 +3,9 @@ class AppStrings {
   static const appNameTxt = 'Peniremit';
 
   //onboard
-  static const onboardTxt = 'Manage all your subscriptions in';
-  static const onboardExtraTxt = 'one place.';
+  static const onboardTxt = 'Experience the Future of Digital Finance ';
   static const onboardCaptionTxt =
-      'Your one-stop-shop for effortlessly managing your subscription';
+      'The effortless way to pay for your daily expenses and send funds with crypto';
 
   //Btn text
   static const signInTxt = 'Sign in';
@@ -14,13 +13,13 @@ class AppStrings {
   static const registerTxt = 'Register';
   static const googleSignInTxt = 'Sign up with google';
   static const changePasswordTxt = 'Change Password';
+  static const signInCaptionTxt = 'Welcome back! sign into your account';
+  static const signUpCaptionTxt =
+      'Create your account to embark on a journey towards decentralized finance.';
 
   //caption text
   static const billPriceTxt = 'Price:\t';
   static const chooseAmountTxt = 'Choose an amount';
-  static const signInCaption = 'Welcome back! sign into your account';
-  static const signUpCaptionTxt = 'Hello, create your account to get started!';
-  static const signInCaptionTxt = 'Welcome back! sign into your account';
   static const verifyAccountCaption =
       'Enter the 6-digit verification code sent to';
   static const didnotRecieveCodeCaption = 'Didn\'t Receive Code?\t';
@@ -56,7 +55,7 @@ class AppStrings {
   static const confirmPasswordHint = 'Confirm your password';
 
   static const alreadyHaveAccountTxt = 'Already have an account?\t';
-  static const verifyAccountTxt = 'Verify Account';
+  static const verifyPhoneNumberTxt = 'Verify Phone Number';
   static const forgotPasswordTxt = 'Forgot password';
   static const forgotPinTxt = 'Forgot payment pin?';
   static const orTxt = 'or';

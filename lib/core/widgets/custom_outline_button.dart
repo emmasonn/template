@@ -42,13 +42,17 @@ class CustomOutlineButton extends StatelessWidget {
           ),
         ),
         onPressed: onPressed,
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          mainAxisSize: MainAxisSize.min,
+        child: Stack(
+          // crossAxisAlignment: CrossAxisAlignment.center,
+          // mainAxisAlignment: MainAxisAlignment.center,
+          // mainAxisSize: MainAxisSize.min,
+          alignment: Alignment.center,
           children: [
             if (prefixIcon != null) ...[
-              prefixIcon!,
+              Positioned(
+                left: 0.0,
+                child: prefixIcon!,
+              ),
             ],
             Align(
               alignment: Alignment.center,

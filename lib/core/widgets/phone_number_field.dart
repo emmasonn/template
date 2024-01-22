@@ -109,13 +109,17 @@ class _PhoneNumberFieldState extends State<PhoneNumberField> {
               prefixIcon: GestureDetector(
                 onTap: () {
                   //navigate to select country
-                  context.push(AppScreenPaths.countryPath,
-                      extra: NavParamWrapper<Country>(callBack: (country) {
-                    widget.onCountrySelected.call(country);
-                    setState(() {
-                      selectedCountry = country!;
-                    });
-                  }));
+                  // context.push(
+                  //   AppScreenPaths.countryPath,
+                  //   extra: NavParamWrapper<Country>(
+                  //     callBack: (country) {
+                  //       widget.onCountrySelected.call(country);
+                  //       setState(() {
+                  //         selectedCountry = country!;
+                  //       });
+                  //     },
+                  //   ),
+                  // );
                 },
                 child: Padding(
                   padding: const EdgeInsets.only(
@@ -126,22 +130,22 @@ class _PhoneNumberFieldState extends State<PhoneNumberField> {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
-                        selectedCountry.dialingCode,
+                        '+${selectedCountry.dialingCode}',
                         style: widget.style,
                       ),
                       const SizedBox(
-                        width: 5.0,
+                        width: 10.0,
                       ),
-                      const Icon(
-                        Icons.keyboard_arrow_down,
-                        color: AppColors.surface500,
-                        size: 20,
-                      ),
-                      const SizedBox(
+                      // const Icon(
+                      //   Icons.keyboard_arrow_down,
+                      //   color: AppColors.surface500,
+                      //   size: 20,
+                      // ),
+                      SizedBox(
                         height: 50,
                         width: 5.0,
                         child: VerticalDivider(
-                          color: AppColors.surface500,
+                          color: context.onSurfaceVt,
                         ),
                       ),
                     ],
@@ -150,21 +154,21 @@ class _PhoneNumberFieldState extends State<PhoneNumberField> {
               ),
               border: OutlineInputBorder(
                 borderSide: BorderSide(
-                  color: context.colorScheme.surface,
+                  color: context.onSurfaceVt,
                   width: 1.0,
                 ),
                 borderRadius: BorderRadius.circular(Corners.md),
               ),
               enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(
-                  color: context.colorScheme.surface,
+                  color: context.onSurfaceVt,
                   width: 0.5,
                 ),
                 borderRadius: BorderRadius.circular(Corners.md),
               ),
               focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(
-                  color: context.colorScheme.surface,
+                  color: context.onSurfaceVt,
                   width: 0.5,
                 ),
                 borderRadius: BorderRadius.circular(Corners.md),

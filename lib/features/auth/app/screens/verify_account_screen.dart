@@ -59,7 +59,7 @@ class _VerifyAccountScreenState extends State<VerifyAccountScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    AppStrings.verifyAccountTxt,
+                    AppStrings.verifyPhoneNumberTxt,
                     style: TextStyles.h1,
                   ),
                   //space vertiically
@@ -125,7 +125,7 @@ class _VerifyAccountScreenState extends State<VerifyAccountScreen> {
             SizedBox(
               width: Sizes.btnWidthMd,
               child: CustomFilledButton(
-                text: AppStrings.verifyAccountTxt,
+                text: AppStrings.verifyPhoneNumberTxt,
                 onPressed: () {
                   context.go(AppScreenPaths.loginPath);
                 },

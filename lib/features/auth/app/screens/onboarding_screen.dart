@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 import 'package:peniremit/core/helpers/spacer_widgets.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
 import 'package:peniremit/core/widgets/custom_filled_button.dart';
+import 'package:peniremit/core/widgets/custom_outline_button.dart';
 import 'package:peniremit/navigation/app_screen_paths.dart';
 import 'package:peniremit/navigation/custom_page_transition.dart';
 import 'package:peniremit/resources/app_assets.dart';
@@ -62,14 +64,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     text: TextSpan(
                         text: AppStrings.onboardTxt,
                         style: TextStyles.appTitle,
-                        children: [
-                          TextSpan(
-                            text: '\n${AppStrings.onboardExtraTxt}',
-                            style: TextStyles.appTitle.copyWith(
-                              color: AppColors.accentDark,
-                              fontWeight: FontWeight.w400,
-                            ),
-                          )
+                        children: const [
+                          // TextSpan(
+                          //   text: '\n${AppStrings.onboardExtraTxt}',
+                          //   style: TextStyles.appTitle.copyWith(
+                          //     color: AppColors.accentDark,
+                          //     fontWeight: FontWeight.w400,
+                          //   ),
+                          // )
                         ]),
                   ),
                   //space vertically
@@ -82,26 +84,39 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ),
                   //space vertiically
                   vSpacer(20.0),
-                  SizedBox(
-                    width: Sizes.btnWidthMd,
-                    child: CustomFilledButton(
-                      text: AppStrings.signInTxt,
-                      onPressed: () {
-                        context.push(AppScreenPaths.loginPath);
-                      },
-                    ),
-                  ),
-                  //space vertiically
-                  TextButton(
-                    onPressed: () {
-                      context.push(AppScreenPaths.registerPath);
-                    },
-                    child: Text(
-                      AppStrings.registerTxt,
-                      style: TextStyles.btnStyle.copyWith(
-                        color: context.colorScheme.onPrimary,
+                  Row(
+                    children: [
+                      Expanded(
+                        flex: 2,
+                        child: SizedBox(
+                          width: Sizes.btnWidthMd,
+                          child: CustomOutlineButton(
+                            text: AppStrings.signInTxt,
+                            style: TextStyles.body1
+                                .copyWith(color: context.colorScheme.onPrimary),
+                            onPressed: () {
+                              context.push(AppScreenPaths.loginPath);
+                            },
+                          ),
+                        ),
                       ),
-                    ),
+                      const Gap(10.0),
+                      Expanded(
+                        flex: 3,
+                        child: SizedBox(
+                          width: Sizes.btnWidthMd,
+                          child: CustomFilledButton(
+                            text: AppStrings.signUpTxt,
+                            style: TextStyles.body1.copyWith(
+                              color: AppColors.onAccent,
+                            ),
+                            onPressed: () {
+                              context.push(AppScreenPaths.registerPath);
+                            },
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                   //space vertiically
                   vSpacer(20.0),

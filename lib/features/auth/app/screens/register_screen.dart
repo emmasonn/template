@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:peniremit/core/helpers/spacer_widgets.dart';
+import 'package:peniremit/core/utils/extension_util.dart';
 import 'package:peniremit/core/utils/phone_number_formatter.dart';
 import 'package:peniremit/core/widgets/app_text_field.dart';
 import 'package:peniremit/core/widgets/custom_app_bar.dart';
@@ -36,6 +37,7 @@ class RegisterScreen extends StatefulWidget {
 class _RegisterScreenState extends State<RegisterScreen> {
   //variables
   String? emailAddress;
+  String? phoneNumber;
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +49,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         noBackButton: true,
         titleText: AppStrings.appNameTxt,
         style: TextStyles.t1.copyWith(
-          color: AppColors.accent,
+          color: context.colorScheme.onPrimary,
         ),
       ),
       body: SafeArea(
@@ -84,22 +86,24 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 style: TextStyles.body1,
                 onChanged: (value) {},
               ),
-              vSpacer(20.0),
-              AppTextFieldEx(
-                label: AppStrings.emailLabel,
-                hintText: AppStrings.emailHint,
-                style: TextStyles.body1,
-                onChanged: (value) {
-                  emailAddress = value;
-                },
-              ),
+              // vSpacer(20.0),
+              // AppTextFieldEx(
+              //   label: AppStrings.emailLabel,
+              //   hintText: AppStrings.emailHint,
+              //   style: TextStyles.body1,
+              //   onChanged: (value) {
+              //     emailAddress = value;
+              //   },
+              // ),
               vSpacer(20.0),
               PhoneNumberField(
                 hintText: formatNumberWithSpace(AppStrings.phoneNumberHint),
                 label: AppStrings.phoneNumberLabel,
                 style: TextStyles.body1,
                 onCountrySelected: (country) {},
-                onChanged: (value) {},
+                onChanged: (value) {
+                  phoneNumber = value;
+                },
               ),
               vSpacer(20.0),
               AppTextFieldEx(
@@ -118,11 +122,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 child: CustomFilledButton(
                   text: AppStrings.signUpTxt,
                   onPressed: () {
-                    // context.go(AppScreenPaths.verifyAccountPath,
-                    //     extra: NavCallBack(
-                    //       object: emailAddress,
-                    //     ));
-                    context.go(AppScreenPaths.homePath);
+                    context.go(AppScreenPaths.verifyAccountPath,
+                        extra: NavParamWrapper(
+                          object: phoneNumber,
+                        ));
                   },
                 ),
               ),
@@ -161,8 +164,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     children: [
                       TextSpan(
                         text: AppStrings.signInTxt,
-                        style: TextStyles.notoSerifJP.copyWith(
-                            color: AppColors.accent, fontSize: FontSizes.s14),
+                        style: TextStyles.body1.copyWith(
+                          color: AppColors.accent,
+                          fontSize: FontSizes.s14,
+                        ),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
                             context.go(AppScreenPaths.loginPath);

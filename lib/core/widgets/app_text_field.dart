@@ -113,7 +113,7 @@ class _AppTextFieldExState extends State<AppTextFieldEx> {
             obscuringCharacter: '∗'.toString(),
             cursorColor: widget.color,
             decoration: InputDecoration(
-              fillColor: context.surfaceVt,
+              fillColor: context.colorScheme.surface,
               filled: true,
               contentPadding: const EdgeInsets.only(
                 left: 15.0,
