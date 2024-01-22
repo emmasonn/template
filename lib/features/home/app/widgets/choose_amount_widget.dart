@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
-import 'package:peniremit/features/home/app/widgets/choose_amount_item_widget.dart';
+import 'package:peniremit/features/home/app/widgets/card_amount_widget.dart';
 import 'package:peniremit/resources/app_dimen.dart';
 import 'package:peniremit/resources/app_strings.dart';
 import 'package:peniremit/resources/app_styles.dart';
@@ -16,7 +16,7 @@ class ChooseAmountWidget extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(Corners.md),
-        color: context.surfaceVt,
+        color: context.colorScheme.surface,
       ),
       padding: const EdgeInsets.symmetric(
         horizontal: 16.0,
@@ -30,21 +30,37 @@ class ChooseAmountWidget extends StatelessWidget {
             style: TextStyles.body2,
           ),
           const Gap(20.0),
-          GridView.count(
-            crossAxisCount: 3,
-            mainAxisSpacing: 10.0,
-            crossAxisSpacing: 10.0,
-            childAspectRatio: 1.2,
-            physics: const NeverScrollableScrollPhysics(),
-            shrinkWrap: true,
-            children: List.generate(
-              amounts.length,
-              (index) => ChooseAmountItemWidget(
-                amount: amounts[index].toString(),
-                onPressed: () {},
+          Wrap(
+            runAlignment: WrapAlignment.start,
+            alignment: WrapAlignment.start,
+            crossAxisAlignment: WrapCrossAlignment.start,
+            spacing: 16.0,
+            runSpacing: 16.0,
+            children: [
+              ...List.generate(
+                amounts.length, // items.length,
+                (index) => CardAmountWidget(
+                  amount: amounts[index].toString(),
+                  onPressed: () {},
+                ),
               ),
-            ).toList(),
+            ],
           ),
+          // GridView.count(
+          //   crossAxisCount: 3,
+          //   mainAxisSpacing: 10.0,
+          //   crossAxisSpacing: 10.0,
+          //   childAspectRatio: 1.2,
+          //   physics: const NeverScrollableScrollPhysics(),
+          //   shrinkWrap: true,
+          //   children: List.generate(
+          //     amounts.length,
+          //     (index) => CardAmountWidget(
+          //       amount: amounts[index].toString(),
+          //       onPressed: () {},
+          //     ),
+          //   ).toList(),
+          // ),
         ],
       ),
     );

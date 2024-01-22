@@ -28,6 +28,7 @@ class BalanceCardWidget extends StatelessWidget {
       ),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(Corners.md),
+        color: context.colorScheme.surface,
         image: const DecorationImage(
           image: AssetImage(
             AppAssets.balanceBg,
@@ -123,7 +124,8 @@ class BalanceCardWidget extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                       ),
                     ),
-                    backgroundColor: context.colorScheme.background,
+                    outlinedColor: context.colorScheme.onSurface,
+                    backgroundColor: context.colorScheme.surface,
                     onPressed: () {},
                   ),
                 ),

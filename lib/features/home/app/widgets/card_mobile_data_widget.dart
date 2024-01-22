@@ -6,8 +6,8 @@ import 'package:peniremit/resources/app_dimen.dart';
 import 'package:peniremit/resources/app_strings.dart';
 import 'package:peniremit/resources/app_styles.dart';
 
-class ScrollableItemWidget extends StatelessWidget {
-  const ScrollableItemWidget({
+class CardMobileDataWidget extends StatelessWidget {
+  const CardMobileDataWidget({
     super.key,
     required this.onPressed,
   });

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:peniremit/features/home/app/widgets/scrollable_item_widget.dart';
+import 'package:peniremit/features/home/app/widgets/card_mobile_data_widget.dart';
 
 class ScrollableContentWidget extends StatelessWidget {
   const ScrollableContentWidget({
@@ -22,8 +22,8 @@ class ScrollableContentWidget extends StatelessWidget {
         runSpacing: 16.0,
         children: [
           ...List.generate(
-           itemCount ?? 6, // items.length,
-            (index) => ScrollableItemWidget(
+            itemCount, // items.length,
+            (index) => CardMobileDataWidget(
               onPressed: () {},
             ),
           ),

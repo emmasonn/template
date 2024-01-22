@@ -35,6 +35,12 @@ class AppStrings {
   static const selectCountryTxt = 'Select Country';
   static const searchTxt = 'Search';
 
+  static const serviceProviderTxt = 'Service Provider';
+  static const selectServiceProviderTxt = 'Select Service Provider';
+
+  static const meterNumberTxt = 'Meter Number';
+  static const selectBeneficiariesTxt = 'Select Beneficiaries';
+
   //Form Information
   static const fullNameLabel = 'Full Name';
   static const fullNameHint = 'Enter your name';

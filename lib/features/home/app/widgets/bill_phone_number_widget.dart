@@ -91,7 +91,7 @@ class _BillPhoneNumberWidgetState extends State<BillPhoneNumberWidget> {
               // PhoneNumberSpaceFormatter(),
             ],
             decoration: InputDecoration(
-              fillColor: context.surfaceVt,
+              fillColor: context.colorScheme.surface,
               filled: true,
               contentPadding: const EdgeInsets.only(
                 top: 16.0,

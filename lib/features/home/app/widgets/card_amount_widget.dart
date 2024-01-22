@@ -6,8 +6,8 @@ import 'package:peniremit/resources/app_dimen.dart';
 import 'package:peniremit/resources/app_strings.dart';
 import 'package:peniremit/resources/app_styles.dart';
 
-class ChooseAmountItemWidget extends StatelessWidget {
-  const ChooseAmountItemWidget({
+class CardAmountWidget extends StatelessWidget {
+  const CardAmountWidget({
     super.key,
     required this.amount,
     required this.onPressed,
@@ -28,8 +28,8 @@ class ChooseAmountItemWidget extends StatelessWidget {
         onTap: onPressed,
         child: Padding(
           padding: const EdgeInsets.symmetric(
-            // horizontal: 16.0,
-            // vertical: 12.0,
+            horizontal: 16.0,
+            vertical: 12.0,
           ),
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -43,7 +43,7 @@ class ChooseAmountItemWidget extends StatelessWidget {
               Text(
                 '${AppStrings.billPriceTxt}\u20A6$totalAmount',
                 textAlign: TextAlign.center,
-                style: TextStyles.body3.copyWith(
+                style: TextStyles.body1.copyWith(
                   fontSize: FontSizes.s8,
                   color: AppColors.accent,
                 ),
