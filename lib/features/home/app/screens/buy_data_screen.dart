@@ -32,41 +32,42 @@ class _BuyDataScreenState extends State<BuyDataScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: CustomAppBar(
-          context,
-          titleText: AppStrings.dataTxt,
-          onBackPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-        body: SafeArea(
-          child: SingleChildScrollView(
-            padding: EdgeInsets.symmetric(
-              horizontal: 16.w,
-              vertical: 20.0,
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                BillPhoneNumberWidget(
-                  hintText: AppStrings.phoneNumberHint,
-                  onChanged: (value) {},
-                  onSelectedNetworkProvider: (auto, manuel) {},
-                  style: TextStyles.body1,
-                ),
-                const Gap(20.0),
-                const ScrollableTabsWidget(
-                  tabTitles: {
-                    'Hot': [],
-                    'Daily': [],
-                    'Weekly': [],
-                    'Monthly': [],
-                    'Yearly': [],
-                  },
-                ),
-              ],
-            ),
+      appBar: CustomAppBar(
+        context,
+        titleText: AppStrings.dataTxt,
+        onBackPressed: () {
+          Navigator.pop(context);
+        },
+      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          padding: EdgeInsets.symmetric(
+            horizontal: 16.w,
+            vertical: 20.0,
           ),
-        ));
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              BillPhoneNumberWidget(
+                hintText: AppStrings.phoneNumberHint,
+                onChanged: (value) {},
+                onSelectedNetworkProvider: (auto, manuel) {},
+                style: TextStyles.body1,
+              ),
+              const Gap(20.0),
+              const ScrollableTabsWidget(
+                tabTitles: {
+                  'Hot': [],
+                  'Daily': [],
+                  'Weekly': [],
+                  'Monthly': [],
+                  'Yearly': [],
+                },
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }

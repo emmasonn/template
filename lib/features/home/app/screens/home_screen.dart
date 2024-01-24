@@ -43,12 +43,14 @@ class _HomeScreenState extends State<HomeScreen> {
         leadingIcon: const RoundedImageWidget(
           radius: 35.0,
         ),
-        style: TextStyles.h4.copyWith(fontWeight: FontWeight.w600),
+        style: TextStyles.h4.copyWith(
+          fontWeight: FontWeight.w600,
+        ),
         actionIcons: [
           IconButton(
             onPressed: () {},
             icon: Icon(
-              Icons.notifications,
+              Icons.notifications_outlined,
               color: context.colorScheme.onPrimary,
             ),
           ),

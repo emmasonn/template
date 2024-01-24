@@ -47,7 +47,7 @@ class _SettingScreenState extends State<SettingScreen> {
           IconButton(
             onPressed: () {},
             icon: Icon(
-              Icons.notifications,
+              Icons.notifications_outlined,
               color: context.colorScheme.onPrimary,
             ),
           ),
@@ -65,8 +65,8 @@ class _SettingScreenState extends State<SettingScreen> {
                 Text(
                   'Hi, Dfun Peter',
                   style: TextStyles.body1.copyWith(
-                    fontSize: FontSizes.s18,
-                  ),
+                      fontSize: FontSizes.s18,
+                      color: context.colorScheme.onPrimary),
                 ),
                 //space vertically
                 const Gap(20.0),

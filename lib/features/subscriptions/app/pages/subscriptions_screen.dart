@@ -48,7 +48,7 @@ class _SubscriptionsScreenState extends State<SubscriptionsScreen> {
           IconButton(
             onPressed: () {},
             icon: Icon(
-              Icons.notifications,
+              Icons.notifications_outlined,
               color: context.colorScheme.onPrimary,
             ),
           ),

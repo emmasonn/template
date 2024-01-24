@@ -48,7 +48,7 @@ class _WalletScreenState extends State<WalletScreen> {
           IconButton(
             onPressed: () {},
             icon: Icon(
-              Icons.notifications,
+              Icons.notifications_outlined,
               color: context.colorScheme.onPrimary,
             ),
           ),
