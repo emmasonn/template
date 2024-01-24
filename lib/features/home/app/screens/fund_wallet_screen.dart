@@ -47,7 +47,6 @@ class _FundWalletScreenState extends State<FundWalletScreen> {
         appBar: CustomAppBar(
           context,
           titleText: AppStrings.fundWalletTxt,
-          leadingIcon: Icons.close,
           onBackPressed: () {
             Navigator.pop(context);
           },

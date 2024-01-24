@@ -20,7 +20,10 @@ class BillPaymentWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(Corners.lg),
+        borderRadius: const BorderRadius.only(
+          topLeft: Radius.circular(Corners.lg),
+          topRight: Radius.circular(Corners.lg),
+        ),
         color: context.colorScheme.surface,
       ),
       padding: const EdgeInsets.symmetric(

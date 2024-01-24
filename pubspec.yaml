@@ -8,6 +8,8 @@ environment:
   flutter: '>=3.16.5 <4.0.0'
 
 dependencies:
+  flutter:
+   sdk: flutter
   bloc: ^8.1.2
   cached_network_image: ^3.2.3
   cupertino_icons: ^1.0.2
@@ -15,8 +17,6 @@ dependencies:
   device_info_plus: ^9.1.0
   dotted_border: ^2.1.0
   equatable: ^2.0.5
-  flutter:
-    sdk: flutter
   flutter_screenutil: ^5.9.0
   flutter_spinkit: ^5.2.0
   get_it: ^7.6.4

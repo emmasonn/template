@@ -43,36 +43,36 @@ class CardCopyWalletWidget extends StatelessWidget {
           ),
         ),
         //space horizontally
-        hSpacer(10.0),
-        Container(
-          padding: const EdgeInsets.all(8.0),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(Corners.md),
-            border: Border.all(
-              color: context.colorScheme.surface,
-            ),
-            color: AppColors.copyBg,
-          ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Icon(
-                Icons.copy,
-                color: AppColors.bgBlack,
-                size: 24,
-              ),
-              //space vertiically
-              vSpacer(5.0),
-              Text(
-                AppStrings.copyTxt,
-                style: TextStyles.callout.copyWith(
-                  fontSize: 14.0,
-                  color: AppColors.bgBlack,
-                ),
-              )
-            ],
-          ),
-        )
+        // hSpacer(10.0),
+        // Container(
+        //   padding: const EdgeInsets.all(8.0),
+        //   decoration: BoxDecoration(
+        //     borderRadius: BorderRadius.circular(Corners.md),
+        //     border: Border.all(
+        //       color: context.colorScheme.surface,
+        //     ),
+        //     color: AppColors.copyBg,
+        //   ),
+        //   child: Column(
+        //     mainAxisSize: MainAxisSize.min,
+        //     children: [
+        //       const Icon(
+        //         Icons.copy,
+        //         color: AppColors.bgBlack,
+        //         size: 24,
+        //       ),
+        //       //space vertiically
+        //       vSpacer(5.0),
+        //       Text(
+        //         AppStrings.copyTxt,
+        //         style: TextStyles.callout.copyWith(
+        //           fontSize: 14.0,
+        //           color: AppColors.bgBlack,
+        //         ),
+        //       )
+        //     ],
+        //   ),
+        // )
       ],
     );
   }

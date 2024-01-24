@@ -35,7 +35,7 @@ class DashboardAppBar extends AppBar {
               ? Text(titleText)
               : null,
           toolbarHeight: Sizes.toolBarHeigth,
-          leadingWidth: noBackButton ? 0 : 40,
+          leadingWidth: noBackButton ? 0 : 50,
           scrolledUnderElevation: 0.0,
           leading: noBackButton ? const SizedBox() : leadingIcon,
           actions: actionIcons,

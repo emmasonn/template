@@ -1,10 +1,12 @@
 import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
 import 'package:peniremit/core/utils/amount_formatter.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
 import 'package:peniremit/core/widgets/simple_filled_buttom.dart';
 import 'package:peniremit/features/home/app/widgets/simple_outlined_button.dart';
+import 'package:peniremit/navigation/app_screen_paths.dart';
 import 'package:peniremit/resources/app_assets.dart';
 import 'package:peniremit/resources/app_colors.dart';
 import 'package:peniremit/resources/app_dimen.dart';
@@ -91,7 +93,9 @@ class BalanceCardWidget extends StatelessWidget {
                       ),
                     ),
                     backGroundColor: AppColors.accentDark,
-                    onPressed: () {},
+                    onPressed: () {
+                      context.push(AppScreenPaths.fundWalletPath);
+                    },
                   ),
                 ),
               ),

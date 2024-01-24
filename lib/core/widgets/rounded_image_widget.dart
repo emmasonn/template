@@ -11,13 +11,16 @@ class RoundedImageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CircleAvatar(
-      backgroundColor: context.colorScheme.background,
-      radius: radius,
-      child: Image.asset(
-        AppAssets.convasPng,
-        fit: BoxFit.cover,
-        width: radius,
+    return Padding(
+      padding: const EdgeInsets.only(left: 10.0),
+      child: CircleAvatar(
+        backgroundColor: context.colorScheme.background,
+        radius: radius,
+        child: Image.asset(
+          AppAssets.convasPng,
+          fit: BoxFit.cover,
+          width: radius,
+        ),
       ),
     );
   }

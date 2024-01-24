@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:peniremit/core/helpers/spacer_widgets.dart';
 import 'package:peniremit/core/icon_fonts/peniremit_font.dart';
@@ -58,84 +59,90 @@ class _SettingScreenState extends State<SettingScreen> {
           padding: const EdgeInsets.symmetric(
             vertical: 30.0,
           ),
-          child: Center(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Hi, Dfun Peter',
-                  style: TextStyles.body1.copyWith(
-                      fontSize: FontSizes.s18,
-                      color: context.colorScheme.onPrimary),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16.w),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Hi, Dfun Peter',
+                      style: TextStyles.body1.copyWith(
+                          fontSize: FontSizes.s18,
+                          color: context.colorScheme.onPrimary),
+                    ),
+                    //space vertically
+                    const Gap(20.0),
+                    const AccountSummaryWidget(),
+                  ],
                 ),
-                //space vertically
-                const Gap(20.0),
-                const AccountSummaryWidget(),
-                //space vertiically
-                vSpacer(20.0),
-                SettingsOptionWidget(
-                  icon: PeniremitIcon.person,
-                  title: AppStrings.editProfileTxt,
+              ),
+              //space vertiically
+              vSpacer(20.0),
+              SettingsOptionWidget(
+                icon: PeniremitIcon.person,
+                title: AppStrings.editProfileTxt,
+                onPressed: () {},
+              ),
+              const HDividerWidget(),
+              SettingsOptionWidget(
+                icon: PeniremitIcon.lock,
+                title: AppStrings.changePasswordTxt,
+                onPressed: () {},
+              ),
+              const HDividerWidget(),
+              SettingsOptionWidget(
+                icon: PeniremitIcon.refer,
+                title: AppStrings.referralsTxt,
+                onPressed: () {},
+              ),
+              const HDividerWidget(),
+              SettingsOptionWidget(
+                icon: PeniremitIcon.file,
+                title: AppStrings.privacyPolicyTxt,
+                onPressed: () {},
+              ),
+              const HDividerWidget(),
+              SettingsOptionWidget(
+                icon: PeniremitIcon.share,
+                title: AppStrings.supportTxt,
+                onPressed: () {},
+              ),
+              const HDividerWidget(),
+              SettingsOptionWidget(
+                icon: PeniremitIcon.share,
+                title: AppStrings.shareAppTxt,
+                onPressed: () {},
+              ),
+              const HDividerWidget(),
+              SettingsOptionWidget(
+                icon: PeniremitIcon.share,
+                title: AppStrings.rateUsTxt,
+                onPressed: () {},
+              ),
+              const HDividerWidget(),
+              SettingsOptionWidget(
+                icon: PeniremitIcon.logout,
+                title: AppStrings.closeAccountTxt,
+                onPressed: () {},
+              ),
+              const HDividerWidget(),
+              const Gap(5.0),
+              Center(
+                child: TextButton(
                   onPressed: () {},
-                ),
-                const HDividerWidget(),
-                SettingsOptionWidget(
-                  icon: PeniremitIcon.lock,
-                  title: AppStrings.changePasswordTxt,
-                  onPressed: () {},
-                ),
-                const HDividerWidget(),
-                SettingsOptionWidget(
-                  icon: PeniremitIcon.refer,
-                  title: AppStrings.referralsTxt,
-                  onPressed: () {},
-                ),
-                const HDividerWidget(),
-                SettingsOptionWidget(
-                  icon: PeniremitIcon.file,
-                  title: AppStrings.privacyPolicyTxt,
-                  onPressed: () {},
-                ),
-                const HDividerWidget(),
-                SettingsOptionWidget(
-                  icon: PeniremitIcon.share,
-                  title: AppStrings.supportTxt,
-                  onPressed: () {},
-                ),
-                const HDividerWidget(),
-                SettingsOptionWidget(
-                  icon: PeniremitIcon.share,
-                  title: AppStrings.shareAppTxt,
-                  onPressed: () {},
-                ),
-                const HDividerWidget(),
-                SettingsOptionWidget(
-                  icon: PeniremitIcon.share,
-                  title: AppStrings.rateUsTxt,
-                  onPressed: () {},
-                ),
-                const HDividerWidget(),
-                SettingsOptionWidget(
-                  icon: PeniremitIcon.logout,
-                  title: AppStrings.closeAccountTxt,
-                  onPressed: () {},
-                ),
-                const HDividerWidget(),
-                const Gap(5.0),
-                Center(
-                  child: TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      AppStrings.logoutTxt,
-                      style: TextStyles.t2.copyWith(
-                        color: AppColors.error,
-                        fontSize: FontSizes.s13,
-                      ),
+                  child: Text(
+                    AppStrings.logoutTxt,
+                    style: TextStyles.t2.copyWith(
+                      color: AppColors.error,
+                      fontSize: FontSizes.s13,
                     ),
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
