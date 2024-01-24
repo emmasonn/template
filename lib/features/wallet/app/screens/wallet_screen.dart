@@ -36,10 +36,10 @@ class _WalletScreenState extends State<WalletScreen> {
     return Scaffold(
       appBar: DashboardAppBar(
         context,
-        titleText: AppStrings.appNameTxt,
+        titleText: AppStrings.walletTxt,
         centerTitle: true,
         leadingIcon: const RoundedImageWidget(
-          radius: 20.0,
+          radius: 35.0,
         ),
         style: TextStyles.h4.copyWith(
           fontWeight: FontWeight.w600,
@@ -58,8 +58,8 @@ class _WalletScreenState extends State<WalletScreen> {
         bottom: false,
         top: false,
         child: SingleChildScrollView(
-          padding: const EdgeInsets.symmetric(
-            vertical: 20.0,
+          padding: EdgeInsets.only(
+            top: Sizes.vlg,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

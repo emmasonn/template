@@ -57,7 +57,6 @@ void onTapClicked(BuildContext context, {required int pageIndex}) {
   //navigate screen.
   context.read<AppManager>().updatePageIndex(pageIndex);
 
-  
   switch (pageIndex) {
     case AppStrings.homeIndexTxt:
       {
@@ -68,9 +67,9 @@ void onTapClicked(BuildContext context, {required int pageIndex}) {
         context.go(AppScreenPaths.walletPath);
       }
 
-    case AppStrings.analyticIndexTxt:
+    case AppStrings.subscriptionIndexTxt:
       {
-        context.go(AppScreenPaths.analyticsPath);
+        context.go(AppScreenPaths.subscriptionsPath);
       }
 
     case AppStrings.settingsIndexTxt:

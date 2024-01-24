@@ -17,7 +17,9 @@ class AppStrings {
   static const signInCaptionTxt = 'Welcome back! sign into your account';
   static const signUpCaptionTxt =
       'Create your account to embark on a journey towards decentralized finance.';
-
+  static const rateUsTxt = 'Rate Us';
+  static const supportTxt = 'Support';
+  static const closeAccountTxt = 'Close Account';
   //caption text
   static const billPriceTxt = 'Price:\t';
   static const selectAmountTxt = 'Select an amount';
@@ -49,6 +51,9 @@ class AppStrings {
   static const smartCardHintTxt = '343342343434';
   static const packageTxt = 'Package';
   static const packageHintTxt = 'Select Package';
+  static const availableBalanceTxt = 'Available Balance';
+  static const peniremitIdTxt = 'Peniremit ID';
+  static const showQrCodeTxt = 'Show QR Code';
 
   //Form Information
   static const fullNameLabel = 'Full Name';
@@ -121,6 +126,7 @@ class AppStrings {
   static const addSubscriptionText = 'Add Subscription';
   static const createCardTxt = 'Create Card';
   static const totalExpensesTxt = 'Total Expenses';
+  static const subForTheMonthTxt = 'Subscription Cost this month';
   static const subscriptionSummaryTxt = 'Subscription Summary';
   static const totalSubscriptionTxt = 'Total Subscription';
   static const paidSubscriptionTxt = 'Paid Subscription';
@@ -141,7 +147,7 @@ class AppStrings {
   //BottomNav index
   static const homeIndexTxt = 0;
   static const walletIndexTxt = 1;
-  static const analyticIndexTxt = 2;
+  static const subscriptionIndexTxt = 2;
   static const settingsIndexTxt = 3;
 
   //pref
@@ -153,7 +159,6 @@ class AppStrings {
   static const String transferFundTxt = 'Transfer Funds';
   static const String transferTxt = 'Transfer';
   static const String withdrawFundTxt = 'Withdraw Funds';
-  static const String availableBalanceTxt = 'Available Balance';
   static const String transactionHistoryTxt = 'Transaction History';
   static const String transactionsTxt = 'Transactions';
   static const String fundWalletTxt = 'Fund Wallet';

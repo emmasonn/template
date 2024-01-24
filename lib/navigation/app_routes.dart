@@ -14,7 +14,7 @@ import 'package:peniremit/features/auth/app/screens/update_password_screen.dart'
 import 'package:peniremit/features/auth/app/screens/update_pin_screen.dart';
 import 'package:peniremit/features/auth/app/screens/verify_account_screen.dart';
 import 'package:peniremit/features/auth/app/screens/verify_otp_screen.dart';
-import 'package:peniremit/features/home/app/screens/add_subscription_screen.dart';
+import 'package:peniremit/features/subscriptions/app/pages/add_subscription_screen.dart';
 import 'package:peniremit/features/home/app/screens/buy_airtime_screen.dart';
 import 'package:peniremit/features/home/app/screens/buy_cabletv_screen.dart';
 import 'package:peniremit/features/home/app/screens/buy_data_screen.dart';
@@ -23,10 +23,11 @@ import 'package:peniremit/features/home/app/screens/fund_wallet_screen.dart';
 import 'package:peniremit/features/home/app/screens/home_screen.dart';
 import 'package:peniremit/features/home/app/screens/main_screen.dart';
 import 'package:peniremit/features/home/app/screens/more_services_screen.dart';
-import 'package:peniremit/features/home/app/screens/subscription_detail_screen.dart';
-import 'package:peniremit/features/home/app/screens/subscriptions_screen.dart';
-import 'package:peniremit/features/home/app/screens/upcoming_subscriptions_screen.dart';
-import 'package:peniremit/features/home/app/widgets/subscription_filter_widget.dart';
+import 'package:peniremit/features/subscriptions/app/pages/subscription_detail_screen.dart';
+import 'package:peniremit/features/subscriptions/app/pages/all_subscriptions_screen.dart';
+import 'package:peniremit/features/subscriptions/app/pages/subscriptions_screen.dart';
+import 'package:peniremit/features/subscriptions/app/pages/upcoming_subscriptions_screen.dart';
+import 'package:peniremit/features/subscriptions/app/widgets/subscription_filter_widget.dart';
 import 'package:peniremit/features/wallet/app/screens/confirm_transaction_screen.dart';
 import 'package:peniremit/features/wallet/app/screens/create_card_screen.dart';
 import 'package:peniremit/features/wallet/app/screens/transaction_completed_screen.dart';
@@ -133,11 +134,11 @@ class AppRoutes {
     },
   );
 
-  static final subscriptionsScreen = GoRoute(
+  static final allSubscriptionsScreen = GoRoute(
     parentNavigatorKey: rootNavigator,
-    path: AppScreenPaths.subscriptionsPath,
+    path: AppScreenPaths.allSubscriptionsPath,
     pageBuilder: (BuildContext context, state) {
-      return SubscriptionScreen.page(key: state.pageKey);
+      return AllSubscriptionScreen.page(key: state.pageKey);
     },
   );
 
@@ -169,7 +170,7 @@ class AppRoutes {
     parentNavigatorKey: rootNavigator,
     path: AppScreenPaths.subscriptionPlansPath,
     pageBuilder: (BuildContext context, state) {
-      return SubscriptionScreen.page(key: state.pageKey);
+      return AllSubscriptionScreen.page(key: state.pageKey);
     },
   );
 
@@ -291,6 +292,14 @@ class AppRoutes {
     },
   );
 
+  static final analyticScreen = GoRoute(
+    parentNavigatorKey: rootNavigator,
+    path: AppScreenPaths.analyticsPath,
+    pageBuilder: (context, state) {
+      return AnalyticScreen.page(key: state.pageKey);
+    },
+  );
+
 //*/
 
   //** Dashboard screen routes
@@ -305,7 +314,7 @@ class AppRoutes {
     routes: [
       homeScreen,
       walletScreen,
-      analyticScreen,
+      subscriptionsScreen,
       settingScreen,
     ],
   );
@@ -324,10 +333,10 @@ class AppRoutes {
     },
   );
 
-  static final analyticScreen = GoRoute(
-    path: AppScreenPaths.analyticsPath,
-    pageBuilder: (context, state) {
-      return AnalyticScreen.page(key: state.pageKey);
+  static final subscriptionsScreen = GoRoute(
+    path: AppScreenPaths.subscriptionsPath,
+    pageBuilder: (BuildContext context, state) {
+      return SubscriptionsScreen.page(key: state.pageKey);
     },
   );
 

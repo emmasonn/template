@@ -8,10 +8,11 @@ class AppScreenPaths {
   static const recoverPasswordPath = '/detail';
   static const registerPath = '/register';
   static const updatePinPath = '/update-pin';
+  static const analyticsPath = '/analytics';
   static const updatePasswordPath = '/update-password';
   static const verifyAccountPath = '/verify-account';
   static const verifyOtpPath = '/verify-otp';
-  static const subscriptionsPath = '/subscriptions';
+  static const allSubscriptionsPath = '/all_subscriptions';
   static const subscriptionDetailPath = '/subscription-detail';
   static const addSubscriptionPath = '/add-subscription';
   static const fundWalletPath = '/fund-wallet-path';
@@ -35,7 +36,7 @@ class AppScreenPaths {
   //* Landings
   static const homePath = '/home';
   static const walletPath = '/wallet';
-  static const analyticsPath = '/analytics';
+  static const subscriptionsPath = '/subscription';
   static const settingPath = '/settings';
 
   //* others

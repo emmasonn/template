@@ -15,9 +15,9 @@ class RoundedImageWidget extends StatelessWidget {
       backgroundColor: context.colorScheme.background,
       radius: radius,
       child: Image.asset(
-        AppAssets.tetherPng,
+        AppAssets.convasPng,
         fit: BoxFit.cover,
-        width: radius * 1.5,
+        width: radius,
       ),
     );
   }

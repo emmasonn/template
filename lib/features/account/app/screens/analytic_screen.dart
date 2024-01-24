@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:peniremit/core/helpers/spacer_widgets.dart';
-import 'package:peniremit/core/utils/amount_formatter.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
 import 'package:peniremit/core/widgets/custom_app_bar.dart';
 import 'package:peniremit/features/account/app/widgets/analytic_summary_widget.dart';
 import 'package:peniremit/features/account/app/widgets/analytics_graph_widget.dart';
 import 'package:peniremit/features/account/app/widgets/analytics_header_widget.dart';
 import 'package:peniremit/navigation/custom_page_transition.dart';
-import 'package:peniremit/resources/app_dimen.dart';
 import 'package:peniremit/resources/app_strings.dart';
 import 'package:peniremit/resources/app_styles.dart';
 

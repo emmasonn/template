@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:peniremit/core/helpers/spacer_widgets.dart';
 import 'package:peniremit/core/icon_fonts/peniremit_font.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
 import 'package:peniremit/core/widgets/custom_divider_widget.dart';
 import 'package:peniremit/core/widgets/dashboard_app_bar_widget.dart';
 import 'package:peniremit/core/widgets/rounded_image_widget.dart';
+import 'package:peniremit/features/account/app/widgets/account_summary_widget.dart';
 import 'package:peniremit/features/account/app/widgets/settings_option_widget.dart';
 import 'package:peniremit/navigation/custom_page_transition.dart';
+import 'package:peniremit/resources/app_colors.dart';
 import 'package:peniremit/resources/app_dimen.dart';
 import 'package:peniremit/resources/app_strings.dart';
 import 'package:peniremit/resources/app_styles.dart';
@@ -35,7 +38,7 @@ class _SettingScreenState extends State<SettingScreen> {
         titleText: AppStrings.accountTxt,
         centerTitle: true,
         leadingIcon: const RoundedImageWidget(
-          radius: 20.0,
+          radius: 35.0,
         ),
         style: TextStyles.h4.copyWith(
           fontWeight: FontWeight.w600,
@@ -57,28 +60,19 @@ class _SettingScreenState extends State<SettingScreen> {
           ),
           child: Center(
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const CircleAvatar(
-                  radius: 35,
-                  backgroundColor: Color(0xffFCB859),
-                  child: Text(
-                    'DP',
+                Text(
+                  'Hi, Dfun Peter',
+                  style: TextStyles.body1.copyWith(
+                    fontSize: FontSizes.s18,
                   ),
                 ),
+                //space vertically
+                const Gap(20.0),
+                const AccountSummaryWidget(),
                 //space vertiically
-                vSpacer(10.0),
-                Text(
-                  'Dfun Peter',
-                  style: TextStyles.body1.copyWith(fontSize: FontSizes.s16),
-                ),
-                //space vertiically
-                vSpacer(5.0),
-                Text(
-                  'words.cs1@gmail.com',
-                  style: TextStyles.body1,
-                ),
-                //space vertiically
-                vSpacer(30.0),
+                vSpacer(20.0),
                 SettingsOptionWidget(
                   icon: PeniremitIcon.person,
                   title: AppStrings.editProfileTxt,
@@ -92,7 +86,6 @@ class _SettingScreenState extends State<SettingScreen> {
                 ),
                 const HDividerWidget(),
                 SettingsOptionWidget(
-                  iconSize: 18,
                   icon: PeniremitIcon.refer,
                   title: AppStrings.referralsTxt,
                   onPressed: () {},
@@ -106,16 +99,41 @@ class _SettingScreenState extends State<SettingScreen> {
                 const HDividerWidget(),
                 SettingsOptionWidget(
                   icon: PeniremitIcon.share,
+                  title: AppStrings.supportTxt,
+                  onPressed: () {},
+                ),
+                const HDividerWidget(),
+                SettingsOptionWidget(
+                  icon: PeniremitIcon.share,
                   title: AppStrings.shareAppTxt,
                   onPressed: () {},
                 ),
                 const HDividerWidget(),
                 SettingsOptionWidget(
-                  icon: PeniremitIcon.logout,
-                  title: AppStrings.logoutTxt,
+                  icon: PeniremitIcon.share,
+                  title: AppStrings.rateUsTxt,
                   onPressed: () {},
                 ),
-                const HDividerWidget()
+                const HDividerWidget(),
+                SettingsOptionWidget(
+                  icon: PeniremitIcon.logout,
+                  title: AppStrings.closeAccountTxt,
+                  onPressed: () {},
+                ),
+                const HDividerWidget(),
+                const Gap(5.0),
+                Center(
+                  child: TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      AppStrings.logoutTxt,
+                      style: TextStyles.t2.copyWith(
+                        color: AppColors.error,
+                        fontSize: FontSizes.s13,
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),

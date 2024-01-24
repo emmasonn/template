@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:peniremit/core/utils/amount_formatter.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
-import 'package:peniremit/features/home/app/widgets/subscription_filter_widget.dart';
+import 'package:peniremit/features/subscriptions/app/widgets/subscription_filter_widget.dart';
 import 'package:peniremit/navigation/app_screen_paths.dart';
 import 'package:peniremit/navigation/nav_utils.dart';
 import 'package:peniremit/resources/app_colors.dart';

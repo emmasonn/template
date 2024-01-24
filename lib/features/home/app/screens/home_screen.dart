@@ -5,13 +5,13 @@ import 'package:peniremit/core/helpers/spacer_widgets.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
 import 'package:peniremit/core/widgets/dashboard_app_bar_widget.dart';
 import 'package:peniremit/core/widgets/rounded_image_widget.dart';
+import 'package:peniremit/core/widgets/view_all_link.dart';
 import 'package:peniremit/features/home/app/screens/transaction_history_list.dart';
 import 'package:peniremit/features/home/app/widgets/balance_card_widget.dart';
 import 'package:peniremit/features/home/app/widgets/services_widget.darts.dart';
-import 'package:peniremit/features/home/app/widgets/upcoming_subscription_widget.dart';
+import 'package:peniremit/features/subscriptions/app/widgets/upcoming_subscription_widget.dart';
 import 'package:peniremit/navigation/app_screen_paths.dart';
 import 'package:peniremit/navigation/custom_page_transition.dart';
-import 'package:peniremit/resources/app_colors.dart';
 import 'package:peniremit/resources/app_dimen.dart';
 import 'package:peniremit/resources/app_strings.dart';
 import 'package:peniremit/resources/app_styles.dart';
@@ -41,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
         titleText: AppStrings.appNameTxt,
         centerTitle: true,
         leadingIcon: const RoundedImageWidget(
-          radius: 20.0,
+          radius: 35.0,
         ),
         style: TextStyles.h4.copyWith(fontWeight: FontWeight.w600),
         actionIcons: [
@@ -55,8 +55,8 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(
-          vertical: 20.0,
+        padding: EdgeInsets.only(
+          top: Sizes.vlg,
         ),
         child: Column(
           children: [
@@ -86,34 +86,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   //space vertiically
                   vSpacer(20.0),
                   //subscription heading
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        AppStrings.transactionsTxt,
-                        style: TextStyles.t2.copyWith(fontSize: FontSizes.s15),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          context.push(AppScreenPaths.subscriptionsPath);
-                        },
-                        child: Padding(
-                          padding: const EdgeInsets.only(
-                            top: 10.0,
-                            bottom: 10.0,
-                            left: 10.0,
-                          ),
-                          child: Text(
-                            AppStrings.viewAllTxt,
-                            style: TextStyles.body1.copyWith(
-                              color: AppColors.accent,
-                              fontSize: FontSizes.s13,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                  ViewAllLink(
+                    title: AppStrings.transactionsTxt,
+                    onPressed: () {
+                      context.push(AppScreenPaths.transactionHistoryPath);
+                    },
+                  )
                 ],
               ),
             ),

@@ -35,13 +35,12 @@ class SettingsOptionWidget extends StatelessWidget {
         child: Icon(
           icon,
           size: iconSize ?? 13,
-          weight: 24,
           color: AppColors.accent,
         ),
       ),
       title: Text(
         title,
-        style: TextStyles.h1.copyWith(
+        style: TextStyles.body1.copyWith(
           color: context.colorScheme.onPrimary,
           fontSize: FontSizes.s13,
         ),

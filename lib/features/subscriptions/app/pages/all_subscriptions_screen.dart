@@ -3,15 +3,15 @@ import 'package:peniremit/core/helpers/spacer_widgets.dart';
 import 'package:peniremit/core/utils/country.dart';
 import 'package:peniremit/core/widgets/app_text_field.dart';
 import 'package:peniremit/core/widgets/custom_app_bar.dart';
-import 'package:peniremit/features/home/app/widgets/subscription_filter_widget.dart';
+import 'package:peniremit/features/subscriptions/app/widgets/subscription_filter_widget.dart';
 import 'package:peniremit/navigation/custom_page_transition.dart';
 import 'package:peniremit/resources/app_colors.dart';
 import 'package:peniremit/resources/app_dimen.dart';
 import 'package:peniremit/resources/app_strings.dart';
 import 'package:peniremit/resources/app_styles.dart';
 
-class SubscriptionScreen extends StatefulWidget {
-  const SubscriptionScreen({
+class AllSubscriptionScreen extends StatefulWidget {
+  const AllSubscriptionScreen({
     super.key,
   });
 
@@ -21,15 +21,15 @@ class SubscriptionScreen extends StatefulWidget {
     return CustomPageTransition(
       key: key,
       transitionStyle: PageTransitionStyle.fade,
-      child: const SubscriptionScreen(),
+      child: const AllSubscriptionScreen(),
     );
   }
 
   @override
-  State<SubscriptionScreen> createState() => _SubscriptionScreenState();
+  State<AllSubscriptionScreen> createState() => _AllSubscriptionScreenState();
 }
 
-class _SubscriptionScreenState extends State<SubscriptionScreen> {
+class _AllSubscriptionScreenState extends State<AllSubscriptionScreen> {
   List<Country> searchResult = [];
 
   @override

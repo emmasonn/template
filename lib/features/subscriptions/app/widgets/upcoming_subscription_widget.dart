@@ -26,10 +26,7 @@ class UpcomingSubscriptionWidget extends StatelessWidget {
           context.push(AppScreenPaths.upcomingSubsriptionPath);
         },
         child: Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 8.0,
-            vertical: 16.0,
-          ),
+          padding: const EdgeInsets.only(left: 12.0, top: 16.0, bottom: 16.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             mainAxisSize: MainAxisSize.max,
