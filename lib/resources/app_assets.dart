@@ -15,4 +15,5 @@ class AppAssets {
   static const bottomNavBg = 'assets/images/bottom_nav_bg.png';
   static const cardBg = 'assets/images/card_bg.png';
   static const chipBg = 'assets/images/chip.png';
+  static const emptyBg = 'assets/images/empty_content.png';
 }

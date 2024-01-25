@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 import 'package:peniremit/core/helpers/spacer_widgets.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
@@ -41,7 +42,7 @@ class UpcomingSubscriptionWidget extends StatelessWidget {
                     style: TextStyles.body1,
                   ),
                   //space vertiically
-                  vSpacer(5.0),
+                  const Gap(2.0),
                   Text(
                     AppStrings.upcomingSubscriptionCaptionTxt,
                     style: TextStyles.body1.copyWith(

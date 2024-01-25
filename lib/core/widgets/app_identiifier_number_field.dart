@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:go_router/go_router.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
+import 'package:peniremit/navigation/app_screen_paths.dart';
 import 'package:peniremit/resources/app_colors.dart';
 import 'package:peniremit/resources/app_dimen.dart';
 import 'package:peniremit/resources/app_strings.dart';
@@ -56,7 +58,9 @@ class _AppIdentifierNumberFieldState extends State<AppIdentifierNumberField> {
                 ),
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  context.push(AppScreenPaths.electricityBeneficiaryPath);
+                },
                 child: Text(
                   AppStrings.selectBeneficiariesTxt,
                   style: widget.style.copyWith(

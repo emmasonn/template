@@ -1,5 +1,17 @@
 //drawer items
-enum ScreenTypes { none, home, wallet, analytics, settings }
+enum ScreenTypes {
+  none,
+  home,
+  wallet,
+  analytics,
+  settings,
+}
+
+//api environment
+enum Environment {
+  production,
+  staging,
+}
 
 //payment confirmation
 enum ConfirmationMethod {

@@ -2,6 +2,9 @@ class AppStrings {
   //app name
   static const appNameTxt = 'Peniremit';
 
+  //pref
+  static const authPrefKeyTxt = 'auth_pref';
+
   //onboard
   static const onboardTxt = 'Experience the Future of Digital Finance ';
   static const onboardCaptionTxt =
@@ -84,6 +87,8 @@ class AppStrings {
   static const verifyFingerPrintTxt = 'Verify Fingerprint';
   static const usePinConfirmationTxt = 'Use pin for confirmation';
   static const confirmPaymentTxt = 'Confirm payment with your fingerprint';
+  static const emptyBeneficiaryTxt =
+      'You do not have any beneficiary yet. you can add a beneficiary for a better electricity payment experience';
 
   //BottomNav item title
   static const homeTxt = 'Home';
@@ -108,6 +113,8 @@ class AppStrings {
   static const accountTxt = 'Account';
   static const onlineShopping = 'Online Shopping';
   static const subscriptionTxt = 'Subscriptions';
+  static const electricityBeneficiaryTxt = 'Electricity Beneficiaries';
+  static const tvBeneficiaries = 'TV Beneficiaries';
   static const subscriptionDetailTxt = 'Subscription Details';
   static const statusTxt = 'Status\t:\t';
   static const planTxt = 'Plan\t:\t';
