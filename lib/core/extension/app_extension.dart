@@ -20,22 +20,6 @@ extension DateParsing on DateTime {
   }
 }
 
-extension ContextExtension on BuildContext {
-  //controls the padding
-  EdgeInsetsGeometry scrollPadding() {
-    final size = MediaQuery.of(this).size;
-    return EdgeInsets.only(
-      left: size.width * 0.03,
-      right: size.width * 0.03,
-      top: 5.0,
-      bottom: size.width * 0.2,
-    );
-  }
-
-  //retrieve the colorscheme
-  ColorScheme get colorScheme => Theme.of(this).colorScheme;
-}
-
 extension StringUtil on String {
   String capitalizeEachLetters() {
     final List<String> results = split(' ');

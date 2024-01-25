@@ -113,6 +113,8 @@ class AppStrings {
   static const accountTxt = 'Account';
   static const onlineShopping = 'Online Shopping';
   static const subscriptionTxt = 'Subscriptions';
+  static const transactionDetailTxt = 'Transaction Details';
+  static const shareReceiptTxt = 'Share Receipt';
   static const electricityBeneficiaryTxt = 'Electricity Beneficiaries';
   static const tvBeneficiaries = 'TV Beneficiaries';
   static const subscriptionDetailTxt = 'Subscription Details';
@@ -129,7 +131,7 @@ class AppStrings {
   static const subscriptionCyleTxt = 'Subscription Cycle';
   static const autoRenewalTxt = 'Auto Renewal Date';
   static const autoRenewalDuration = 'Auto Renewal Duration';
-  static const myCardTxt = 'Cards';
+  static const myCardTxt = 'My Cards';
   static const addSubscriptionText = 'Add Subscription';
   static const createCardTxt = 'Create Card';
   static const totalExpensesTxt = 'Total Expenses';
@@ -195,6 +197,15 @@ class AppStrings {
   static const amountRangeTxt = '50 - 50,000';
   static const payTxt = 'Pay';
 
+  static const transactionTypeTxt = 'Transaction Type';
+  static const senderDetailsTxt = 'Sender Details';
+  static const remarkTxt = 'Remark';
+  static const transactionNumberTxt = 'Transaction Number';
+  static const transactionDateTxt = 'Transaction Date';
+  static const customerNameTxt = 'Customer name';
+  static const addressTxt = 'Address';
+  static const meterTypeTxt = 'Meter Type';
+  static const tokenTxt = 'Token';
   static const depositWarningTitleTxt =
       'Please Note: Send only USDT to this address';
   static const depositNoteTxt =

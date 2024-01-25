@@ -20,6 +20,7 @@ class AppScreenPaths {
   static const subscriptionPlansPath = '/subscription-plans';
   static const upcomingSubsriptionPath = '/upcoming-subscriptions';
   static const transactionHistoryPath = '/transaction_history';
+  static const transactionDetailPath = '/transaction_detail';
   static const createCardPath = '/create_card';
   static const transferFundPath = '/transfer_funds';
   static const confirmTransactionPath = '/confirm_transaction_path';
@@ -33,6 +34,7 @@ class AppScreenPaths {
   static const buyTvPath = '/buy_tv';
   static const recoverPasswordOtpPath = '/recover_password_otp';
   static const electricityBeneficiaryPath = '/electricity_beneficiary_path';
+  static const contactsPath = '/contacts_path';
 
   //* Landings
   static const homePath = '/home';

@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:go_router/go_router.dart';
 import 'package:peniremit/core/utils/country.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
 import 'package:peniremit/core/utils/phone_number_formatter.dart';
-import 'package:peniremit/navigation/app_screen_paths.dart';
-import 'package:peniremit/navigation/nav_utils.dart';
-import 'package:peniremit/resources/app_colors.dart';
 import 'package:peniremit/resources/app_dimen.dart';
 
 class PhoneNumberField extends StatefulWidget {

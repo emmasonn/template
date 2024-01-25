@@ -8,11 +8,18 @@ import 'package:peniremit/resources/app_dimen.dart';
 import 'package:peniremit/resources/app_styles.dart';
 
 class CardTransactionWidget extends StatelessWidget {
-  const CardTransactionWidget({super.key});
+  const CardTransactionWidget({
+    super.key,
+    required this.onPressed,
+  });
+  final Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      onTap: () {
+        onPressed.call();
+      },
       leading: Container(
         width: 40,
         height: 40,

@@ -23,6 +23,7 @@ class AppColors {
   static const Color bgBlack = Color(0xff000000); //Color(0xff0D0D0D);
   static const Color splashBg = Color(0xff000000);
   static const Color error = Color(0xffFF0101);
+  static const Color orangeColor = Color(0xFFF79B31);
   static const Color grey = Colors.grey;
   static Color greyLight = Colors.grey.shade100;
   static Color greyStrong = Colors.grey.shade500;

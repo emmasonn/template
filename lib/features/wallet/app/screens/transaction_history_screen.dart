@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:peniremit/core/widgets/custom_app_bar.dart';
 import 'package:peniremit/features/home/app/screens/transaction_history_list.dart';
 import 'package:peniremit/features/wallet/app/widgets/transactions_header_widget.dart';
@@ -36,16 +37,19 @@ class _TransactionHistoryScreenState extends State<TransactionHistoryScreen> {
             Navigator.pop(context);
           },
         ),
-        body: const SafeArea(
+        body: SafeArea(
           child: Stack(
             children: [
               Positioned(
                 top: 30,
                 left: 0,
                 right: 0,
-                child: TransactionHeaderWidget(),
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
+                  child: const TransactionHeaderWidget(),
+                ),
               ),
-              Positioned(
+              const Positioned(
                 top: 100,
                 left: 0,
                 right: 0,

@@ -14,6 +14,7 @@ import 'package:peniremit/features/auth/app/screens/update_password_screen.dart'
 import 'package:peniremit/features/auth/app/screens/update_pin_screen.dart';
 import 'package:peniremit/features/auth/app/screens/verify_account_screen.dart';
 import 'package:peniremit/features/auth/app/screens/verify_otp_screen.dart';
+import 'package:peniremit/features/home/app/screens/contacts_screen.dart';
 import 'package:peniremit/features/home/app/screens/electricity_beneficiary_screen.dart';
 import 'package:peniremit/features/subscriptions/app/pages/add_subscription_screen.dart';
 import 'package:peniremit/features/home/app/screens/buy_airtime_screen.dart';
@@ -32,6 +33,7 @@ import 'package:peniremit/features/subscriptions/app/widgets/subscription_filter
 import 'package:peniremit/features/wallet/app/screens/confirm_transaction_screen.dart';
 import 'package:peniremit/features/wallet/app/screens/create_card_screen.dart';
 import 'package:peniremit/features/wallet/app/screens/transaction_completed_screen.dart';
+import 'package:peniremit/features/wallet/app/screens/transaction_detail_screen.dart';
 import 'package:peniremit/features/wallet/app/screens/transaction_history_screen.dart';
 import 'package:peniremit/features/wallet/app/screens/transfer_funds_screen.dart';
 import 'package:peniremit/features/wallet/app/screens/wallet_screen.dart';
@@ -183,6 +185,14 @@ class AppRoutes {
     },
   );
 
+  static final transactionDetailScreen = GoRoute(
+    parentNavigatorKey: rootNavigator,
+    path: AppScreenPaths.transactionDetailPath,
+    pageBuilder: (BuildContext context, state) {
+      return TransactionDetailScreen.page(key: state.pageKey);
+    },
+  );
+
   static final createCardScreen = GoRoute(
     parentNavigatorKey: rootNavigator,
     path: AppScreenPaths.createCardPath,
@@ -256,6 +266,16 @@ class AppRoutes {
     path: AppScreenPaths.electricityBeneficiaryPath,
     pageBuilder: (BuildContext context, state) {
       return ElectricityBeneficiaryScreen.page(
+        key: state.pageKey,
+      );
+    },
+  );
+
+  static final contactsScreen = GoRoute(
+    parentNavigatorKey: rootNavigator,
+    path: AppScreenPaths.contactsPath,
+    pageBuilder: (BuildContext context, state) {
+      return ContactsScreen.page(
         key: state.pageKey,
       );
     },

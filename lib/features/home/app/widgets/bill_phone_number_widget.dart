@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:go_router/go_router.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
 import 'package:peniremit/features/home/app/widgets/network_provider_widget.dart';
 import 'package:peniremit/features/home/domain/entities/network_provider.dart';
+import 'package:peniremit/navigation/app_screen_paths.dart';
 import 'package:peniremit/resources/app_colors.dart';
 import 'package:peniremit/resources/app_dimen.dart';
 import 'package:peniremit/resources/app_strings.dart';
@@ -60,7 +62,11 @@ class _BillPhoneNumberWidgetState extends State<BillPhoneNumberWidget> {
               ),
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                context.push(
+                  AppScreenPaths.contactsPath,
+                );
+              },
               child: Text(
                 AppStrings.chooseContactTxt,
                 style: widget.style.copyWith(

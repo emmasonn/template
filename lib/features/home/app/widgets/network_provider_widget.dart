@@ -123,8 +123,8 @@ class NetworkProviderItemWidget extends StatelessWidget {
         const Gap(10.0),
         Icon(
           Icons.keyboard_arrow_down_rounded,
-          color: context.colorScheme.onSurface,
-          size: 30,
+          color: context.onSurfaceVt,
+          size: 25,
         ),
         SizedBox(
           height: 50.0,

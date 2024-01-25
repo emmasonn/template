@@ -34,3 +34,11 @@ enum MeterType {
   prepaid,
   postpaid,
 }
+
+//Transaction status
+enum TransactionStatus {
+  successful,
+  failed,
+  pending,
+  refunded,
+}
