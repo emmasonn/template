@@ -81,7 +81,7 @@ class BalanceCardWidget extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               Padding(
-                padding: const EdgeInsets.only(bottom: 5.0),
+                padding: const EdgeInsets.only(bottom: 10.0),
                 child: SizedBox(
                   height: 30,
                   child: SimpleFilledButton(
@@ -117,7 +117,7 @@ class BalanceCardWidget extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(bottom: 5.0),
+                padding: const EdgeInsets.only(bottom: 10.0),
                 child: SizedBox(
                   height: 30.0,
                   child: SimpleOutlinedButton(
