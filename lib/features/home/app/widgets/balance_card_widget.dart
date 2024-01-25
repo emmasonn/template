@@ -130,7 +130,9 @@ class BalanceCardWidget extends StatelessWidget {
                     ),
                     outlinedColor: context.colorScheme.onSurface,
                     backgroundColor: context.colorScheme.surface,
-                    onPressed: () {},
+                    onPressed: () {
+                      context.push(AppScreenPaths.transferFundPath);
+                    },
                   ),
                 ),
               ),

@@ -2,15 +2,19 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gap/gap.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:peniremit/core/helpers/spacer_widgets.dart';
 import 'package:peniremit/core/qr_flutter/src/qr_image.dart';
 import 'package:peniremit/core/qr_flutter/src/qr_versions.dart';
+import 'package:peniremit/core/utils/enum_constants.dart';
+import 'package:peniremit/core/widgets/app_pop_up_field.dart';
 import 'package:peniremit/core/widgets/custom_app_bar.dart';
 import 'package:peniremit/core/widgets/custom_filled_button.dart';
-import 'package:peniremit/features/home/app/widgets/card_copy_wallet.dart';
+import 'package:peniremit/features/wallet/app/screens/card_copy_wallet.dart';
 import 'package:peniremit/navigation/custom_page_transition.dart';
+import 'package:peniremit/resources/app_assets.dart';
 import 'package:peniremit/resources/app_colors.dart';
 import 'package:peniremit/resources/app_dimen.dart';
 import 'package:peniremit/resources/app_strings.dart';
@@ -61,6 +65,27 @@ class _FundWalletScreenState extends State<FundWalletScreen> {
                 _qrBodyWidget(),
                 //space vertiically
                 vSpacer(50.0),
+
+                AppPopUpField(
+                  prefixIcon: CircleAvatar(
+                    radius: 13,
+                    child: Image.asset(AppAssets.tetherPng),
+                  ),
+                  items: const [
+                    'Tron (TRC20)',
+                    'Ethereum (ERC20)',
+                    'Binance Smartchain (BEP20)',
+                  ],
+                  billType: BillType.none,
+                  label: AppStrings.tokenNetworkTxt,
+                  hintText: AppStrings.selectNetworkTxt,
+                  style: TextStyles.body1,
+                  onChanged: (value) {},
+                ),
+
+                //space vertically
+                const Gap(20.0),
+
                 //copy wallet address card
                 const CardCopyWalletWidget(),
                 //space vertiically

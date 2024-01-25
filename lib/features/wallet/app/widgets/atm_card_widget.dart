@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:peniremit/core/helpers/spacer_widgets.dart';
 import 'package:peniremit/core/icon_fonts/peniremit_font.dart';
 import 'package:peniremit/core/utils/extension_util.dart';
+import 'package:peniremit/navigation/app_screen_paths.dart';
 import 'package:peniremit/resources/app_assets.dart';
 import 'package:peniremit/resources/app_colors.dart';
 import 'package:peniremit/resources/app_dimen.dart';
@@ -34,20 +36,32 @@ class AtmCardWidget extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              //nfc icon
-              const Icon(
-                PeniremitIcon.nfcRight,
-                size: 17,
-              ),
               //smc
               Text(
                 AppStrings.smcTxt,
                 style: TextStyles.inter.copyWith(
                   fontSize: FontSizes.s15,
-                  fontWeight: FontWeight.w700,
-                  color: context.colorScheme.onPrimary.withOpacity(
-                    0.8,
-                  ),
+                  fontWeight: FontWeight.w600,
+                  shadows: [
+                    const Shadow(
+                      color: Color(0xff309AF6),
+                    ),
+                  ],
+                  color: context.colorScheme.onPrimary,
+                ),
+              ),
+              //smc
+              Text(
+                '\$1000.00',
+                style: TextStyles.inter.copyWith(
+                  shadows: [
+                    const Shadow(
+                      color: Color(0xff309AF6),
+                    ),
+                  ],
+                  fontSize: FontSizes.s15,
+                  fontWeight: FontWeight.w500,
+                  color: context.colorScheme.onPrimary,
                 ),
               ),
             ],

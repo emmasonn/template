@@ -35,6 +35,7 @@ class AppScreenPaths {
   static const recoverPasswordOtpPath = '/recover_password_otp';
   static const electricityBeneficiaryPath = '/electricity_beneficiary_path';
   static const contactsPath = '/contacts_path';
+  static const myCardsPath = '/my_cards_screen';
 
   //* Landings
   static const homePath = '/home';

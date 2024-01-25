@@ -12,6 +12,7 @@ class AppStrings {
 
   //Btn text
   static const createAccountTxt = 'Create Account';
+  static const idHintTxt = '9023434232';
   static const signInTxt = 'Sign in';
   static const signUpTxt = 'Sign up';
   static const registerTxt = 'Register';
@@ -57,6 +58,7 @@ class AppStrings {
   static const availableBalanceTxt = 'Available Balance';
   static const peniremitIdTxt = 'Peniremit ID';
   static const showQrCodeTxt = 'Show QR Code';
+  static const remarkTxt = 'Remark';
 
   //Form Information
   static const fullNameLabel = 'Full Name';
@@ -171,12 +173,14 @@ class AppStrings {
   static const String transactionHistoryTxt = 'Transaction History';
   static const String transactionsTxt = 'Transactions';
   static const String fundWalletTxt = 'Fund Wallet';
+  static const String fundCardTxt = 'Fund Card';
+  static const String cardBalanceTxt = 'Card Balance';
   static const String upcomingSubscriptionTxt = 'Upcoming Subscription';
   static const String upcomingSubscriptionCaptionTxt =
       'Platforms due soon for subscription';
   static const String walletAddressTxt = 'Wallet Address';
   static const String amountTxt = 'Amount';
-  static const String usdTxt = 'USD';
+  static const String usdTxt = 'USDT';
   static const String amountToFundTxt = 'Amount to Fund';
   static const String enterYourPinTxt = 'Enter your Pin';
   static const String transactionSuccessTxt =
@@ -199,13 +203,14 @@ class AppStrings {
 
   static const transactionTypeTxt = 'Transaction Type';
   static const senderDetailsTxt = 'Sender Details';
-  static const remarkTxt = 'Remark';
   static const transactionNumberTxt = 'Transaction Number';
   static const transactionDateTxt = 'Transaction Date';
   static const customerNameTxt = 'Customer name';
   static const addressTxt = 'Address';
   static const meterTypeTxt = 'Meter Type';
   static const tokenTxt = 'Token';
+  static const tokenNetworkTxt = 'Token Network';
+  static const selectNetworkTxt = 'Select network';
   static const depositWarningTitleTxt =
       'Please Note: Send only USDT to this address';
   static const depositNoteTxt =

@@ -94,7 +94,14 @@ class _WalletScreenState extends State<WalletScreen> {
                     vSpacer(20.0),
                     // //emptyCard
                     // const VirtualCardContainer(),
-                    const AtmCardWidget(),
+                    InkWell(
+                      onTap: () {
+                        context.push(
+                          AppScreenPaths.myCardsPath,
+                        );
+                      },
+                      child: const AtmCardWidget(),
+                    ),
                     vSpacer(20.0),
                     //card widget
                     Row(

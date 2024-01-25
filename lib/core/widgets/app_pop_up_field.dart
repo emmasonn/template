@@ -19,12 +19,14 @@ class AppPopUpField extends StatefulWidget {
     required this.hintText,
     this.initValue,
     this.billType = BillType.none,
+    this.prefixIcon,
   });
   final String? label;
   final String hintText;
   final String? initValue;
   final double? height;
   final TextStyle? style;
+  final Widget? prefixIcon;
   final List<String> items;
   final Function(String) onChanged;
   final BillType billType;
@@ -106,16 +108,18 @@ class _AppPopUpFieldState extends State<AppPopUpField> {
                           ),
                           child: ListTile(
                             leading: CircleAvatar(
-                              radius: 18,
+                              radius: 13,
                               backgroundColor: context.onSurfaceVt,
-                              child: Icon(
-                                widget.billType == BillType.tv
-                                    ? PeniremitIcon.tv
-                                    : widget.billType == BillType.electricity
-                                        ? PeniremitIcon.electricity
-                                        : Icons.subscriptions,
-                                size: 18.0,
-                              ),
+                              child: widget.prefixIcon ??
+                                  Icon(
+                                    widget.billType == BillType.tv
+                                        ? PeniremitIcon.tv
+                                        : widget.billType ==
+                                                BillType.electricity
+                                            ? PeniremitIcon.electricity
+                                            : Icons.subscriptions,
+                                    size: 18.0,
+                                  ),
                             ),
                             title: Text(
                               item,
@@ -136,10 +140,12 @@ class _AppPopUpFieldState extends State<AppPopUpField> {
                 .toList();
           },
           child: AppPopUpItem(
+            height: 40,
             label: widget.label,
             hintText: widget.hintText,
             initValue: selectedItem,
             style: widget.style,
+            prefixIcon: widget.prefixIcon,
             billType: widget.billType,
           ),
         ),
@@ -156,10 +162,12 @@ class AppPopUpItem extends StatelessWidget {
     this.style,
     required this.hintText,
     this.initValue,
+    this.prefixIcon,
     this.billType = BillType.none,
   });
   final String? label;
   final String hintText;
+  final Widget? prefixIcon;
   final String? initValue;
   final double? height;
   final TextStyle? style;
@@ -185,16 +193,17 @@ class AppPopUpItem extends StatelessWidget {
           children: [
             if (initValue != null) ...[
               CircleAvatar(
-                radius: 18,
+                radius: 13,
                 backgroundColor: context.onSurfaceVt,
-                child: Icon(
-                  billType == BillType.tv
-                      ? PeniremitIcon.tv
-                      : billType == BillType.electricity
-                          ? PeniremitIcon.electricity
-                          : Icons.subscriptions,
-                  size: 18.0,
-                ),
+                child: prefixIcon ??
+                    Icon(
+                      billType == BillType.tv
+                          ? PeniremitIcon.tv
+                          : billType == BillType.electricity
+                              ? PeniremitIcon.electricity
+                              : Icons.subscriptions,
+                      size: 18.0,
+                    ),
               ),
               const Gap(10.0),
               Expanded(

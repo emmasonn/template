@@ -55,6 +55,7 @@ class AppRouter {
       AppRoutes.electricityBeneficiaryScreen,
       AppRoutes.transactionDetailScreen,
       AppRoutes.contactsScreen,
+      AppRoutes.myCardScreen,
     ],
   );
 }

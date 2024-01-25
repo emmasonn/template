@@ -21,7 +21,7 @@ import 'package:peniremit/features/home/app/screens/buy_airtime_screen.dart';
 import 'package:peniremit/features/home/app/screens/buy_cabletv_screen.dart';
 import 'package:peniremit/features/home/app/screens/buy_data_screen.dart';
 import 'package:peniremit/features/home/app/screens/buy_electricity_screen.dart';
-import 'package:peniremit/features/home/app/screens/fund_wallet_screen.dart';
+import 'package:peniremit/features/wallet/app/screens/fund_wallet_screen.dart';
 import 'package:peniremit/features/home/app/screens/home_screen.dart';
 import 'package:peniremit/features/home/app/screens/main_screen.dart';
 import 'package:peniremit/features/home/app/screens/more_services_screen.dart';
@@ -32,6 +32,7 @@ import 'package:peniremit/features/subscriptions/app/pages/upcoming_subscription
 import 'package:peniremit/features/subscriptions/app/widgets/subscription_filter_widget.dart';
 import 'package:peniremit/features/wallet/app/screens/confirm_transaction_screen.dart';
 import 'package:peniremit/features/wallet/app/screens/create_card_screen.dart';
+import 'package:peniremit/features/wallet/app/screens/my_cards_screen.dart';
 import 'package:peniremit/features/wallet/app/screens/transaction_completed_screen.dart';
 import 'package:peniremit/features/wallet/app/screens/transaction_detail_screen.dart';
 import 'package:peniremit/features/wallet/app/screens/transaction_history_screen.dart';
@@ -281,8 +282,17 @@ class AppRoutes {
     },
   );
 
-  //** bill payment routes
+  static final myCardScreen = GoRoute(
+    parentNavigatorKey: rootNavigator,
+    path: AppScreenPaths.myCardsPath,
+    pageBuilder: (BuildContext context, state) {
+      return MyCardScreen.page(
+        key: state.pageKey,
+      );
+    },
+  );
 
+  //** bill payment routes
   static final buyAirtimeScreen = GoRoute(
     parentNavigatorKey: rootNavigator,
     path: AppScreenPaths.buyAirtimePath,
