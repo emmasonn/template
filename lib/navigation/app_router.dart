@@ -4,7 +4,6 @@ import 'package:peniremit/main.dart';
 import 'package:peniremit/navigation/app_routes.dart';
 import 'package:peniremit/navigation/app_screen_paths.dart';
 import 'package:peniremit/navigation/navigation_error_screen.dart';
-import 'package:peniremit/resources/app_strings.dart';
 
 final GlobalKey<NavigatorState> rootNavigator = GlobalKey(debugLabel: 'root');
 final GlobalKey<NavigatorState> shellNavigator = GlobalKey(debugLabel: 'shell');

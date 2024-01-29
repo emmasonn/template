@@ -85,7 +85,6 @@ class _FundWalletScreenState extends State<FundWalletScreen> {
 
                 //space vertically
                 const Gap(20.0),
-
                 //copy wallet address card
                 const CardCopyWalletWidget(),
                 //space vertiically

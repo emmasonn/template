@@ -108,14 +108,15 @@ class _SubscriptionDetailScreenState extends State<SubscriptionDetailScreen> {
             //space vertiically
             vSpacer(30.0),
             Container(
+              height: 60.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(Corners.md),
                 border: Border.all(
-                  color: context.colorScheme.onSurface,
+                  color: context.onSurfaceVt,
                 ),
               ),
               margin: EdgeInsets.symmetric(horizontal: 16.w),
-              padding: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

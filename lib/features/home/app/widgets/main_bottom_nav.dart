@@ -37,7 +37,7 @@ class MainBottomNav extends StatelessWidget {
           title: AppStrings.walletTxt,
         ),
         PersistentBottomNavBarItem(
-          icon: const Icon(PeniremitIcon.analytics),
+          icon: const Icon(PeniremitIcon.subscription),
           title: AppStrings.subscriptionTxt,
         ),
         PersistentBottomNavBarItem(

@@ -54,7 +54,9 @@ class _AppPopUpFieldState extends State<AppPopUpField> {
           const Gap(10)
         ],
         PopupMenuButton<String>(
+          clipBehavior: Clip.hardEdge,
           elevation: 1.0,
+          splashRadius: Corners.md,
           constraints: BoxConstraints(
             maxWidth: double.infinity,
             minWidth: context.widthPx - 30,
@@ -180,12 +182,13 @@ class AppPopUpItem extends StatelessWidget {
         height: height ?? 50.0,
         width: double.infinity,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(Corners.md),
-            border: Border.all(
-              color: context.onSurfaceVt,
-              width: 0.5,
-            ),
-            color: context.colorScheme.surface),
+          borderRadius: BorderRadius.circular(Corners.md),
+          border: Border.all(
+            color: context.onSurfaceVt,
+            width: 0.5,
+          ),
+          color: context.colorScheme.surface,
+        ),
         padding: const EdgeInsets.symmetric(
           horizontal: 10.0,
         ),

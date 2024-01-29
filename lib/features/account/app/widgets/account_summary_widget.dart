@@ -14,6 +14,7 @@ class AccountSummaryWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
+          color: context.colorScheme.surface,
           border: Border.all(
             color: context.onSurfaceVt,
             width: 0.5,

@@ -73,7 +73,7 @@ class AppStrings {
   static const confirmPinHint = 'Confirm your pin';
   static const confirmPasswordLabel = 'Confirm Passowrd';
   static const confirmPasswordHint = 'Confirm your password';
-
+  static const hideBalanceChar = '∗∗∗∗';
   static const alreadyHaveAccountTxt = 'Already have an account?\t';
   static const verifyPhoneNumberTxt = 'Verify Phone Number';
   static const forgotPasswordTxt = 'Forgot password';
